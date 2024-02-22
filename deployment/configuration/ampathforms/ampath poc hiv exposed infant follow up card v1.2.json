@@ -20,7 +20,8 @@
 							},
 							"validators": [
 								{
-									"type": "date"
+									"type": "date",
+									"allowFutureDates": "false"
 								}
 							]
 						},
@@ -86,10 +87,10 @@
 							"historicalExpression": "_.isEmpty(HD.getObject('prevEnc').getValue('a8ace206-1350-11df-a1f1-0026b9348838')) ? undefined : HD.getObject('prevEnc').getValue('a8ace206-1350-11df-a1f1-0026b9348838')",
 							"id": "birthWeight",
 							"questionOptions": {
-								"rendering": "decimal",
+								"rendering": "number",
 								"concept": "a8ace206-1350-11df-a1f1-0026b9348838",
-								"max": "5.0",
-								"min": "0.5"
+								"max": "5",
+								"min": "0"
 							},
 							"type": "obs",
 							"validators": [
@@ -887,10 +888,10 @@
 							"label": "Weight (kg):",
 							"id": "weight",
 							"questionOptions": {
-								"rendering": "decimal",
+								"rendering": "number",
 								"concept": "a8a660ca-1350-11df-a1f1-0026b9348838",
-								"max": "150.00",
-								"min": "0.00"
+								"max": "150",
+								"min": "0"
 							},
 							"type": "obs",
 							"validators": [
@@ -904,12 +905,11 @@
 							"label": "Height (cm):",
 							"id": "height",
 							"questionOptions": {
-								"rendering": "decimal",
+								"rendering": "number",
 								"concept": "a8a6619c-1350-11df-a1f1-0026b9348838",
-								"max": "350.00",
-								"min": "0.00"
+								"max": "350",
+								"min": "0"
 							},
-							"type": "obs",
 							"validators": [
 								{
 									"type": "decimal",
@@ -1165,226 +1165,15 @@
 					"isExpanded": "true",
 					"questions": [
 						{
-							"type": "obsGroup",
-							"label": "Test orders",
+							"label": "Lab Order",
+							"required": false,
+							"id": "labsWorkspaceLauncher",
 							"questionOptions": {
-								"concept": "af46861e-597a-48a3-b3d4-a134d0b1c5fa",
-								"rendering": "group"
-							},
-							"questions": [
-								{
-									"label": "Tests ordered",
-									"id": "order1",
-									"type": "testOrder",
-									"questionOptions": {
-										"rendering": "repeating",
-										"orderSettingUuid": "6f0c9a92-6f24-11e3-af88-005056821db0",
-										"orderType": "testorder",
-										"selectableOrders": [
-											{
-												"concept": "a8982474-1350-11df-a1f1-0026b9348838",
-												"label": "Viral load"
-											},
-											{
-												"concept": "a896cce6-1350-11df-a1f1-0026b9348838",
-												"label": "CD4"
-											},
-											{
-												"concept": "a898fe80-1350-11df-a1f1-0026b9348838",
-												"label": "HIV DNA PCR"
-											},
-											{
-												"concept": "a8908192-1350-11df-a1f1-0026b9348838",
-												"label": "CXR"
-											},
-											{
-												"concept": "a8945d4e-1350-11df-a1f1-0026b9348838",
-												"label": "Sputum AFB"
-											},
-											{
-												"concept": "a897e450-1350-11df-a1f1-0026b9348838",
-												"label": "Creatinine"
-											},
-											{
-												"concept": "a898f50c-1350-11df-a1f1-0026b9348838",
-												"label": "CBC"
-											},
-											{
-												"concept": "a896ca48-1350-11df-a1f1-0026b9348838",
-												"label": "SGPT(ALT)"
-											},
-											{
-												"concept": "a896c8ae-1350-11df-a1f1-0026b9348838",
-												"label": "AST"
-											},
-											{
-												"concept": "a8970a26-1350-11df-a1f1-0026b9348838",
-												"label": " CD4 %"
-											},
-											{
-												"concept": "7243bed9-0bc7-4702-af28-a06ab1981e19",
-												"label": "Crag test"
-											},
-											{
-												"concept": "57677735-4310-4841-8902-dae4bac24d20",
-												"label": "DST"
-											},
-											{
-												"concept": "a8981bd2-1350-11df-a1f1-0026b9348838",
-												"label": "CT scan, head"
-											},
-											{
-												"concept": "9e4a337c-7230-4020-922e-bf7d1c36ae45",
-												"label": "CT scan, abdomen"
-											},
-											{
-												"concept": "06f42089-8ed8-4620-9d42-6c717a12451e",
-												"label": "CT scan, chest"
-											},
-											{
-												"concept": "a8999fb6-1350-11df-a1f1-0026b9348838",
-												"label": "Elisa"
-											},
-											{
-												"concept": "a89dd9aa-1350-11df-a1f1-0026b9348838",
-												"label": "Echo"
-											},
-											{
-												"concept": "a89dda72-1350-11df-a1f1-0026b9348838",
-												"label": "ECGn"
-											},
-											{
-												"concept": "741517cf-8bac-4755-b289-8dd2a2df7962",
-												"label": "Gene Xpert"
-											},
-											{
-												"concept": "a8af7520-1350-11df-a1f1-0026b9348838",
-												"label": "HbA1C"
-											},
-											{
-												"concept": "a8908a16-1350-11df-a1f1-0026b9348838",
-												"label": "Hgb"
-											},
-											{
-												"concept": "7129af13-e39a-43b0-9923-6d1de22c9c5e",
-												"label": "Microalbumin"
-											},
-											{
-												"concept": "5f24edf3-da0f-4990-8a43-9c6e3ca52cfe",
-												"label": "MRI"
-											},
-											{
-												"concept": "a89a7418-1350-11df-a1f1-0026b9348838",
-												"label": "Potassium"
-											},
-											{
-												"concept": "a8999dfe-1350-11df-a1f1-0026b9348838",
-												"label": "Rapid HIV "
-											},
-											{
-												"concept": "a8a47094-1350-11df-a1f1-0026b9348838",
-												"label": "TB PCR "
-											},
-											{
-												"concept": "a8a462a2-1350-11df-a1f1-0026b9348838",
-												"label": "TB culture"
-											},
-											{
-												"concept": "e83f4f97-91eb-4858-89d8-371535c5c131",
-												"label": "Ultrasound"
-											},
-											{
-												"concept": "a894590c-1350-11df-a1f1-0026b9348838",
-												"label": "Urinalysis"
-											},
-											{
-												"concept": "a8945678-1350-11df-a1f1-0026b9348838",
-												"label": "VDRL"
-											},
-											{
-												"concept": "a890d0f2-1350-11df-a1f1-0026b9348838",
-												"label": "X-ray abdomen"
-											},
-											{
-												"concept": "a894c5a4-1350-11df-a1f1-0026b9348838",
-												"label": "X-ray spine"
-											},
-											{
-												"concept": "a8b0f7c4-1350-11df-a1f1-0026b9348838",
-												"label": "Antibody test"
-											},
-											{
-												"concept": "a8aaf3e2-1350-11df-a1f1-0026b9348838",
-												"label": "Other"
-											}
-										]
-									}
-								},
-								{
-									"label": "Test ordered: Other (specify):",
-									"questionOptions": {
-										"concept": "a8a06fc6-1350-11df-a1f1-0026b9348838",
-										"rendering": "text"
-									},
-									"type": "obs",
-									"validators": [],
-									"hide": {
-										"hideWhenExpression": "isEmpty(order1) || !arrayContainsAny(order1, ['a8aaf3e2-1350-11df-a1f1-0026b9348838'])"
-									},
-									"id": "__yuHpzqty1"
-								}
-							],
-							"id": "__3MrxzsKyn"
-						},
-						{
-							"label": "Viral load justification:",
-							"type": "obs",
-							"id": "vljust",
-							"questionOptions": {
-								"concept": "0a98f01f-57f1-44b7-aacf-e1121650a967",
-								"rendering": "select",
-								"answers": [
-									{
-										"concept": "5931c4d4-4406-4d71-b75d-2205d905cc24",
-										"label": "Routine VL"
-									},
-									{
-										"concept": "e43ddeb6-3984-499c-a280-3bade1039608",
-										"label": "Confirmation of treatment failure (repeat VL)"
-									},
-									{
-										"concept": "a8981934-1350-11df-a1f1-0026b9348838",
-										"label": "Clinical failure"
-									},
-									{
-										"concept": "a8a00158-1350-11df-a1f1-0026b9348838",
-										"label": "Single drug substitution"
-									},
-									{
-										"concept": "3966e139-ca69-47c6-aad3-ebd41bb45e28",
-										"label": "Baseline VL (for infants diagnsed through EID)"
-									},
-									{
-										"concept": "42cdefa2-c306-4d10-a819-c04131c4934e",
-										"label": "Confirmation of persistent low level viremia (PLLV)"
-									},
-									{
-										"concept": "a8aaf3e2-1350-11df-a1f1-0026b9348838",
-										"label": "Other"
-									}
-								]
-							},
-							"validators": [
-								{
-									"type": "js_expression",
-									"failsWhenExpression": "isEmpty(myValue) && !(isEmpty(order1) || !arrayContains(order1, 'a8982474-1350-11df-a1f1-0026b9348838'))",
-									"message": "Viral load justification required."
-								}
-							],
-							"hide": {
-								"hideWhenExpression": "isEmpty(order1) || !arrayContains(order1, 'a8982474-1350-11df-a1f1-0026b9348838')"
+							  "rendering": "workspace-launcher",
+							  "buttonLabel": "Add lab order",
+							  "workspaceName": "add-lab-order"
 							}
-						},
+						  },
 						{
 							"id": "pcrReason",
 							"label": "Reason for doing PCR:",
