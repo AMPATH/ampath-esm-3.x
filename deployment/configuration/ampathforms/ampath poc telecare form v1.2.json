@@ -750,7 +750,7 @@
 									"type": "obs",
 									"validators": [],
 									"hide": {
-										"hideWhenExpression": "patientConsent === 'a899b42e-1350-11df-a1f1-0026b9348838' || (hasCallConsent === false && isEmpty(patientConsent)) || sex == 'M' || (sex == 'F'  && age < 10)"
+										"hideWhenExpression": "sex !== 'F' || age < 10 || patientConsent === 'a899b42e-1350-11df-a1f1-0026b9348838' || (hasCallConsent === false && isEmpty(patientConsent))"
 									}
 								},
 								{
@@ -915,7 +915,7 @@
 									"type": "obs",
 									"validators": [],
 									"hide": {
-										"hideWhenExpression": "patientConsent === 'a899b42e-1350-11df-a1f1-0026b9348838' || (hasCallConsent === false && isEmpty(patientConsent)) || sex === 'M' || (sex === 'F'  && age < 10)"
+										"hideWhenExpression": "sex !== 'F' || age < 10 || patientConsent === 'a899b42e-1350-11df-a1f1-0026b9348838' || (hasCallConsent === false && isEmpty(patientConsent))"
 									}
 								}
 							]
@@ -945,7 +945,7 @@
 									"type": "obs",
 									"validators": [],
 									"hide": {
-										"hideWhenExpression": "patientConsent === 'a899b42e-1350-11df-a1f1-0026b9348838' || (hasCallConsent === false && isEmpty(patientConsent)) || age > 3"
+										"hideWhenExpression": "age > 3 || patientConsent === 'a899b42e-1350-11df-a1f1-0026b9348838' || (hasCallConsent === false && isEmpty(patientConsent)) || age > 3"
 									}
 								}
 							]
