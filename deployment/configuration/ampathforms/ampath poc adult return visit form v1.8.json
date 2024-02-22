@@ -1102,67 +1102,112 @@
 											},
 											{
 												"concept": "81aad3d5-0535-416a-a833-9079af068e3f",
-												"label": "Bilateral tubal ligation"
+												"label": "Bilateral tubal ligation",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "a123d949-31f3-4abf-98e3-8504e17ebc00",
-												"label": "3-year implant"
+												"label": "3-year implant",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "feb48308-a56f-4754-8e8f-8c1698e570cb",
-												"label": "5-year implant"
+												"label": "5-year implant",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "f8c66a32-3660-4233-ae51-d3a4a1eac44e",
-												"label": "IUCD copper"
+												"label": "IUCD copper",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "236dba53-1062-46b4-8067-ec8711897dbf",
-												"label": "IUCD hormonal"
+												"label": "IUCD hormonal",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "a8988b44-1350-11df-a1f1-0026b9348838",
-												"label": "Injectables (Depo)"
+												"label": "Injectables (Depo)",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "a8aff1b2-1350-11df-a1f1-0026b9348838",
-												"label": "Combined hormone oral contraceptive pills"
+												"label": "Combined hormone oral contraceptive pills",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "a8afeb54-1350-11df-a1f1-0026b9348838",
-												"label": "Projestin only pills"
-											},
-											{
-												"concept": "eaa5796d-0b1c-478b-8c9d-d23cf4c3bddc",
-												"label": "Vasectomy"
+												"label": "Projestin only pills",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "4a740e33-fee5-4a2b-b679-1904722e3d9e",
-												"label": "Lactational amenohhrea method"
+												"label": "Lactational amenohhrea method",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "a8a71588-1350-11df-a1f1-0026b9348838",
-												"label": "Diaphram/Cervical cap"
+												"label": "Diaphram/Cervical cap",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "b75702a6-908d-491b-9399-6495712c81cc",
-												"label": "Emergency contraceptive pills"
+												"label": "Emergency contraceptive pills",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "a8aff284-1350-11df-a1f1-0026b9348838",
-												"label": "Periodic abstinence"
+												"label": "Periodic abstinence",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											},
 											{
 												"concept": "856a7f0d-8359-4316-97c1-2d37813414f0",
-												"label": "Undecided"
+												"label": "Undecided",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
 											}
 										],
-										"rendering": "select"
+										"rendering": "checkbox"
 									},
 									"type": "obs",
 									"validators": [],
 									"hide": {
 										"hideWhenExpression": "sex !== 'F' || menStatus === '5cc1c1a7-dfcc-47dc-ad73-c386c188fad8' || arrayContains(['02e3ce61-fa24-445e-a1f0-6e3299142966','53b856ad-21ef-4745-9acd-81aca01bba31','55c74fa8-c810-4b37-a918-14a851bba6f3','44032888-08e1-4900-b9dd-7d236d79276c'], visitTypeUuid)"
+									}
+								},
+								{
+									"label": "Select modern contraception method:",
+									"required": "true",
+									"historicalExpression": "_.isEmpty(HD.getObject('prevEnc').getValue('767e8060-5272-4927-ab78-97534a4499ef.a894b1cc-1350-11df-a1f1-0026b9348838')) ? undefined : HD.getObject('prevEnc').getValue('767e8060-5272-4927-ab78-97534a4499ef.a894b1cc-1350-11df-a1f1-0026b9348838')",
+									"id": "fpMethodMale",
+									"questionOptions": {
+										"concept": "a894b1cc-1350-11df-a1f1-0026b9348838",
+										"answers": [
+											{
+												"concept": "a899e0ac-1350-11df-a1f1-0026b9348838",
+												"label": "None"
+											},
+											{
+												"concept": "eaa5796d-0b1c-478b-8c9d-d23cf4c3bddc",
+												"label": "Vasectomy",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
+											},
+											{
+												"concept": "a8aff284-1350-11df-a1f1-0026b9348838",
+												"label": "Periodic abstinence",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
+											},
+											{
+												"concept": "856a7f0d-8359-4316-97c1-2d37813414f0",
+												"label": "Undecided",
+												"disableWhenExpression": "myValue === 'a899e0ac-1350-11df-a1f1-0026b9348838'"
+											}
+										],
+										"rendering": "checkbox"
+									},
+									"type": "obs",
+									"validators": [],
+									"hide": {
+										"hideWhenExpression": "sex !== 'M'"
 									}
 								},
 								{
@@ -1596,20 +1641,8 @@
 										"label": "Treatment"
 									},
 									{
-										"concept": "a8a19c20-1350-11df-a1f1-0026b9348838",
-										"label": "PEP"
-									},
-									{
-										"concept": "27ac429d-8a42-476e-b2f6-65bde0b8c935",
-										"label": "Prep"
-									},
-									{
 										"concept": "a89fbedc-1350-11df-a1f1-0026b9348838",
 										"label": "PMTCT"
-									},
-									{
-										"concept": "a8ab1e12-1350-11df-a1f1-0026b9348838",
-										"label": "Infant prophylaxis"
 									},
 									{
 										"concept": "a8908ed0-1350-11df-a1f1-0026b9348838",
@@ -1619,7 +1652,32 @@
 							},
 							"validators": [],
 							"hide": {
-								"hideWhenExpression": "onArt!== 'a899b35c-1350-11df-a1f1-0026b9348838'"
+								"hideWhenExpression": "sex !== 'F' || onArt!== 'a899b35c-1350-11df-a1f1-0026b9348838'"
+							}
+						},
+						{
+							"label": "Reason for use:",
+							"id": "reasonUseMale",
+							"type": "obs",
+							"historicalExpression": "_.isEmpty(HD.getObject('prevEnc').getValue('a8a30d1c-1350-11df-a1f1-0026b9348838')) ? undefined : HD.getObject('prevEnc').getValue('a8a30d1c-1350-11df-a1f1-0026b9348838')",
+							"historicalPrepopulateCondition": "!_.isEmpty(HD.getObject('prevEnc').getValue('a8a30d1c-1350-11df-a1f1-0026b9348838'))",
+							"questionOptions": {
+								"concept": "a8a30d1c-1350-11df-a1f1-0026b9348838",
+								"rendering": "select",
+								"answers": [
+									{
+										"concept": "a89adc46-1350-11df-a1f1-0026b9348838",
+										"label": "Treatment"
+									},
+									{
+										"concept": "a8908ed0-1350-11df-a1f1-0026b9348838",
+										"label": "HBV"
+									}
+								]
+							},
+							"validators": [],
+							"hide": {
+								"hideWhenExpression": "sex !== 'M' || onArt!== 'a899b35c-1350-11df-a1f1-0026b9348838'"
 							}
 						},
 						{
@@ -4241,7 +4299,7 @@
 						{
 							"label": "Temp (C):",
 							"questionOptions": {
-								"rendering": "decimal",
+								"rendering": "number",
 								"concept": "a8a65fee-1350-11df-a1f1-0026b9348838",
 								"max": "43",
 								"min": "25"
@@ -4259,7 +4317,7 @@
 							"label": "Weight (Kg):",
 							"id": "weight",
 							"questionOptions": {
-								"rendering": "decimal",
+								"rendering": "number",
 								"concept": "a8a660ca-1350-11df-a1f1-0026b9348838",
 								"max": "250",
 								"min": "0"
@@ -4277,7 +4335,7 @@
 							"historicalExpression": "_.isEmpty(HD.getObject('prevEnc').getValue('a8a6619c-1350-11df-a1f1-0026b9348838')) ? undefined : HD.getObject('prevEnc').getValue('a8a6619c-1350-11df-a1f1-0026b9348838')",
 							"id": "height",
 							"questionOptions": {
-								"rendering": "decimal",
+								"rendering": "number",
 								"concept": "a8a6619c-1350-11df-a1f1-0026b9348838",
 								"max": "228",
 								"min": "0"
@@ -8630,135 +8688,15 @@
 							},
 							"questions": [
 								{
-									"label": "Tests Ordered",
-									"id": "order1",
-									"type": "testOrder",
+									"label": "Lab Order",
+									"required": false,
+									"id": "labWorkspaceLauncher",
 									"questionOptions": {
-										"rendering": "repeating",
-										"orderSettingUuid": "6f0c9a92-6f24-11e3-af88-005056821db0",
-										"orderType": "testorder",
-										"selectableOrders": [
-											{
-												"concept": "a8982474-1350-11df-a1f1-0026b9348838",
-												"label": "Viral load"
-											},
-											{
-												"concept": "a896cce6-1350-11df-a1f1-0026b9348838",
-												"label": "CD4"
-											},
-											{
-												"concept": "7243bed9-0bc7-4702-af28-a06ab1981e19",
-												"label": "Crag test"
-											},
-											{
-												"concept": "57677735-4310-4841-8902-dae4bac24d20",
-												"label": "DST"
-											},
-											{
-												"concept": "a898fe80-1350-11df-a1f1-0026b9348838",
-												"label": "HIV DNA PCR "
-											},
-											{
-												"concept": "a8908192-1350-11df-a1f1-0026b9348838",
-												"label": "CXR"
-											},
-											{
-												"concept": "a8945d4e-1350-11df-a1f1-0026b9348838",
-												"label": "Sputum AFB"
-											},
-											{
-												"concept": "a897e450-1350-11df-a1f1-0026b9348838",
-												"label": "Creatinine"
-											},
-											{
-												"concept": "a898f50c-1350-11df-a1f1-0026b9348838",
-												"label": "CBC"
-											},
-											{
-												"concept": "a896ca48-1350-11df-a1f1-0026b9348838",
-												"label": "SGPT(ALT)"
-											},
-											{
-												"concept": "a896c8ae-1350-11df-a1f1-0026b9348838",
-												"label": "AST"
-											},
-											{
-												"concept": "a8970a26-1350-11df-a1f1-0026b9348838",
-												"label": " CD4 %"
-											},
-											{
-												"concept": "a8999fb6-1350-11df-a1f1-0026b9348838",
-												"label": "Elisa"
-											},
-											{
-												"concept": "a8999dfe-1350-11df-a1f1-0026b9348838",
-												"label": "Rapid HIV "
-											},
-											{
-												"concept": "a8a47094-1350-11df-a1f1-0026b9348838",
-												"label": "TB PCR "
-											},
-											{
-												"concept": "741517cf-8bac-4755-b289-8dd2a2df7962",
-												"label": "Gene Xpert"
-											},
-											{
-												"concept": "a8908a16-1350-11df-a1f1-0026b9348838",
-												"label": "Hgb"
-											},
-											{
-												"concept": "a8a462a2-1350-11df-a1f1-0026b9348838",
-												"label": "TB Culture"
-											},
-											{
-												"concept": "a8945678-1350-11df-a1f1-0026b9348838",
-												"label": "VDRL"
-											},
-											{
-												"concept": "a894590c-1350-11df-a1f1-0026b9348838",
-												"label": "Urinalysis"
-											},
-											{
-												"concept": "a8af7520-1350-11df-a1f1-0026b9348838",
-												"label": "HbA1C"
-											},
-											{
-												"concept": "7129af13-e39a-43b0-9923-6d1de22c9c5e",
-												"label": "Microalbumin"
-											},
-											{
-												"concept": "a89a7418-1350-11df-a1f1-0026b9348838",
-												"label": "Potassium"
-											},
-											{
-												"concept": "a899f5ec-1350-11df-a1f1-0026b9348838",
-												"label": "Sodium"
-											},
-											{
-												"concept": "a8af843e-1350-11df-a1f1-0026b9348838",
-												"label": "Serum Uric acid"
-											},
-											{
-												"concept": "a89dda72-1350-11df-a1f1-0026b9348838",
-												"label": "ECGn"
-											},
-											{
-												"concept": "a89dd9aa-1350-11df-a1f1-0026b9348838",
-												"label": "Echo"
-											}
-										]
+									  "rendering": "workspace-launcher",
+									  "buttonLabel": "Add Lab order",
+									  "workspaceName": "add-lab-order"
 									}
-								},
-								{
-									"label": "Test ordered: Other (specify):",
-									"questionOptions": {
-										"concept": "a8a06fc6-1350-11df-a1f1-0026b9348838",
-										"rendering": "text"
-									},
-									"type": "obs",
-									"validators": [],
-									"id": "otherTestOrder"
-								}
+								  }
 							],
 							"id": "testDetailed"
 						},
