@@ -109,8 +109,9 @@
 							"type": "obs",
 							"required": "true",
 							"id": "smsTime",
+							"datePickerFormat": "timer",
 							"questionOptions": {
-								"rendering": "time",
+								"rendering": "date",
 								"concept": "4e1a9d59-3d06-47eb-82a7-30410db249e4"
 							},
 							"validators": [],
