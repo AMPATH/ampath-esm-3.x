@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json.openmrs.org/routes.schema.json",
+  "backendDependencies": {
+    "webservices.rest": "^2.2.0"
+  },
+  "pages": [
+    {
+      "component": "root",
+      "route": "hts"
+    }
+  ],
+  "extensions": [
+    {
+      "component": "root",
+      "name": "hts-root",
+      "slot": "hts-dashboard-slot"
+    },
+    {
+      "component": "htsLeftPanelLink",
+      "name": "hts-left-panel-link",
+      "slot": "homepage-dashboard-slot",
+      "meta": {
+        "name": "hts",
+        "title": "HTS",
+        "slot": "hts-dashboard-slot",
+        "config": {
+          "columns": 1,
+          "type": "grid",
+          "programme": "hts",
+          "dashboardTitle": "HTS Dashboard"
+        }
+      }
+    },
+    {
+      "name": "hts-home-tiles-ext",
+      "slot": "hts-home-tiles-slot",
+      "component": "htsDashboardTiles"
+    },
+    {
+      "name": "hts-home-tabs-ext",
+      "slot": "hts-home-tabs-slot",
+      "component": "htsDashboardTabs"
+    },
+
+    {
+      "name": "hts-dashboard-link",
+      "slot": "dashboard-slot",
+      "component": "htsFolderLink",
+      "meta": {
+        "slot": "ohri-hts-dashboard-slot",
+        "isFolder": true,
+        "title": "HTS Program"
+      }
+    },
+    {
+      "name": "ohri-hts",
+      "slot": "patient-chart-dashboard-slot",
+      "component": "patientChartTptDashboard",
+      "order": 24
+    },
+    {
+      "name": "hts-patient-summary",
+      "slot": "ohri-hts-slot",
+      "component": "htsPatientSummaryDashboardLink",
+      "meta": {
+        "slot": "hts-patient-summary-slot",
+        "columns": 1,
+        "path": "hts-patient-summary",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "hts-patient-summary-ext",
+      "slot": "hts-patient-summary-slot",
+      "component": "htsPatientSummaryDashboard"
+    },
+
+    {
+      "name": "hts-program-management-summary",
+      "slot": "ohri-hts-slot",
+      "component": "htsProgramManagementDashboardLink",
+      "meta": {
+        "slot": "hts-program-management-summary-slot",
+        "columns": 1,
+        "path": "hts-program-management",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "hts-program-management-summary-ext",
+      "slot": "hts-program-management-summary-slot",
+      "component": "htsProgramManagementDashboard"
+    }
+  ]
+}
