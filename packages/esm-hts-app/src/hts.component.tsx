@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import OTZHomePatientTabs from './views/dashboard/patient-list-tabs/otz-patient-list-tabs.component';
-import OTZSummaryTile from './views/dashboard/summary-tiles/otz-summary-tiles.component';
+import OTZSummaryTile from './views/dashboard/summary-tiles/hts-summary-tiles.component';
 import { OTZHeader } from './header/otz-header.component';
 import styles from './hts.scss';
 

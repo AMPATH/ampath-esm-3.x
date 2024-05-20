@@ -1,37 +1,37 @@
 import { Coronavirus } from '@carbon/react/icons';
 
 export const otzPatientChartMeta = {
-  title: 'OTZ',
-  slotName: 'ampath-otz-patient-chart-slot',
+  title: 'HTS',
+  slotName: 'ampath-hts-patient-chart-slot',
   isExpanded: false,
 };
 
 export const otzDashboardMeta = {
-  name: 'otz-cases',
-  slot: 'otz-cases-dashboard-slot',
+  name: 'hts-cases',
+  slot: 'hts-cases-dashboard-slot',
   config: { columns: 1, type: 'grid', programme: 'otz', dashboardTitle: 'OTZ clubs', icon: Coronavirus },
-  title: 'OTZ clubs',
+  title: 'HTS clubs',
   dashboardIcon: Coronavirus,
 };
 
 export const otzPatientClinicalChartMeta = {
-  title: 'OTZ Program',
+  title: 'HTS Program',
   slotName: 'ohri-otz-slot',
   isExpanded: false,
 };
 
 export const otzPatientSummaryMeta = {
-  slot: 'otz-patient-summary-slot',
+  slot: 'hts-patient-summary-slot',
   columns: 1,
-  title: 'OTZ Patient Summary',
-  path: 'otz-patient-summary',
+  title: 'HTS Patient Summary',
+  path: 'hts-patient-summary',
   layoutMode: 'anchored',
 };
 
 export const otzProgramManagementDashboardMeta = {
-  slot: 'otz-program-management-summary-slot',
+  slot: 'hts-program-management-summary-slot',
   columns: 1,
-  title: 'OTZ Services',
-  path: 'otz-program-management',
+  title: 'HTS Services',
+  path: 'hts-program-management',
   layoutMode: 'anchored',
 };

@@ -9,7 +9,7 @@ import {
 import { createDashboardGroup, createDashboardLink } from '@openmrs/esm-patient-common-lib';
 import OTZHomePatientTabs from './views/dashboard/patient-list-tabs/otz-patient-list-tabs.component';
 import { createLeftPanelLink } from './left-panel-link.component';
-import OTZSummaryTiles from './views/dashboard/summary-tiles/otz-summary-tiles.component';
+import OTZSummaryTiles from './views/dashboard/summary-tiles/hts-summary-tiles.component';
 import otzPatientSummary from './views/dashboard/patient-summary/patient-summary.component';
 import otzProgramManagementSummary from './views/dashboard/hts-program-services/hts-program-services';
 
