@@ -1,3 +1,4 @@
+git push --no-verify;
 yarn up @openmrs/esm-framework@next
 yarn set version lastest
 nvm ls
