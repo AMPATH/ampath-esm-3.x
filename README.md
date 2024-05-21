@@ -109,6 +109,8 @@ To run E2E tests, make sure the dev server is running by using:
 
 ```sh
 yarn start --sources 'packages/esm-*-app/'
+yarn start --sources 'packages/esm-preappointment-app'
+yarn up openmrs @openmrs/esm-framework
 ```
 
 Then, in a separate terminal, run:
