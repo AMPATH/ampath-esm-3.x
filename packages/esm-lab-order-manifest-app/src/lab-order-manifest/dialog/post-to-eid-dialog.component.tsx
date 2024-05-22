@@ -21,7 +21,8 @@ import styles from './post-orde-to-eid-dialog.scss';
 import { type Result } from '../manifest-orders-list-resource';
 import { PostToEid } from './post-to-eid-dialog.resource';
 import { showNotification, showSnackbar } from '@openmrs/esm-framework';
-import { Card } from '@ampath/esm-patient-registration-app/src/patient-verification/verification.component';
+
+import { Card } from './verification.component';
 
 interface PostOrderDialogProps {
   order: Result;
