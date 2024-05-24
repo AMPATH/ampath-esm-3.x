@@ -1,3 +1,3 @@
-const rootConfig = require('../../jest.config.js');
+const rootConfig = require('../../babel.config.js');
 
 module.exports = rootConfig;
