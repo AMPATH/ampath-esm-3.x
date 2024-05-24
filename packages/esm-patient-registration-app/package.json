@@ -52,6 +52,10 @@
     "swr": "2.x"
   },
   "devDependencies": {
-    "webpack": "^5.74.0"
+    "webpack": "^5.74.0",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6"
   }
 }
