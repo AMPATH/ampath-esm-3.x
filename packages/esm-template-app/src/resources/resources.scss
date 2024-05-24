@@ -19,13 +19,13 @@
   margin-bottom: spacing.$spacing-09;
 
   > * + * {
-    margin-right: spacing.$spacing-05; 
+    margin-right: spacing.$spacing-05;
   }
 }
 
 .cardsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   column-gap: spacing.$spacing-06;
   margin-top: spacing.$spacing-07;
   max-width: 75%;
@@ -59,4 +59,3 @@
     @include type.type-style('heading-02');
   }
 }
-

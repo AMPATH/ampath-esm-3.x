@@ -6,7 +6,7 @@
  * `> * > *` is used to target the outermost DOM node of
  * the extension.
  */
- @use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/spacing';
 
 .box > * > * {
   height: spacing.$spacing-10;
