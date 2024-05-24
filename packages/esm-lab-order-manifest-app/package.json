@@ -43,7 +43,7 @@
   },
   "peerDependencies": {
     "@openmrs/esm-framework": "next",
-    "@openmrs/esm-laboratory-app": "1.0.0",
+    "@openmrs/esm-laboratory-app": "next",
     "react": "^18.1.0",
     "react-i18next": "11.x",
     "react-router-dom": "6.x",

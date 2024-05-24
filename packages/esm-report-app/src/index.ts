@@ -8,7 +8,7 @@ import { getAsyncLifecycle, defineConfigSchema, getSyncLifecycle } from '@openmr
 import { configSchema } from './config-schema';
 import { createLeftPanelLink } from './left-panel-link.component';
 
-const moduleName = '@amrs/esm-reports-app';
+const moduleName = '@ampath/esm-reports-app';
 
 const options = {
   featureName: 'reports',

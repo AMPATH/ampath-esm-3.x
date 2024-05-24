@@ -3,8 +3,8 @@ import { Buffer } from 'buffer';
 import { openmrsFetch, useConfig } from '@openmrs/esm-framework';
 //import getPreappointment from './api/api';
 const moment = require('moment');
-const username = '';
-const password = '';
+const username = 'erugut';
+const password = 'nNoel@2019';
 //const { basicAuthBase64 } = useConfig();
 const basicAuthBase64 = Buffer.from(`${username}:${password}`).toString('base64');
 
