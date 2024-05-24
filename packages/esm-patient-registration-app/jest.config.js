@@ -1,9 +1,3 @@
-//const rootConfig = require('../');
+const rootConfig = require('../../jest.config.js');
 
-//module.exports = rootConfig;
-
-module.exports = {
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest',
-  },
-};
+module.exports = rootConfig;
