@@ -49,6 +49,87 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ampath/esm-hts-app@workspace:packages/esm-hts-app":
+  version: 0.0.0-use.local
+  resolution: "@ampath/esm-hts-app@workspace:packages/esm-hts-app"
+  dependencies:
+    "@carbon/react": "npm:~1.37.0"
+    lodash-es: "npm:^4.17.15"
+    webpack: "npm:^5.74.0"
+  peerDependencies:
+    "@openmrs/esm-framework": 5.x
+    react: ^18.1.0
+    react-i18next: 11.x
+    react-router-dom: 6.x
+    swr: 2.x
+  languageName: unknown
+  linkType: soft
+
+"@ampath/esm-lab-order-manifest-app@workspace:packages/esm-lab-order-manifest-app":
+  version: 0.0.0-use.local
+  resolution: "@ampath/esm-lab-order-manifest-app@workspace:packages/esm-lab-order-manifest-app"
+  dependencies:
+    "@carbon/react": "npm:~1.37.0"
+    lodash-es: "npm:^4.17.15"
+    webpack: "npm:^5.74.0"
+  peerDependencies:
+    "@openmrs/esm-framework": 5.x
+    "@openmrs/esm-laboratory-app": "*"
+    react: ^18.1.0
+    react-i18next: 11.x
+    react-router-dom: 6.x
+    swr: 2.x
+  languageName: unknown
+  linkType: soft
+
+"@ampath/esm-otz-app@workspace:packages/esm-otz-app":
+  version: 0.0.0-use.local
+  resolution: "@ampath/esm-otz-app@workspace:packages/esm-otz-app"
+  dependencies:
+    "@carbon/react": "npm:~1.37.0"
+    lodash-es: "npm:^4.17.15"
+    webpack: "npm:^5.74.0"
+  peerDependencies:
+    "@openmrs/esm-framework": 5.x
+    react: ^18.1.0
+    react-i18next: 11.x
+    react-router-dom: 6.x
+    swr: 2.x
+  languageName: unknown
+  linkType: soft
+
+"@ampath/esm-preappointment-app@workspace:packages/esm-preappointment-app":
+  version: 0.0.0-use.local
+  resolution: "@ampath/esm-preappointment-app@workspace:packages/esm-preappointment-app"
+  dependencies:
+    "@carbon/react": "npm:~1.37.0"
+    lodash-es: "npm:^4.17.15"
+    webpack: "npm:^5.74.0"
+  peerDependencies:
+    "@openmrs/esm-framework": "*"
+    react: ^18.1.0
+    react-i18next: 11.x
+    react-router-dom: 6.x
+    swr: 2.x
+  languageName: unknown
+  linkType: soft
+
+"@ampath/esm-report-app@workspace:packages/esm-report-app":
+  version: 0.0.0-use.local
+  resolution: "@ampath/esm-report-app@workspace:packages/esm-report-app"
+  dependencies:
+    "@carbon/react": "npm:~1.37.0"
+    lodash-es: "npm:^4.17.15"
+    webpack: "npm:^5.74.0"
+  peerDependencies:
+    "@openmrs/esm-framework": 5.x
+    react: ^18.1.0
+    react-i18next: 11.x
+    react-router-dom: 6.x
+    swr: 2.x
+  languageName: unknown
+  linkType: soft
+
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.3.0
   resolution: "@ampproject/remapping@npm:2.3.0"
@@ -64,6 +145,7 @@ __metadata:
   resolution: "@ampth/esm-3.x-app@workspace:."
   dependencies:
     "@babel/core": "npm:^7.11.6"
+    "@carbon/charts-react": "npm:^1.16.1"
     "@carbon/react": "npm:~1.37.0"
     "@hookform/resolvers": "npm:^3.3.1"
     "@openmrs/esm-framework": "npm:^5.6.1-pre.1824"
@@ -104,6 +186,7 @@ __metadata:
     jest-cli: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     lint-staged: "npm:^15.2.1"
+    moment: "npm:^2.30.1"
     openmrs: "npm:next"
     prettier: "npm:^3.1.1"
     react: "npm:^18.1.0"
@@ -1494,7 +1577,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/charts@npm:^1.12.0":
+"@carbon/charts-react@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "@carbon/charts-react@npm:1.16.1"
+  dependencies:
+    "@carbon/charts": "npm:1.16.1"
+    "@carbon/icons-react": "npm:^11.39.0"
+    "@ibm/telemetry-js": "npm:^1.5.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 10/e92227ab44d3ea1a7311c5784197b875561fce5c02978fdc1956850a2aa0e7587f2d02580bff987f10a1e9c4747dd10b3df7ff023724381bc3e03ddbb719047f
+  languageName: node
+  linkType: hard
+
+"@carbon/charts@npm:1.16.1, @carbon/charts@npm:^1.12.0":
   version: 1.16.1
   resolution: "@carbon/charts@npm:1.16.1"
   dependencies:
@@ -1581,7 +1680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/icons-react@npm:^11.26.0, @carbon/icons-react@npm:^11.42.0":
+"@carbon/icons-react@npm:^11.26.0, @carbon/icons-react@npm:^11.39.0, @carbon/icons-react@npm:^11.42.0":
   version: 11.42.0
   resolution: "@carbon/icons-react@npm:11.42.0"
   dependencies:
@@ -13802,6 +13901,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"moment@npm:^2.30.1":
+  version: 2.30.1
+  resolution: "moment@npm:2.30.1"
+  checksum: 10/ae42d876d4ec831ef66110bdc302c0657c664991e45cf2afffc4b0f6cd6d251dde11375c982a5c0564ccc0fa593fc564576ddceb8c8845e87c15f58aa6baca69
+  languageName: node
+  linkType: hard
+
 "mrmime@npm:^2.0.0":
   version: 2.0.0
   resolution: "mrmime@npm:2.0.0"
@@ -15568,7 +15674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.1.0":
+"react-dom@npm:^18.1.0, react-dom@npm:^18.2.0":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -15700,7 +15806,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.1.0":
+"react@npm:^18.1.0, react@npm:^18.2.0":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
