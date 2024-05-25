@@ -315,7 +315,7 @@ export const esmPatientRegistrationSchema = {
     phone: {
       personAttributeUuid: {
         _type: Type.UUID,
-        _default: '14d4f066-15f5-102d-96e4-000c29c2a5d7',
+        _default: '72a759a8-1359-11df-a1f1-0026b9348838',
         _description: 'The UUID of the phone number person attribute type',
       },
       validation: {
