@@ -136,7 +136,7 @@ export function generateNUPIPayload(formValues: FormValues): RegistryPatient {
     (concept) => concept.uuid === formValues.obs['1542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
   );
   const maritalStatus = formValues.concepts.find(
-    (concept) => concept.uuid === formValues.obs['1054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+    (concept) => concept.uuid === formValues.obs['a899a9f2-1350-11df-a1f1-0026b9348838'],
   );
 
   let createRegistryPatient: RegistryPatient = {
