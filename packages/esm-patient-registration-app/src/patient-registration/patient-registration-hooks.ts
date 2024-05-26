@@ -324,7 +324,7 @@ export function usePatientObs(patientUuid: string) {
 
 function useConcepts() {
   const config = useConfig<RegistrationConfig>();
-  const { data: education, isLoading: educationLoad } = useConceptAnswers('1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+  const { data: education, isLoading: educationLoad } = useConceptAnswers('a89e48ae-1350-11df-a1f1-0026b9348838');
   const occupation: Array<ConceptAnswers> = [
     {
       uuid: '1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
@@ -355,10 +355,15 @@ function useConcepts() {
       display: 'Other',
     },
   ];
-
-  const martialStatus: Array<ConceptAnswers> = config.fieldDefinitions
-    .find((fieldDefinition) => fieldDefinition.id === 'maritalStatus')
-    .customConceptAnswers.map((concept) => ({ uuid: concept.uuid, display: concept.label }));
+  const martialStatus: Array<ConceptAnswers> = [
+    {
+      uuid: '1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+      display: 'Farmer',
+    },
+  ];
+  //const martialStatus: Array<ConceptAnswers> = config.fieldDefinitions
+  //  .find((fieldDefinition) => fieldDefinition.id === 'maritalStatus')
+  //  .customConceptAnswers.map((concept) => ({ uuid: concept.uuid, display: concept.label }));
 
   return { martialStatus, education, occupation, educationLoad };
 }

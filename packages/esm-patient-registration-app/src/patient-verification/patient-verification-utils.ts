@@ -108,7 +108,7 @@ export function handleClientRegistryResponse(
               props.values.concepts.find((concept) =>
                 concept.display?.toLowerCase()?.includes(clientResponse.client.maritalStatus?.toLowerCase()),
               )?.uuid ?? '',
-            '1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA':
+            'a89e48ae-1350-11df-a1f1-0026b9348838':
               props.values.concepts.find((concept) =>
                 concept.display?.toLowerCase()?.includes(clientResponse.client.educationLevel?.toLowerCase()),
               )?.uuid ?? '',
@@ -130,7 +130,7 @@ export function handleClientRegistryResponse(
 
 export function generateNUPIPayload(formValues: FormValues): RegistryPatient {
   const educationLevel = formValues.concepts.find(
-    (concept) => concept.uuid === formValues.obs['1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+    (concept) => concept.uuid === formValues.obs['a89e48ae-1350-11df-a1f1-0026b9348838'],
   );
   const occupation = formValues.concepts.find(
     (concept) => concept.uuid === formValues.obs['1542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],

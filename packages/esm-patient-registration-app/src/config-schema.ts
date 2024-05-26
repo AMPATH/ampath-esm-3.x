@@ -37,6 +37,7 @@ export interface Gender {
 export interface RegistrationConfig {
   sections: Array<string>;
   sectionDefinitions: Array<SectionDefinition>;
+
   fieldDefinitions: Array<FieldDefinition>;
   fieldConfigurations: {
     name: {
