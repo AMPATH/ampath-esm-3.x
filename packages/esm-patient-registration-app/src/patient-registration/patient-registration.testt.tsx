@@ -153,6 +153,13 @@ let mockOpenmrsConfig: RegistrationConfig = {
         searchAddressByLevel: true,
       },
     },
+    phone: {
+      personAttributeUuid: '',
+      validation: {
+        required: false,
+        matches: '',
+      },
+    },
   },
   concepts: {
     patientPhotoUuid: '736e8771-e501-4615-bfa7-570c03f4bef5',

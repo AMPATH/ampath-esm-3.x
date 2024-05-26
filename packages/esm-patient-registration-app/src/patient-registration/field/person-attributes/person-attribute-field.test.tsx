@@ -42,7 +42,7 @@ describe('PersonAttributeField', () => {
       data: mockPersonAttributeType,
       isLoading: false,
       error: null,
-      uuid: '14d4f066-15f5-102d-96e4-000c29c2a5d7d',
+      uuid: '72a759a8-1359-11df-a1f1-0026b9348838',
     });
   });
 

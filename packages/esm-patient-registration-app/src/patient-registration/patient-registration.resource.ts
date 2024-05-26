@@ -2,7 +2,7 @@ import { openmrsFetch, restBaseUrl } from '@openmrs/esm-framework';
 import { type Patient, type Relationship, type PatientIdentifier, type Encounter } from './patient-registration.types';
 
 export const uuidIdentifier = '05a29f94-c0ed-11e2-94be-8c13b969e334';
-export const uuidTelephoneNumber = '14d4f066-15f5-102d-96e4-000c29c2a5d7';
+export const uuidTelephoneNumber = '72a759a8-1359-11df-a1f1-0026b9348838';
 
 function dataURItoFile(dataURI: string) {
   const byteString = atob(dataURI.split(',')[1]);
