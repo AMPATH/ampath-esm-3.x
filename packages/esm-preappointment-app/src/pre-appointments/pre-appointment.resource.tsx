@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import { Buffer } from 'buffer';
-import { openmrsFetch, useConfig } from '@openmrs/esm-framework';
+import { openmrsFetch, restBaseUrl, useConfig } from '@openmrs/esm-framework';
 //import getPreappointment from './api/api';
 const moment = require('moment');
 const username = 'erugut';
@@ -28,11 +28,7 @@ const fetcher = async (url) => {
 };
 
 export const usePreAppointments = (locationUuid: string, yearWeek: any, successCode?: any) => {
-  //let url = `/rest/v2/amrs/preappointment`;
-
-  //let url = '/rest/v2/amrs/preappointment/';
-
-  let url = `https://ngx.ampath.or.ke/etl-latest/etl/ml-weekly-predictions?locationUuids=${locationUuid}&yearWeek=${yearWeek?.id}`;
+  let url = `${restBaseUrl}/rest/v1/amrscore/preappointment/?locationUuids=${locationUuid}&yearWeek=${yearWeek?.id}`;
   if (successCode.id !== '' && successCode) {
     url += successCode.id;
   }
