@@ -124,7 +124,7 @@ async function postToRegistry(
       const nupiIdentifier = {
         ['nationalUniquePatientIdentifier']: {
           identifierTypeUuid: 'cba702b9-4664-4b43-83f1-9ab473cbd64d',
-          identifierName: 'National Unique patient identifier',
+          identifierName: 'National Unique Patient Identifier (NUPI)',
           identifierValue: savedValues['clientNumber'],
           initialValue: savedValues['clientNumber'],
           identifierUuid: undefined,

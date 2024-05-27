@@ -18,8 +18,8 @@ export function handleClientRegistryResponse(
         selectedSource: { uuid: '', name: '' },
         preferred: false,
         required: false,
-        identifierTypeUuid: '49af6cdc-7968-4abb-bf46-de10d7f4859f',
-        identifierName: 'National ID',
+        identifierTypeUuid: '58a47054-1359-11df-a1f1-0026b9348838',
+        identifierName: 'Kenyan National ID Number',
         identifierValue: searchTerm,
       },
     };
@@ -61,13 +61,13 @@ export function handleClientRegistryResponse(
         preferred: false,
         required: false,
         identifierTypeUuid: '58a47054-1359-11df-a1f1-0026b9348838',
-        identifierName: 'National ID',
+        identifierName: 'Kenyan National ID Number',
         identifierValue: identifications !== undefined && identifications[0]?.identificationNumber,
       },
 
       ['nationalUniquePatientIdentifier']: {
         identifierTypeUuid: 'cba702b9-4664-4b43-83f1-9ab473cbd64d',
-        identifierName: 'National Unique patient identifier',
+        identifierName: 'National Unique Patient Identifier (NUPI)',
         identifierValue: clientNumber,
         initialValue: clientNumber,
         identifierUuid: undefined,
