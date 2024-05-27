@@ -30,7 +30,7 @@ export const mockedIdentifierTypes = [
     name: 'OpenMRS ID',
     required: true,
     uniquenessBehavior: 'UNIQUE',
-    uuid: '05a29f94-c0ed-11e2-94be-8c13b969e334',
+    uuid: '58a4732e-1359-11df-a1f1-0026b9348838',
     autoGenerationSource: null,
   },
   {

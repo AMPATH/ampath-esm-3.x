@@ -2,7 +2,7 @@ export const openmrsID = {
   name: 'OpenMRS ID',
   fieldName: 'openMrsId',
   required: true,
-  uuid: '05a29f94-c0ed-11e2-94be-8c13b969e334',
+  uuid: '58a4732e-1359-11df-a1f1-0026b9348838',
   format: null,
   isPrimary: true,
   identifierSources: [

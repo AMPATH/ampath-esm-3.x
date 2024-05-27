@@ -60,13 +60,13 @@ export function handleClientRegistryResponse(
         selectedSource: { uuid: '', name: '' },
         preferred: false,
         required: false,
-        identifierTypeUuid: '49af6cdc-7968-4abb-bf46-de10d7f4859f',
+        identifierTypeUuid: '58a47054-1359-11df-a1f1-0026b9348838',
         identifierName: 'National ID',
         identifierValue: identifications !== undefined && identifications[0]?.identificationNumber,
       },
 
       ['nationalUniquePatientIdentifier']: {
-        identifierTypeUuid: 'f85081e2-b4be-4e48-b3a4-7994b69bb101',
+        identifierTypeUuid: 'cba702b9-4664-4b43-83f1-9ab473cbd64d',
         identifierName: 'National Unique patient identifier',
         identifierValue: clientNumber,
         initialValue: clientNumber,
