@@ -3,8 +3,8 @@ import { Buffer } from 'buffer';
 import { openmrsFetch, restBaseUrl, useConfig } from '@openmrs/esm-framework';
 //import getPreappointment from './api/api';
 const moment = require('moment');
-const username = 'erugut';
-const password = 'nNoel@2019';
+const username = '';
+const password = '';
 //const { basicAuthBase64 } = useConfig();
 const basicAuthBase64 = Buffer.from(`${username}:${password}`).toString('base64');
 
@@ -16,7 +16,7 @@ interface YearWeek {
 const fetcher = async (url) => {
   try {
     const response = await fetch(url, {
-      headers: { Authorization: `Basic ${basicAuthBase64}` },
+      //headers: { Authorization: `Basic ${basicAuthBase64}` },
     });
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.statusText}`);
