@@ -106,7 +106,7 @@ export const DobField: React.FC = () => {
               {...birthdate}
               dateFormat={dateFormat}
               onChange={onDateChange}
-              maxDate={today}
+              //maxDate={today}
               labelText={t('dateOfBirthLabelText', 'Date of Birth')}
               invalid={!!(birthdateMeta.touched && birthdateMeta.error)}
               invalidText={birthdateMeta.error && t(birthdateMeta.error)}
