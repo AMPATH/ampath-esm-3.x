@@ -123,7 +123,7 @@ async function postToRegistry(
       const savedValues = await clientRegistryResponse.json();
       const nupiIdentifier = {
         ['nationalUniquePatientIdentifier']: {
-          identifierTypeUuid: 'f85081e2-b4be-4e48-b3a4-7994b69bb101',
+          identifierTypeUuid: 'cba702b9-4664-4b43-83f1-9ab473cbd64d',
           identifierName: 'National Unique patient identifier',
           identifierValue: savedValues['clientNumber'],
           initialValue: savedValues['clientNumber'],

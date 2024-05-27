@@ -59,7 +59,7 @@ export const generateRandomPatient = async (api: APIRequestContext): Promise<Pat
       identifiers: [
         {
           identifier,
-          identifierType: '05a29f94-c0ed-11e2-94be-8c13b969e334',
+          identifierType: '58a4732e-1359-11df-a1f1-0026b9348838',
           location: '44c3efb0-2583-4c80-a79e-1f756a03c0a1',
           preferred: true,
         },
