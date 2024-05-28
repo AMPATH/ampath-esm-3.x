@@ -15,7 +15,7 @@ export const HTSHeader: React.FC = () => {
       <div className={styles['left-justified-items']}>
         <HTSIllustration />
         <div className={styles['page-labels']}>
-          <p className={styles['page-name']}>{t('otz', 'HTS Dashboard')}</p>
+          <p className={styles['page-name']}>{t('hts', 'HTS Dashboard')}</p>
         </div>
       </div>
       <div className={styles['right-justified-items']}>
