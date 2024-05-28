@@ -355,15 +355,51 @@ function useConcepts() {
       display: 'Other',
     },
   ];
-  //const martialStatus: Array<ConceptAnswers> = [
-  // {
-  //    uuid: '1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
-  //    display: 'Farmer',
-  //  },
-  //];
-  const martialStatus: Array<ConceptAnswers> = config.fieldDefinitions
-    .find((fieldDefinition) => fieldDefinition.id === 'maritalStatus')
-    .customConceptAnswers.map((concept) => ({ uuid: concept.uuid, display: concept.label }));
+  const martialStatus: Array<ConceptAnswers> = [
+    {
+      uuid: 'a8b03712-1350-11df-a1f1-0026b9348838',
+      display: 'Married polygamous',
+    },
+    {
+      uuid: 'a8aa76b0-1350-11df-a1f1-0026b9348838',
+      display: 'Married monogamous',
+    },
+    {
+      uuid: 'a899ad58-1350-11df-a1f1-0026b9348838',
+      display: 'Divorced',
+    },
+    {
+      uuid: 'a899ae34-1350-11df-a1f1-0026b9348838',
+      display: 'Widowed',
+    },
+    {
+      uuid: 'a899af10-1350-11df-a1f1-0026b9348838',
+      display: 'Cohabiting',
+    },
+    {
+      uuid: 'a899ac7c-1350-11df-a1f1-0026b9348838',
+      display: 'Single',
+    },
+    {
+      uuid: 'a899aba0-1350-11df-a1f1-0026b9348838',
+      display: 'Separated',
+    },
+    {
+      uuid: '7831f002-331d-4f07-bf91-6bb65cd31050',
+      display: 'Sexual Partner/Sexual Partner',
+    },
+    {
+      uuid: 'a89ad3a4-1350-11df-a1f1-0026b9348838',
+      display: 'Not Applicable',
+    },
+    {
+      uuid: 'a8aaf3e2-1350-11df-a1f1-0026b9348838',
+      display: 'Other Non-Coded',
+    },
+  ];
+  //const martialStatus: Array<ConceptAnswers> = config.fieldDefinitions
+  //  .find((fieldDefinition) => fieldDefinition.id === 'maritalStatus')
+  //  .customConceptAnswers.map((concept) => ({ uuid: concept.uuid, display: concept.label }));
 
   return { martialStatus, education, occupation, educationLoad };
 }
