@@ -355,15 +355,15 @@ function useConcepts() {
       display: 'Other',
     },
   ];
-  const martialStatus: Array<ConceptAnswers> = [
-    {
-      uuid: '1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
-      display: 'Farmer',
-    },
-  ];
-  //const martialStatus: Array<ConceptAnswers> = config.fieldDefinitions
-  //  .find((fieldDefinition) => fieldDefinition.id === 'maritalStatus')
-  //  .customConceptAnswers.map((concept) => ({ uuid: concept.uuid, display: concept.label }));
+  //const martialStatus: Array<ConceptAnswers> = [
+  // {
+  //    uuid: '1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+  //    display: 'Farmer',
+  //  },
+  //];
+  const martialStatus: Array<ConceptAnswers> = config.fieldDefinitions
+    .find((fieldDefinition) => fieldDefinition.id === 'maritalStatus')
+    .customConceptAnswers.map((concept) => ({ uuid: concept.uuid, display: concept.label }));
 
   return { martialStatus, education, occupation, educationLoad };
 }
