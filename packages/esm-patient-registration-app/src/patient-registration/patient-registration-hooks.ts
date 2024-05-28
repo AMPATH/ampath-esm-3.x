@@ -36,7 +36,7 @@ import { useInitialPatientRelationships } from './section/patient-relationships/
 import dayjs from 'dayjs';
 
 export function useInitialFormValues(patientUuid: string): [FormValues, Dispatch<FormValues>] {
-  const { martialStatus, education, occupation, educationLoad } = useConcepts();
+  const { martialStatus, education, occupation, educationLoad, occupationLoad } = useConcepts();
   const { isLoading: isLoadingPatientToEdit, patient: patientToEdit } = usePatient(patientUuid);
   const { data: attributes, isLoading: isLoadingAttributes } = useInitialPersonAttributes(patientUuid);
   const { data: identifiers, isLoading: isLoadingIdentifiers } = useInitialPatientIdentifiers(patientUuid);
@@ -325,7 +325,8 @@ export function usePatientObs(patientUuid: string) {
 function useConcepts() {
   const config = useConfig<RegistrationConfig>();
   const { data: education, isLoading: educationLoad } = useConceptAnswers('a89e48ae-1350-11df-a1f1-0026b9348838');
-  const occupation: Array<ConceptAnswers> = [
+  const { data: occupation, isLoading: occupationLoad } = useConceptAnswers('a8a0a00e-1350-11df-a1f1-0026b9348838');
+  /* const occupation: Array<ConceptAnswers> = [
     {
       uuid: '1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
       display: 'Farmer',
@@ -354,7 +355,7 @@ function useConcepts() {
       uuid: '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
       display: 'Other',
     },
-  ];
+  ]; */
   const martialStatus: Array<ConceptAnswers> = [
     {
       uuid: 'a8b03712-1350-11df-a1f1-0026b9348838',
@@ -401,5 +402,5 @@ function useConcepts() {
   //  .find((fieldDefinition) => fieldDefinition.id === 'maritalStatus')
   //  .customConceptAnswers.map((concept) => ({ uuid: concept.uuid, display: concept.label }));
 
-  return { martialStatus, education, occupation, educationLoad };
+  return { martialStatus, education, occupation, educationLoad, occupationLoad };
 }
