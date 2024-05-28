@@ -1,37 +1,37 @@
 import { Coronavirus } from '@carbon/react/icons';
 
-export const otzPatientChartMeta = {
+export const htsPatientChartMeta = {
   title: 'HTS',
   slotName: 'ampath-hts-patient-chart-slot',
   isExpanded: false,
 };
 
-export const otzDashboardMeta = {
-  name: 'otz-cases',
-  slot: 'otz-cases-dashboard-slot',
-  config: { columns: 1, type: 'grid', programme: 'otz', dashboardTitle: 'OTZ clubs', icon: Coronavirus },
-  title: 'OTZ clubs',
+export const htsDashboardMeta = {
+  name: 'hts-cases',
+  slot: 'hts-cases-dashboard-slot',
+  config: { columns: 1, type: 'grid', programme: 'hts', dashboardTitle: 'HTS clubs', icon: Coronavirus },
+  title: 'HTS clubs',
   dashboardIcon: Coronavirus,
 };
 
-export const otzPatientClinicalChartMeta = {
-  title: 'OTZ Program',
-  slotName: 'ohri-otz-slot',
+export const htsPatientClinicalChartMeta = {
+  title: 'HTS Program',
+  slotName: 'ohri-hts-slot',
   isExpanded: false,
 };
 
-export const otzPatientSummaryMeta = {
-  slot: 'otz-patient-summary-slot',
+export const htsPatientSummaryMeta = {
+  slot: 'hts-patient-summary-slot',
   columns: 1,
-  title: 'OTZ Patient Summary',
-  path: 'otz-patient-summary',
+  title: 'HTS Patient Summary',
+  path: 'hts-patient-summary',
   layoutMode: 'anchored',
 };
 
-export const otzProgramManagementDashboardMeta = {
-  slot: 'otz-program-management-summary-slot',
+export const htsProgramManagementDashboardMeta = {
+  slot: 'hts-program-management-summary-slot',
   columns: 1,
-  title: 'OTZ Services',
-  path: 'otz-program-management',
+  title: 'HTS Services',
+  path: 'hts-program-management',
   layoutMode: 'anchored',
 };

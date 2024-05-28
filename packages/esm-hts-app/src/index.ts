@@ -2,18 +2,18 @@ import { defineConfigSchema, getSyncLifecycle } from '@openmrs/esm-framework';
 import { configSchema } from './config-schema';
 import Root from './root.component';
 import {
-  otzPatientClinicalChartMeta,
-  otzPatientSummaryMeta,
-  otzProgramManagementDashboardMeta,
+  htsPatientClinicalChartMeta,
+  htsPatientSummaryMeta,
+  htsProgramManagementDashboardMeta,
 } from './dashboard.meta';
 import { createDashboardGroup, createDashboardLink } from '@openmrs/esm-patient-common-lib';
-import OTZHomePatientTabs from './views/dashboard/patient-list-tabs/hts-patient-list-tabs.component';
+import HTSHomePatientTabs from './views/dashboard/patient-list-tabs/hts-patient-list-tabs.component';
 import { createLeftPanelLink } from './left-panel-link.component';
-import OTZSummaryTiles from './views/dashboard/summary-tiles/hts-summary-tiles.component';
-import otzPatientSummary from './views/dashboard/patient-summary/patient-summary.component';
-import otzProgramManagementSummary from './views/dashboard/hts-program-services/otz-program-services';
+import HTSSummaryTiles from './views/dashboard/summary-tiles/hts-summary-tiles.component';
+import htsPatientSummary from './views/dashboard/patient-summary/patient-summary.component';
+import HtsProgramManagementSummary from './views/dashboard/hts-program-services/hts-program-services';
 
-export const moduleName = '@ampath/esm-otz-app';
+export const moduleName = '@ampath/esm-hts-app';
 
 const options = {
   featureName: 'esm-hts-app',
@@ -28,9 +28,9 @@ export function startupApp() {
   defineConfigSchema(moduleName, configSchema);
 }
 
-export const patientChartTptDashboard = getSyncLifecycle(createDashboardGroup(otzPatientClinicalChartMeta), options);
+export const patientChartTptDashboard = getSyncLifecycle(createDashboardGroup(htsPatientClinicalChartMeta), options);
 
-export const otzLeftPanelLink = getSyncLifecycle(
+export const htsLeftPanelLink = getSyncLifecycle(
   createLeftPanelLink({
     name: 'hts',
     title: 'HTS',
@@ -38,30 +38,30 @@ export const otzLeftPanelLink = getSyncLifecycle(
   }),
   options,
 );
-export const otzDashboardTiles = getSyncLifecycle(OTZSummaryTiles, {
+export const htsDashboardTiles = getSyncLifecycle(HTSSummaryTiles, {
   featureName: 'hts-home-tiles',
   moduleName,
 });
 
-export const otzDashboardTabs = getSyncLifecycle(OTZHomePatientTabs, {
+export const htsDashboardTabs = getSyncLifecycle(HTSHomePatientTabs, {
   featureName: 'hts-home-tabs',
   moduleName,
 });
 
-export const otzPatientSummaryDashboardLink = getSyncLifecycle(
-  createDashboardLink({ ...otzPatientSummaryMeta, moduleName }),
+export const htsPatientSummaryDashboardLink = getSyncLifecycle(
+  createDashboardLink({ ...htsPatientSummaryMeta, moduleName }),
   options,
 );
-export const otzPatientSummaryDashboard = getSyncLifecycle(otzPatientSummary, {
+export const htsPatientSummaryDashboard = getSyncLifecycle(htsPatientSummary, {
   featureName: 'hts-patient-summary',
   moduleName,
 });
 
-export const otzProgramManagementDashboardLink = getSyncLifecycle(
-  createDashboardLink({ ...otzProgramManagementDashboardMeta, moduleName }),
+export const htsProgramManagementDashboardLink = getSyncLifecycle(
+  createDashboardLink({ ...htsProgramManagementDashboardMeta, moduleName }),
   options,
 );
-export const otzProgramManagementDashboard = getSyncLifecycle(otzProgramManagementSummary, {
-  featureName: 'otz-program-management-summary',
+export const htsProgramManagementDashboard = getSyncLifecycle(HtsProgramManagementSummary, {
+  featureName: 'hts-program-management-summary',
   moduleName,
 });

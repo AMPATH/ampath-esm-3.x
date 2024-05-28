@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import OtzDashboard from './hts.component';
+import HtsDashboard from './hts.component';
 
 const Root: React.FC = () => {
   const basePath = window.getOpenmrsSpaBase() + 'home/hts';
@@ -8,7 +8,7 @@ const Root: React.FC = () => {
   return (
     <BrowserRouter basename={basePath}>
       <Routes>
-        <Route path="/" element={<OtzDashboard />} />
+        <Route path="/" element={<HtsDashboard />} />
       </Routes>
     </BrowserRouter>
   );

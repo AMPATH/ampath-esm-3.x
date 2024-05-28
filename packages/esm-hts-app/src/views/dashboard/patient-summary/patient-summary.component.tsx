@@ -2,7 +2,7 @@ import React from 'react';
 import { EmptyState } from '@openmrs/esm-patient-common-lib';
 import { useTranslation } from 'react-i18next';
 
-const OtzPatientSummary: React.FC = () => {
+const HtsPatientSummary: React.FC = () => {
   const { t } = useTranslation();
 
   const headerClinicalViews = t('clinicalViews', 'clinical Views');
@@ -20,4 +20,4 @@ const OtzPatientSummary: React.FC = () => {
   );
 };
 
-export default OtzPatientSummary;
+export default HtsPatientSummary;

@@ -8,7 +8,7 @@ import TotalEnrolled from './hts-patient-list-tables/total-enrolled.component';
 import TotalActive from './hts-patient-list-tables/total-active.component';
 import EligibleNotEnrolled from './hts-patient-list-tables/eligible-not-enrolled.component';
 
-function OTZHomePatientTabs() {
+function HTSHomePatientTabs() {
   const { t } = useTranslation();
 
   return (
@@ -43,4 +43,4 @@ function OTZHomePatientTabs() {
   );
 }
 
-export default OTZHomePatientTabs;
+export default HTSHomePatientTabs;

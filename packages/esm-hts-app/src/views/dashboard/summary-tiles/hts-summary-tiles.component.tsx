@@ -5,7 +5,7 @@ interface SummaryTileProps {
   headerTitle: string;
 }
 
-const OTZSummaryTile: React.FC<SummaryTileProps> = ({ headerTitle }) => {
+const HTSSummaryTile: React.FC<SummaryTileProps> = ({ headerTitle }) => {
   return (
     <React.Fragment>
       <Tile className={styles.tileContainer}>
@@ -25,4 +25,4 @@ const OTZSummaryTile: React.FC<SummaryTileProps> = ({ headerTitle }) => {
   );
 };
 
-export default OTZSummaryTile;
+export default HTSSummaryTile;
