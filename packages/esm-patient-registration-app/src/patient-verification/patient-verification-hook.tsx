@@ -148,8 +148,8 @@ async function postToRegistry(
         ...formValues,
         attributes: {
           ...formValues.attributes,
-          ['869f623a-f78e-4ace-9202-0bed481822f5']: 'Failed validation',
-          ['752a0331-5293-4aa5-bf46-4d51aaf2cdc5']: 'Failed',
+          ['5553d509-f03a-4982-8e16-0d6f3d70fb8b']: 'Failed validation',
+          ['d8f4d295-3f31-47ec-b377-825bd38820b2']: 'Failed',
         },
       });
       showNotification({
