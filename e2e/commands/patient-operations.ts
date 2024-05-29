@@ -47,7 +47,7 @@ export interface Identifier {
 }
 
 export const generateRandomPatient = async (api: APIRequestContext): Promise<Patient> => {
-  const identifierRes = await api.post('idgen/identifiersource/8549f706-7e85-4c1d-9424-217d50a2988b/identifier', {
+  const identifierRes = await api.post('idgen/identifiersource/58a4732e-1359-11df-a1f1-0026b9348838/identifier', {
     data: {},
   });
   await expect(identifierRes.ok()).toBeTruthy();
