@@ -88,9 +88,9 @@ export function handleClientRegistryResponse(
           birthdate: new Date(dateOfBirth),
           isDead: !isAlive,
           attributes: {
-            'b2c38640-2603-4629-aebd-3b54f33f1e3a': contact?.primaryPhone,
-            '94614350-84c8-41e0-ac29-86bc107069be': contact?.secondaryPhone,
-            'b8d0b331-1d2d-4a9a-b741-1816f498bdb6': contact?.emailAddress ?? '',
+            '72a759a8-1359-11df-a1f1-0026b9348838': contact?.primaryPhone,
+            'b0a08406-09c0-4f8b-8cb5-b22b6d4a8e46': contact?.secondaryPhone,
+            '2f65dbcb-3e58-45a3-8be7-fd1dc9aa0faa': contact?.emailAddress ?? '',
           },
           address: {
             address1: residence?.address,
@@ -104,7 +104,7 @@ export function handleClientRegistryResponse(
           },
           identifiers: { ...props.values.identifiers, ...nupiIdentifiers },
           obs: {
-            '1054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA':
+            'a899a9f2-1350-11df-a1f1-0026b9348838':
               props.values.concepts.find((concept) =>
                 concept.display?.toLowerCase()?.includes(clientResponse.client.maritalStatus?.toLowerCase()),
               )?.uuid ?? '',
@@ -112,12 +112,12 @@ export function handleClientRegistryResponse(
               props.values.concepts.find((concept) =>
                 concept.display?.toLowerCase()?.includes(clientResponse.client.educationLevel?.toLowerCase()),
               )?.uuid ?? '',
-            '1542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA':
+            'a8a0a00e-1350-11df-a1f1-0026b9348838':
               clientResponse.client.occupation === undefined || clientResponse.client.occupation === null
-                ? '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+                ? 'a899e0ac-1350-11df-a1f1-0026b9348838'
                 : props.values.concepts.find(
                     (concept) => concept.display?.toLowerCase() === clientResponse.client.occupation?.toLowerCase(),
-                  )?.uuid ?? '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+                  )?.uuid ?? 'a8aaf3e2-1350-11df-a1f1-0026b9348838',
           },
         });
         dispose();
@@ -133,7 +133,7 @@ export function generateNUPIPayload(formValues: FormValues): RegistryPatient {
     (concept) => concept.uuid === formValues.obs['a89e48ae-1350-11df-a1f1-0026b9348838'],
   );
   const occupation = formValues.concepts.find(
-    (concept) => concept.uuid === formValues.obs['1542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+    (concept) => concept.uuid === formValues.obs['a8a0a00e-1350-11df-a1f1-0026b9348838'],
   );
   const maritalStatus = formValues.concepts.find(
     (concept) => concept.uuid === formValues.obs['a899a9f2-1350-11df-a1f1-0026b9348838'],
@@ -156,9 +156,9 @@ export function generateNUPIPayload(formValues: FormValues): RegistryPatient {
     },
     nextOfKins: [],
     contact: {
-      primaryPhone: formValues.attributes['b2c38640-2603-4629-aebd-3b54f33f1e3a'],
-      secondaryPhone: formValues.attributes['94614350-84c8-41e0-ac29-86bc107069be'],
-      emailAddress: formValues.attributes['b8d0b331-1d2d-4a9a-b741-1816f498bdb6'],
+      primaryPhone: formValues.attributes['72a759a8-1359-11df-a1f1-0026b9348838'],
+      secondaryPhone: formValues.attributes['b0a08406-09c0-4f8b-8cb5-b22b6d4a8e46'],
+      emailAddress: formValues.attributes['2f65dbcb-3e58-45a3-8be7-fd1dc9aa0faa'],
     },
     country: 'KE',
     countyOfBirth: `0${counties.find((county) => county.name.includes(formValues.address['countyDistrict']))?.code}`,
