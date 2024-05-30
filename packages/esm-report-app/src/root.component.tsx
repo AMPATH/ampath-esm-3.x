@@ -14,6 +14,9 @@ import Resources from './resources/resources.component';
 import styles from './root.scss';
 import ClinicalDashboardComponent from './clinical-dashboard/clinical-dashboard.component';
 import IptReportComponent from './clinical-dashboard/ipt-report/ipt-report.component';
+import { ReportHeader } from './headers/report-header-component';
+import { ReportsList } from './reports-dashboard/report-tab/components/report-tabs';
+import ReportDashboard from './reports-dashboard/report-dashboard-component';
 
 const Root: React.FC = () => {
   const { t } = useTranslation();
@@ -24,7 +27,10 @@ const Root: React.FC = () => {
         {t("reportsHeader", "Reports Dashboard")}
       </h3>
       <Resources /> */}
+      <ReportHeader />
+
       <IptReportComponent />
+      <ReportDashboard />
     </div>
   );
 };
