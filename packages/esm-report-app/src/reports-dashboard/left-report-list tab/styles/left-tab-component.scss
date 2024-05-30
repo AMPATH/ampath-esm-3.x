@@ -1,18 +1,17 @@
 .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .leftPanel {
-    width: 70%;
-    padding: 10px;
-    background-color: #f0f0f0;
-  }
-  
-  .rightPanel {
-    width: 30%;
-    padding: 10px;
-    background-color: #e0e0e0;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.leftPanel {
+  width: 70%;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.rightPanel {
+  width: 30%;
+  padding: 10px;
+  background-color: #e0e0e0;
+}

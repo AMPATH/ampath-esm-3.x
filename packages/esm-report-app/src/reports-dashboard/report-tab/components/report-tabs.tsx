@@ -24,6 +24,11 @@ export const ReportsList: React.FC = () => {
               <Tab>VMMC</Tab>
               <Tab>Prep</Tab>
               <Tab>ADHOC</Tab>
+              <Tab>Prep</Tab>
+              <Tab>VMMC</Tab>
+              <Tab>Prep</Tab>
+              <Tab>ADHOC</Tab>
+              <Tab>ADHOC</Tab>
             </TabList>
 
             {/* TabPanels Component */}
