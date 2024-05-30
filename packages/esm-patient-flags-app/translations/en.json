@@ -1,9 +1,9 @@
 {
   "2xChart": "AMRS POC 2.X",
+  "AMRSHome": "AMRS POC Home",
+  "amrsModules": "AMRS Modules",
   "clearSearch": "Clear search",
   "emptyLinkSearchText": "There are no links to display that match the search criteria",
   "errorPatientFlags": "Error loading patient flags",
-  "amrsHome": "AMRS Home",
-  "amrsModules": "AMRS Modules",
   "search": "Search for a module"
 }
