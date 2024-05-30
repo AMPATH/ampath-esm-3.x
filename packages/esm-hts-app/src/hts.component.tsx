@@ -12,12 +12,12 @@ const HTSDashboard: React.FC = () => {
     <React.Fragment>
       <HTSHeader />
       <div className={styles.tileLayout}>
-        <HTSSummaryTile headerTitle={t('totalScreened', 'Total screened')} />
-        <HTSSummaryTile headerTitle={t('totalEligible', 'Total eligible')} />
-        <HTSSummaryTile headerTitle={t('totalTested', 'Total tested')} />
-        <HTSSummaryTile headerTitle={t('totalPositive', 'Total positive')} />
-        <HTSSummaryTile headerTitle={t('totalNegative', 'Total negative')} />
-        <HTSSummaryTile headerTitle={t('totalInvalid', 'Total invalid')} />
+        <HTSSummaryTile headerTitle={t('totalScreened', 'Total Screened')} />
+        <HTSSummaryTile headerTitle={t('totalEligible', 'Total Eligible')} />
+        <HTSSummaryTile headerTitle={t('totalTested', 'Total Tested')} />
+        <HTSSummaryTile headerTitle={t('totalPositive', 'Total Positive')} />
+        <HTSSummaryTile headerTitle={t('totalNegative', 'Total Negative')} />
+        <HTSSummaryTile headerTitle={t('totalInvalid', 'Total Invalid')} />
       </div>
       <div className={styles.tabList}>
         <HTSHomePatientTabs />
