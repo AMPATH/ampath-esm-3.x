@@ -13,6 +13,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.(s?css)$': 'identity-obj-proxy',
     '@openmrs/esm-framework': '@openmrs/esm-framework/mock',
+    '@openmrs/esm-patient-common-lib': '@openmrs/esm-patient-common-lib',
     '^dexie$': require.resolve('dexie'),
     '^lodash-es/(.*)$': 'lodash/$1',
     'lodash-es': 'lodash',

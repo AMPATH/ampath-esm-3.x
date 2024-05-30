@@ -3,10 +3,10 @@ import { Buffer } from 'buffer';
 import { openmrsFetch, restBaseUrl, useConfig } from '@openmrs/esm-framework';
 //import getPreappointment from './api/api';
 const moment = require('moment');
-const username = '';
-const password = '';
+//const username = '';
+//const password = '';
 //const { basicAuthBase64 } = useConfig();
-const basicAuthBase64 = Buffer.from(`${username}:${password}`).toString('base64');
+//const basicAuthBase64 = Buffer.from(`${username}:${password}`).toString('base64');
 
 interface YearWeek {
   id: string;
@@ -28,15 +28,20 @@ const fetcher = async (url) => {
 };
 
 export const usePreAppointments = (locationUuid: string, yearWeek: any, successCode?: any) => {
-  let url = `${restBaseUrl}/rest/v1/amrscore/preappointment/?locationUuids=${locationUuid}&yearWeek=${yearWeek?.id}`;
+  let url = `/amrs/rest/v1/amrscore/preappointment/?locationUUID=${locationUuid}&yearWeek=${yearWeek?.id}`;
   if (successCode.id !== '' && successCode) {
     url += successCode.id;
   }
 
-  //const { data, error, isLoading, isValidating } = useSWR(url, fetcher);
+  //const patientFlagsUrl = `/rest/v1/amrscore/preappointment/?locationUuids=${locationUuid}&yearWeek=${yearWeek?.id}`;
+  //const { data, mutate, error, isLoading, isValidating } = useSWR(patientFlagsUrl, openmrsFetch);
   const { data, error, isLoading, isValidating } = useSWR(url, fetcher);
+  // const { data, error, isLoading, isValidating } = useSWR(url, fetcher);
 
   const preAppointments = data ? (data as any)?.result : [];
+
+  //console.log('Fetched data:', data);
+  //console.log('PreAppointments:', preAppointments);
 
   return {
     preAppointments: preAppointments,
