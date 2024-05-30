@@ -20,7 +20,7 @@ import { Download } from '@carbon/react/icons';
 import { ConfigurableLink, useConfig, usePagination } from '@openmrs/esm-framework';
 import { EmptyState } from '../empty-state/empty-state.component';
 
-const MissedAppointments: React.FC = () => {
+const Eligible: React.FC = () => {
   const { t } = useTranslation();
   //data fetching hook called here, will populate the table rows
 
@@ -47,38 +47,30 @@ const MissedAppointments: React.FC = () => {
       key: 'phoneNumber',
     },
     {
-      header: 'Last appointment date',
-      key: 'lastAppointmentDate',
+      header: 'Latest VL',
+      key: 'latestVL',
     },
     {
-      header: 'Visit Type',
-      key: 'visitType',
+      header: 'Latest VL Date',
+      key: 'latestVLDate',
     },
     {
-      header: 'Latest RTC Date',
+      header: 'VL Category',
+      key: 'vlCategory',
+    },
+    {
+      header: 'Latest RTC date',
       key: 'latestRTCDate',
-    },
-    {
-      header: 'Days since last appointment',
-      key: 'daysSinceLastAppointment',
-    },
-    {
-      header: 'Current regimen',
-      key: 'currentRegimen',
-    },
-    {
-      header: 'Adherence',
-      key: 'adherence',
     },
   ];
 
   return (
     <EmptyState
-      displayText={t('missedAppointments-lower', 'missed appointments')}
-      headerTitle={t('missedAppointments', 'Missed appointments')}
+      displayText={t('eligibilityDisplay', 'patients eligible for hts screening')}
+      headerTitle={t('eligibilityHeader', 'Eligible patients')}
       scheduleType="Unscheduled"
     />
   );
 };
 
-export default MissedAppointments;
+export default Eligible;

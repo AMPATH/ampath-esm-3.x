@@ -20,7 +20,7 @@ import { Download } from '@carbon/react/icons';
 import { ConfigurableLink, useConfig, usePagination } from '@openmrs/esm-framework';
 import { EmptyState } from '../empty-state/empty-state.component';
 
-const EligibleNotEnrolled: React.FC = () => {
+const DueForLinkage: React.FC = () => {
   const { t } = useTranslation();
   //data fetching hook called here, will populate the table rows
 
@@ -45,11 +45,11 @@ const EligibleNotEnrolled: React.FC = () => {
 
   return (
     <EmptyState
-      displayText={t('eligibleNotEnrolledDisplayText', 'eligible non-enrolled patients')}
-      headerTitle={t('totalActiveHeader', 'Eligible not enrolled')}
+      displayText={t('dueForLinkageDisplayText', 'due for linkage patients')}
+      headerTitle={t('dueForLinkageHeader', 'Due for linkage')}
       scheduleType="Unscheduled"
     />
   );
 };
 
-export default EligibleNotEnrolled;
+export default DueForLinkage;
