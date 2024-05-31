@@ -28,12 +28,12 @@ const fetcher = async (url) => {
 };
 
 export const usePreAppointments = (locationUuid: string, yearWeek: any, successCode?: any) => {
-  let url = `/amrs/rest/v1/amrscore/preappointment/?locationUUID=${locationUuid}&yearWeek=${yearWeek?.id}`;
+  let url = `/ws/rest/v1/amrscore/preappointment?locationUUID=${locationUuid}&yearWeek=${yearWeek?.id}`;
   if (successCode.id !== '' && successCode) {
     url += successCode.id;
   }
 
-  //const patientFlagsUrl = `/rest/v1/amrscore/preappointment/?locationUuids=${locationUuid}&yearWeek=${yearWeek?.id}`;
+  //const patientFlagsUrl = `/ws/rest/v1/amrscore/preappointment?locationUuids=${locationUuid}&yearWeek=${yearWeek?.id}`;
   //const { data, mutate, error, isLoading, isValidating } = useSWR(patientFlagsUrl, openmrsFetch);
   const { data, error, isLoading, isValidating } = useSWR(url, fetcher);
   // const { data, error, isLoading, isValidating } = useSWR(url, fetcher);
