@@ -1,10 +1,10 @@
 import React from 'react';
-import { ReportsList } from './report-tab/components/report-tabs';
+import { RenderReportTab } from './report-tab/report-tabs';
 
 const ReportDashboard: React.FC = () => {
   return (
     <>
-      <ReportsList />
+      <RenderReportTab />
     </>
   );
 };

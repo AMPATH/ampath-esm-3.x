@@ -5,7 +5,7 @@ import { Download } from '@carbon/react/icons';
 const GenerateButton: React.FC = () => {
   return (
     <Button kind="ghost" renderIcon={Download}>
-      Button
+      Generate
     </Button>
   );
 };

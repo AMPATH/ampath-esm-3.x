@@ -39,6 +39,7 @@ __metadata:
     "@babel/core": "npm:^7.11.6"
     "@carbon/charts-react": "npm:^1.16.1"
     "@carbon/react": "npm:~1.37.0"
+    "@carbon/styles": "npm:^1.58.0"
     "@hookform/resolvers": "npm:^3.3.1"
     "@ohri/openmrs-esm-ohri-commons-lib": "npm:next"
     "@openmrs/esm-framework": "npm:^5.6.1-pre.1824"

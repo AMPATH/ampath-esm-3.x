@@ -61,7 +61,6 @@ const ReportTable: React.FC = () => {
                     {row.cells.map((cell) => (
                       <TableCell key={cell.id}>{cell.value}</TableCell>
                     ))}
-                    {/* <GenerateReportComponent /> */}
                   </TableRow>
                 ))}
               </TableBody>

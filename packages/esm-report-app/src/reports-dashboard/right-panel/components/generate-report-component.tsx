@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ReportEndDate from '../date-pickers/end-date-component';
-import ReportTable from '../../report-table-component';
+import ReportTable from '../../left-panel/report-table-component';
 
 import ReportStartDate from '../date-pickers/start-date-component';
 import GenerateButton from '../generate-report-button';
