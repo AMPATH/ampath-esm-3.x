@@ -1,11 +1,11 @@
 .container {
   display: flex;
   justify-content: space-between;
-  width: 100%  !important;
-  
-  border: 1px solid #ccc !important; 
- border-radius: 8px !important; 
-  padding: 16px !important; 
+  width: 100% !important;
+
+  border: 1px solid #ccc !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
 }
 
 .leftPanel {
@@ -19,4 +19,3 @@
   padding: 10px;
   background-color: #e0e0e0;
 }
-
