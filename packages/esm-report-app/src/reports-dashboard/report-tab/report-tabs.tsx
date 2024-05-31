@@ -10,16 +10,14 @@ export const RenderReportTab: React.FC = () => {
         <TabList aria-label="List of tabs" contained fullWidth className={styles['full-width-tablist']}>
           <Tab>Common</Tab>
           <Tab>Cohort</Tab>
-          <Tab>EHR</Tab>
-          <Tab>HW</Tab>
           <Tab>TB</Tab>
           <Tab>TPT</Tab>
           <Tab>MCH</Tab>
-          <Tab>072</Tab>
           <Tab>OVC</Tab>
           <Tab>Key Population</Tab>
           <Tab>Prep</Tab>
           <Tab>VMMC</Tab>
+          <Tab>ADHOC</Tab>
         </TabList>
 
         {/* TabPanels Component */}
@@ -27,6 +25,7 @@ export const RenderReportTab: React.FC = () => {
           <TabPanel className={styles['tab-panels']}>
             <RenderTabPanel />
           </TabPanel>
+          <TabPanel className={styles['tab-panels']}>Tab Panel 2</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 3</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 4</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 5</TabPanel>
@@ -34,10 +33,6 @@ export const RenderReportTab: React.FC = () => {
           <TabPanel className={styles['tab-panels']}>Tab Panel 7</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 8</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 9</TabPanel>
-          <TabPanel className={styles['tab-panels']}>Tab Panel 10</TabPanel>
-          <TabPanel className={styles['tab-panels']}>Tab Panel 11</TabPanel>
-          <TabPanel className={styles['tab-panels']}>Tab Panel 12</TabPanel>
-          <TabPanel className={styles['tab-panels']}>Tab Panel 13</TabPanel>
         </TabPanels>
       </Tabs>
     </div>
