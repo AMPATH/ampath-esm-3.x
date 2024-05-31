@@ -25,6 +25,7 @@ export const RenderReportTab: React.FC = () => {
           <TabPanel className={styles['tab-panels']}>
             <RenderTabPanel />
           </TabPanel>
+          <TabPanel className={styles['tab-panels']}>Tab Panel 2</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 3</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 4</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 5</TabPanel>
@@ -32,7 +33,6 @@ export const RenderReportTab: React.FC = () => {
           <TabPanel className={styles['tab-panels']}>Tab Panel 7</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 8</TabPanel>
           <TabPanel className={styles['tab-panels']}>Tab Panel 9</TabPanel>
-          <TabPanel className={styles['tab-panels']}>Tab Panel 10</TabPanel>
         </TabPanels>
       </Tabs>
     </div>
