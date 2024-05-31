@@ -74,7 +74,6 @@
       "slot": "hts-patient-summary-slot",
       "component": "htsPatientSummaryDashboard"
     },
-
     {
       "name": "hts-program-management-summary",
       "slot": "ohri-hts-slot",
