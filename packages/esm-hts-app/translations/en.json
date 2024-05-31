@@ -18,6 +18,8 @@
   "invalidResult": "Invalid Result",
   "invalidResultDisplayText": "invalid results",
   "invalidResultHeader": "Invalid results",
+  "moduleUptake": "Module Uptake",
+  "overallUptake": "Overall Uptake",
   "totalEligible": "Total Eligible",
   "totalInvalid": "Total invalid",
   "totalNegative": "Total negative",

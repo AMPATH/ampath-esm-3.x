@@ -8,6 +8,7 @@ import Tested from './hts-patient-list-tables/tested.component';
 import DueForLinkage from './hts-patient-list-tables/due-for-linkage.component';
 import DueForRetest from './hts-patient-list-tables/due-for-retest.component';
 import InvalidResult from './hts-patient-list-tables/invalid-result.component';
+import ModuleUptake from './hts-patient-list-tables/module-uptake.component';
 
 function HTSHomePatientTabs() {
   const { t } = useTranslation();
@@ -22,6 +23,7 @@ function HTSHomePatientTabs() {
           <Tab>{t('dueForRetest', 'Due For Retest')}</Tab>
           <Tab>{t('dueForLinkage', 'Due For Linkage')}</Tab>
           <Tab>{t('invalidResult', 'Invalid Result')}</Tab>
+          <Tab>{t('moduleUptake', 'Module Uptake')}</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -41,6 +43,9 @@ function HTSHomePatientTabs() {
           </TabPanel>
           <TabPanel>
             <InvalidResult />
+          </TabPanel>
+          <TabPanel>
+            <ModuleUptake />
           </TabPanel>
         </TabPanels>
       </Tabs>
