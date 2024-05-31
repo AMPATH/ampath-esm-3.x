@@ -20,36 +20,65 @@ import { Download } from '@carbon/react/icons';
 import { ConfigurableLink, useConfig, usePagination } from '@openmrs/esm-framework';
 import { EmptyState } from '../empty-state/empty-state.component';
 
-const TotalActive: React.FC = () => {
+const HTSScreening: React.FC = () => {
   const { t } = useTranslation();
   //data fetching hook called here, will populate the table rows
 
   const headerData = [
+    //will populate the data table headers
     {
-      header: 'Patient Name',
+      header: 'Patient Number',
+      key: 'number',
+    },
+    {
+      header: 'Name',
       key: 'name',
     },
     {
-      header: 'Identifier',
-      key: 'identifier',
+      header: 'Age',
+      key: 'age',
     },
     {
-      header: 'Gender',
-      key: 'gender',
+      header: 'Sex',
+      key: 'sex',
     },
     {
       header: 'Phone Number',
       key: 'phoneNumber',
     },
+    {
+      header: 'Last appointment date',
+      key: 'lastAppointmentDate',
+    },
+    {
+      header: 'Visit Type',
+      key: 'visitType',
+    },
+    {
+      header: 'Latest RTC Date',
+      key: 'latestRTCDate',
+    },
+    {
+      header: 'Days since last appointment',
+      key: 'daysSinceLastAppointment',
+    },
+    {
+      header: 'Current regimen',
+      key: 'currentRegimen',
+    },
+    {
+      header: 'Adherence',
+      key: 'adherence',
+    },
   ];
 
   return (
     <EmptyState
-      displayText={t('totalActiveDisplayText', 'total active patients')}
-      headerTitle={t('totalActiveHeader', 'Total active patients')}
+      displayText={t('HTSScreeningDisplay', 'hts screened patients')}
+      headerTitle={t('HTSScreening', 'HTS Screening')}
       scheduleType="Unscheduled"
     />
   );
 };
 
-export default TotalActive;
+export default HTSScreening;

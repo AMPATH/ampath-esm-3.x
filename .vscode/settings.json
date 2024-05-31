@@ -1,6 +1,10 @@
 {
     "cSpell.words": [
+        "ampath",
+        "AMRS",
         "formik",
+        "microfrontend",
         "openmrs"
-    ]
+    ],
+    "files.autoSave": "onWindowChange"
 }

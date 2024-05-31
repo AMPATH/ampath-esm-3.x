@@ -20,7 +20,7 @@ import { Download } from '@carbon/react/icons';
 import { ConfigurableLink, useConfig, usePagination } from '@openmrs/esm-framework';
 import { EmptyState } from '../empty-state/empty-state.component';
 
-const TotalEnrolled: React.FC = () => {
+const DueForRetest: React.FC = () => {
   const { t } = useTranslation();
   //data fetching hook called here, will populate the table rows
 
@@ -45,11 +45,11 @@ const TotalEnrolled: React.FC = () => {
 
   return (
     <EmptyState
-      displayText={t('totalEnrolledDisplayText', 'total enrolled patients')}
-      headerTitle={t('totalEnrolledHeader', 'Total enrolled patients')}
+      displayText={t('dueForRetestDisplayText', 'due for retest patients')}
+      headerTitle={t('dueForRetestHeader', 'Due for retest')}
       scheduleType="Unscheduled"
     />
   );
 };
 
-export default TotalEnrolled;
+export default DueForRetest;

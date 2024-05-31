@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import HTSHomePatientTabs from './views/dashboard/patient-list-tabs/hts-patient-list-tabs.component';
 import HTSSummaryTile from './views/dashboard/summary-tiles/hts-summary-tiles.component';
+import HTSSummaryTileOverallUptake from './views/dashboard/summary-tiles/hts-summary-tiles-overall-uptake.component';
 import { HTSHeader } from './header/hts-header.component';
 import styles from './hts.scss';
 
@@ -12,9 +13,13 @@ const HTSDashboard: React.FC = () => {
     <React.Fragment>
       <HTSHeader />
       <div className={styles.tileLayout}>
-        <HTSSummaryTile headerTitle={t('totalEnrolled', 'Total enrolled')} />
-        <HTSSummaryTile headerTitle={t('totalActive', 'Total active')} />
-        <HTSSummaryTile headerTitle={t('eligibleNotEnrolled', 'Eligible not enrolled')} />
+        <HTSSummaryTile headerTitle={t('totalScreened', 'Total Screened')} />
+        <HTSSummaryTile headerTitle={t('totalEligible', 'Total Eligible')} />
+        <HTSSummaryTile headerTitle={t('totalTested', 'Total Tested')} />
+        <HTSSummaryTile headerTitle={t('totalPositive', 'Total Positive')} />
+        <HTSSummaryTile headerTitle={t('totalNegative', 'Total Negative')} />
+        <HTSSummaryTile headerTitle={t('totalInvalid', 'Total Invalid')} />
+        <HTSSummaryTileOverallUptake headerTitle={t('overallUptake', 'Overall Uptake')} />
       </div>
       <div className={styles.tabList}>
         <HTSHomePatientTabs />

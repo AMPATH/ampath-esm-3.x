@@ -15,7 +15,7 @@ export const htsDashboardMeta = {
 };
 
 export const htsPatientClinicalChartMeta = {
-  title: 'HTS Program',
+  title: 'HTS Services',
   slotName: 'ohri-hts-slot',
   isExpanded: false,
 };

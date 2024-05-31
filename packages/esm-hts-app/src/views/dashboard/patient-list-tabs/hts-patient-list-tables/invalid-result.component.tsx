@@ -20,57 +20,36 @@ import { Download } from '@carbon/react/icons';
 import { ConfigurableLink, useConfig, usePagination } from '@openmrs/esm-framework';
 import { EmptyState } from '../empty-state/empty-state.component';
 
-const EligibleForVLTest: React.FC = () => {
+const InvalidResult: React.FC = () => {
   const { t } = useTranslation();
   //data fetching hook called here, will populate the table rows
 
   const headerData = [
-    //will populate the data table headers
     {
-      header: 'Patient Number',
-      key: 'number',
-    },
-    {
-      header: 'Name',
+      header: 'Patient Name',
       key: 'name',
     },
     {
-      header: 'Age',
-      key: 'age',
+      header: 'Identifier',
+      key: 'identifier',
     },
     {
-      header: 'Sex',
-      key: 'sex',
+      header: 'Gender',
+      key: 'gender',
     },
     {
       header: 'Phone Number',
       key: 'phoneNumber',
     },
-    {
-      header: 'Latest VL',
-      key: 'latestVL',
-    },
-    {
-      header: 'Latest VL Date',
-      key: 'latestVLDate',
-    },
-    {
-      header: 'VL Category',
-      key: 'vlCategory',
-    },
-    {
-      header: 'Latest RTC date',
-      key: 'latestRTCDate',
-    },
   ];
 
   return (
     <EmptyState
-      displayText={t('vlEligibilityDisplay', 'patients eligible for viral load testing')}
-      headerTitle={t('vlEligibilityHeader', 'Eligible for Viral Load Testing')}
+      displayText={t('invalidResultDisplayText', 'invalid results')}
+      headerTitle={t('invalidResultHeader', 'Invalid results')}
       scheduleType="Unscheduled"
     />
   );
 };
 
-export default EligibleForVLTest;
+export default InvalidResult;
