@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100% !important;
+
+  border: 1px solid #ccc !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+}
+
+.leftPanel {
+  width: 70%;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.rightPanel {
+  width: 30%;
+  padding: 10px;
+  background-color: #e0e0e0;
+}

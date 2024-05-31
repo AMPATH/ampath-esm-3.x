@@ -1,0 +1,18 @@
+// report-tabs.module.scss
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/type';
+@import '~@openmrs/esm-styleguide/src/vars';
+
+.full-width-tablist {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 16px !important;
+
+  .cds--tabs__nav-item {
+    flex-grow: 1;
+    text-align: center;
+  }
+}

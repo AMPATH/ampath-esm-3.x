@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "openmrs develop --backend https://ngx.ampath.or.ke --sources packages/esm-*-app  --api-url  /amrs --spa-path /amrs/spa/ --port 8040",
+    "start": "openmrs develop --backend https://ngx.ampath.or.ke --sources packages/esm-report-app  --api-url  /amrs --spa-path /amrs/spa/ --port 8040",
     "start:core": "openmrs develop --backend https://ngx.ampath.or.ke --sources packages/esm-ampath-core-app --api-url  /amrs --spa-path /amrs/spa/ --port 8030",
     "ci:publish": "yarn workspaces foreach --all --topological --exclude @ampath/esm-3.x-app npm publish --access public --tag latest",
     "ci:prepublish": "yarn workspaces foreach --all --topological --exclude @ampath/esm-3.x-app npm publish --access public --tag next",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@carbon/charts-react": "^1.16.1",
+    "@carbon/styles": "^1.58.0",
     "@hookform/resolvers": "^3.3.1",
     "classnames": "^2.3.2",
     "formik": "^2.4.6",
