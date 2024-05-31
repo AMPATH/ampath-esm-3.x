@@ -15,7 +15,7 @@ export const ReportHeader: React.FC = () => {
       <div className={styles['left-justified-items']}>
         <ReportIllustration />
         <div className={styles['page-labels']}>
-          <p className={styles['page-name']}>{t('reports', 'Reports Dashboard')}</p>
+          <p className={styles['page-name']}>{t('reports', 'Reporting Dashboard')}</p>
         </div>
       </div>
       <div className={styles['right-justified-items']}>
