@@ -6,8 +6,5 @@
         "microfrontend",
         "openmrs"
     ],
-    "githubPullRequests.ignoredPullRequestBranches": [
-        "main"
-    ],
     "files.autoSave": "onWindowChange"
 }
