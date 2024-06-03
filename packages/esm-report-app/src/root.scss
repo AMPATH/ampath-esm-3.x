@@ -3,6 +3,7 @@
 
 .container {
   padding: spacing.$spacing-02;
+  max-height: none;
 }
 
 .welcome {
@@ -13,3 +14,4 @@
 .explainer {
   margin-bottom: 2rem;
 }
+

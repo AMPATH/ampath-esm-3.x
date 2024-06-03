@@ -1,7 +1,6 @@
 import React from 'react';
 import { DatePicker, DatePickerInput } from '@carbon/react';
 import styles from './date-pickers.scss';
-
 const ReportStartDate: React.FC = () => {
   return (
     <DatePicker datePickerType="single" style={{ width: '100%' }} className={styles.datePickerContainer}>
