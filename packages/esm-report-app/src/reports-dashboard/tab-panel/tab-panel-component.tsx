@@ -1,6 +1,6 @@
 import React from 'react';
-import ReportTable from '../left-panel/report-table-component';
-import GenerateReportComponent from '../right-panel/components/generate-report-component';
+import ReportTable from '../left-justified-components/report-table-component';
+import GenerateReportComponent from '../right-justified-components/components/generate-report-component';
 import styles from './tab-panel.scss';
 
 const RenderTabPanel: React.FC = () => {
