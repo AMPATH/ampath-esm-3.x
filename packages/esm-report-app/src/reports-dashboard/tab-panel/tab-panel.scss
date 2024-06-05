@@ -1,7 +1,6 @@
 .container {
   display: flex;
-  width: 90% !important;
-  max-width: 100%;
+  width: 100% !important;
   border: 1px solid #ccc !important;
   padding: 16px !important;
   gap: 8px;
@@ -14,6 +13,7 @@
 }
 
 .rightPanel {
+  width: 50%;
   padding: 10px;
   background-color: #e0e0e0;
 }

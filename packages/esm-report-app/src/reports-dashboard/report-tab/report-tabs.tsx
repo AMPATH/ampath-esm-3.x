@@ -3,11 +3,11 @@ import { Grid, Column, Tabs, TabList, Tab, TabPanels, TabPanel, Checkbox, Button
 import styles from './report-tabs.scss';
 import RenderTabPanel from '../tab-panel/tab-panel-component';
 export const RenderReportTab: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState('Hiv Treatment');
+  const [selectedTab, setSelectedTab] = useState('HIV Treatment');
 
   const tabPanelsContent = [
     {
-      title: 'Hiv Treatment',
+      title: 'HIV Treatment',
       rows: [
         {
           id: '1',
