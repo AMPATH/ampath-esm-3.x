@@ -182,7 +182,7 @@ const ClientFollowUpRegister: React.FC = () => (
         <tr></tr>
         <TableRow>
           <TableHeader rowSpan={3}>SNO.</TableHeader>
-          <TableHeader rowSpan={2}>Date: (DD/MM/YYYY)</TableHeader>
+          <TableHeader rowSpan={2}>Date: (dd/mm/yyyy)</TableHeader>
           <TableHeader rowSpan={1}>
             National
             <br /> Identification
