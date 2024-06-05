@@ -20,8 +20,8 @@ const ReportTable: React.FC<{ onRowClick: any; title: string; rows: { id: string
 }) => {
   const headers = [{ key: 'name', header: 'Name' }];
 
-  const handleRowClick = (rowId) => {
-    onRowClick(rowId);
+  const handleRowClick = (row: any) => {
+    onRowClick(row);
   };
 
   return (
@@ -42,7 +42,7 @@ const ReportTable: React.FC<{ onRowClick: any; title: string; rows: { id: string
               </TableHead>
               <TableBody>
                 {rows.map((row) => (
-                  <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.id)}>
+                  <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.cells)}>
                     <TableSelectRow />
                     {row.cells.map((cell) => (
                       <TableCell key={cell.id}>{cell.value}</TableCell>
