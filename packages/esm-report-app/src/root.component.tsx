@@ -17,6 +17,7 @@ import IptReportComponent from './clinical-dashboard/ipt-report/ipt-report.compo
 import { ReportHeader } from './headers/report-header-component';
 import ReportDashboard from './reports-dashboard/report-dashboard-component';
 import RenderMOH362 from './registers/MOH-362/MOH_362_component';
+import NutritionRegisters from './registers/MOH-407/nutrition-register-component';
 
 const Root: React.FC = () => {
   const { t } = useTranslation();
@@ -35,6 +36,8 @@ const Root: React.FC = () => {
         <ReportDashboard />
 
         <RenderMOH362 />
+
+        <NutritionRegisters />
       </div>
     </div>
   );

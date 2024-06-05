@@ -5,17 +5,17 @@ import { useTranslation } from 'react-i18next';
 const HtsPatientSummary: React.FC = () => {
   const { t } = useTranslation();
 
-  const headerClinicalViews = t('clinicalViews', 'clinical Views');
-  const headerAppointments = t('appointments', 'Appointments');
-  const headerViralLoads = t('viralLoads', 'viral Loads');
+  const headerCharacteristics = t('characteristics', 'Characteristics');
+  const headerHIVMonitoring = t('HIVMonitoring', 'HIV Monitoring');
+  const headerLastVisitDetails = t('lastVisitDetails', 'Last Visit Details');
 
   return (
     <>
-      <EmptyState displayText={headerClinicalViews} headerTitle={headerClinicalViews} />
+      <EmptyState displayText={headerCharacteristics} headerTitle={headerCharacteristics} />
 
-      <EmptyState displayText={headerAppointments} headerTitle={headerAppointments} />
+      <EmptyState displayText={headerHIVMonitoring} headerTitle={headerHIVMonitoring} />
 
-      <EmptyState displayText={headerViralLoads} headerTitle={headerViralLoads} />
+      <EmptyState displayText={headerLastVisitDetails} headerTitle={headerLastVisitDetails} />
     </>
   );
 };
