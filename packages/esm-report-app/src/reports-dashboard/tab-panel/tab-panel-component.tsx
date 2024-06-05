@@ -80,7 +80,6 @@ const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string
       const data = await response.json();
       setReportData(data);
     } catch (error) {
-      console.error('Error generating report:', error);
       setNotification({
         kind: 'error',
         title: 'API Error',
