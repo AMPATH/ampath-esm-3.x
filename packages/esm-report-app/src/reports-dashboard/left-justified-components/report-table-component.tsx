@@ -13,34 +13,20 @@ import {
   Pagination,
 } from '@carbon/react';
 
-const ReportTable: React.FC = () => {
+const ReportTable: React.FC<{ onRowClick: any; title: string; rows: { id: string; name: string }[] }> = ({
+  onRowClick,
+  title,
+  rows,
+}) => {
   const headers = [{ key: 'name', header: 'Name' }];
 
-  const rows = [
-    {
-      id: '1',
-      name: 'MOH 361A',
-    },
-    {
-      id: '2',
-      name: 'MOH 362B',
-    },
-    {
-      id: '3',
-      name: 'MOH 731',
-    },
-    {
-      id: '4',
-      name: 'MOH 711',
-    },
-    {
-      id: '5',
-      name: 'MOH 715',
-    },
-  ];
+  const handleRowClick = (row: any) => {
+    onRowClick(row);
+  };
+
   return (
     <>
-      <TableContainer title="Reports">
+      <TableContainer title={`${title} Reports`}>
         <DataTable
           rows={rows}
           headers={headers}
@@ -56,7 +42,7 @@ const ReportTable: React.FC = () => {
               </TableHead>
               <TableBody>
                 {rows.map((row) => (
-                  <TableRow {...getRowProps({ row })}>
+                  <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.cells)}>
                     <TableSelectRow />
                     {row.cells.map((cell) => (
                       <TableCell key={cell.id}>{cell.value}</TableCell>
