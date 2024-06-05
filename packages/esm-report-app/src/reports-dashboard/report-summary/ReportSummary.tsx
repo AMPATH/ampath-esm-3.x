@@ -17,7 +17,7 @@ import styles from './ReportSummary.css';
 
 const ReportSummary: React.FC<{ title: string; rows: { id: string; name: string }[] }> = ({ title, rows }) => {
   const headers = [
-    { key: 'reportName', header: 'Report Name' },
+    { key: 'status', header: 'Report Status' },
     { key: 'month', header: 'Month' },
     { key: 'view', header: 'View' },
     { key: 'download', header: 'Download' },
@@ -40,7 +40,18 @@ const ReportSummary: React.FC<{ title: string; rows: { id: string; name: string 
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
+                <TableRow>
+                  <TableSelectRow />
+                  <TableCell>0</TableCell>
+                  <TableCell>JUNE</TableCell>
+                  <TableCell>
+                    <button className={styles.view_button}>View</button>
+                  </TableCell>
+                  <TableCell>
+                    <button className={styles.download_button}>Download</button>
+                  </TableCell>
+                </TableRow>
+                {/* {rows.map((row) => (
                   <TableRow key={row.id} {...getRowProps({ row })}>
                     <TableSelectRow {...row} />
                     <TableCell>{title}</TableCell>
@@ -51,18 +62,8 @@ const ReportSummary: React.FC<{ title: string; rows: { id: string; name: string 
                     <TableCell>
                       <button className={styles.download_button}>Download</button>
                     </TableCell>
-                    {/* <TableCell>
-                      <Button size="small" kind="tertiary">
-                        View
-                      </Button>
-                    </TableCell>
-                    <TableCell>
-                      <Button size="small" kind="tertiary">
-                        Download
-                      </Button>
-                    </TableCell> */}
                   </TableRow>
-                ))}
+                ))} */}
               </TableBody>
             </Table>
           )}

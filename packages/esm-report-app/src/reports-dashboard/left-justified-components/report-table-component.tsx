@@ -42,7 +42,7 @@ const ReportTable: React.FC<{ onRowClick: any; title: string; rows: { id: string
               </TableHead>
               <TableBody>
                 {rows.map((row) => (
-                  <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.cells)}>
+                  <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.id)}>
                     <TableSelectRow />
                     {row.cells.map((cell) => (
                       <TableCell key={cell.id}>{cell.value}</TableCell>
