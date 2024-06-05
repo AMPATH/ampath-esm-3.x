@@ -3,11 +3,11 @@ import ReportTable from '../left-justified-components/report-table-component';
 import GenerateReportComponent from '../right-justified-components/components/generate-report-component';
 import styles from './tab-panel.scss';
 
-const RenderTabPanel: React.FC = () => {
+const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string }[] }> = ({ title, rows }) => {
   return (
     <div className={styles.container}>
       <div className={styles.leftPanel}>
-        <ReportTable />
+        <ReportTable title={title} rows={rows} />
       </div>
       <div className={styles.rightPanel}>
         <GenerateReportComponent />

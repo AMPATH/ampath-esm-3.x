@@ -1,21 +1,19 @@
 .container {
   display: flex;
-  justify-content: space-between;
-  width: 100% !important;
-
+  width: 90% !important;
+  max-width: 100%;
   border: 1px solid #ccc !important;
-  border-radius: 8px !important;
   padding: 16px !important;
+  gap: 8px;
 }
 
 .leftPanel {
-  width: 70%;
+  width: 50%;
   padding: 10px;
   background-color: #f0f0f0;
 }
 
 .rightPanel {
-  width: 30%;
   padding: 10px;
   background-color: #e0e0e0;
 }

@@ -34,7 +34,7 @@ const Root: React.FC = () => {
 
         <ReportDashboard />
 
-        <RenderMOH362 />
+        {/* <RenderMOH362 /> */}
       </div>
     </div>
   );

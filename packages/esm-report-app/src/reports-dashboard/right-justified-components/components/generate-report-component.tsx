@@ -15,7 +15,7 @@ const GenerateReportComponent: React.FC = () => {
         <ReportEndDate />
         <GenerateButton />
       </div>
-      <ReportTable />
+      {/* <ReportTable /> */}
     </div>
   );
 };
