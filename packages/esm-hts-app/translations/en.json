@@ -1,6 +1,5 @@
 {
-  "appointments": "Appointments",
-  "clinicalViews": "clinical Views",
+  "characteristics": "Characteristics",
   "createAppointment": "Create appointment",
   "dueForLinkage": "Due For Linkage",
   "dueForLinkageDisplayText": "due for linkage patients",
@@ -11,6 +10,7 @@
   "eligibilityDisplay": "patients eligible for hts screening",
   "eligibilityHeader": "Eligible patients",
   "emptyStateText": "There are no {{displayText}} to display",
+  "HIVMonitoring": "HIV Monitoring",
   "hts": "HTS Dashboard",
   "htsEnrolment": "HTS Enrolment",
   "HTSScreening": "HTS Screening",
@@ -18,6 +18,7 @@
   "invalidResult": "Invalid Result",
   "invalidResultDisplayText": "invalid results",
   "invalidResultHeader": "Invalid results",
+  "lastVisitDetails": "Last Visit Details",
   "moduleUptake": "Module Uptake",
   "overallUptake": "Overall Uptake",
   "totalEligible": "Total Eligible",
@@ -27,6 +28,5 @@
   "totalScreened": "Total screened",
   "totalTested": "Total Tested",
   "totalTestedDisplayText": "tested patients",
-  "totalTestedHeader": "Total Tested",
-  "viralLoads": "viral Loads"
+  "totalTestedHeader": "Total Tested"
 }
