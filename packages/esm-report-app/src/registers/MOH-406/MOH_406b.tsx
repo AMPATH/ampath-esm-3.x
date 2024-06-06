@@ -77,10 +77,10 @@ const RenderMOH406b: React.FC = () => (
           <TableHeader rowSpan={1}>Lot No.</TableHeader>
           <TableHeader rowSpan={1}>Lot No.</TableHeader>
           <TableHeader rowSpan={1}>Lot No.</TableHeader>
-          <TableHeader rawSpan={4}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
-          <TableHeader rawSpan={4}>HAART</TableHeader>
-          <TableHeader rawSpan={4}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
-          <TableHeader rawSpan={4}>HAART</TableHeader>
+          <TableHeader rawSpan={6}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
+          <TableHeader rawSpan={6}>HAART</TableHeader>
+          <TableHeader rawSpan={6}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
+          <TableHeader rawSpan={6}>HAART</TableHeader>
           <TableHeader rawSpan={4}>Counseled method received</TableHeader>
           <TableHeader rawSpan={4}> 1= community unit, 2= another health facility 3=not applicable</TableHeader>
           <TableHeader rawSpan={4}>1= community unit, 2= another health facility 3=not applicable</TableHeader>
@@ -125,18 +125,18 @@ const RenderMOH406b: React.FC = () => (
           <React.Fragment key={i}>
             <TableRow>
               <TableCell rowSpan={2}></TableCell>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
+              <TableCell rowSpan={1}></TableCell>
+              <TableCell rowSpan={1}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>
               <TableCell rowSpan={2}></TableCell>

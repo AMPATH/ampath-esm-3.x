@@ -36,7 +36,9 @@ const RenderMOH405b: React.FC = () => (
               Remarks
             </TableHeader>
           </TableRow>
+
           <TableRow></TableRow>
+
           <TableRow>
             <TableHeader colSpan={1} rowSpan={6}>
               Haemoglobin (Level/ND/NA){' '}
@@ -99,6 +101,7 @@ const RenderMOH405b: React.FC = () => (
               Reason for Referral Specify{' '}
             </TableHeader>
           </TableRow>
+
           <TableRow>
             <TableHeader colSpan={0} rowSpan={4}>
               Type of Test RPR/VDRL/Duo Test/NA{' '}
