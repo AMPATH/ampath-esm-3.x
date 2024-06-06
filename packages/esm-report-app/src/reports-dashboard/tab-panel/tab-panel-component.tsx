@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DatePicker, DatePickerInput, Button, InlineLoading, InlineNotification } from '@carbon/react';
 import { Download } from '@carbon/react/icons';
 import ReportTable from '../left-justified-components/report-table-component';
 import styles from './tab-panel.scss';
 import ReportSummary from '../report-summary/ReportSummary';
+import { generateSpReport, getSPReports } from './tab.panel.resource';
 
 const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string }[] }> = ({ title, rows }) => {
   const [selectedRow, setSelectedRow] = useState(null);
@@ -60,25 +61,18 @@ const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string
     setNotification({ kind: '', title: '', subtitle: '', hide: true });
 
     try {
-      const response = await fetch('/v1/amrscore/reports/generate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          startDate,
-          endDate,
-          sp_name: selectedRow.map((row: any) => row.value),
-          report_id: selectedRow.map((row: any) => row.id),
-        }),
+      const response = generateSpReport({
+        startDate,
+        endDate,
+        sp_name: selectedRow.map((row: any) => row.value),
+        report_id: selectedRow.map((row: any) => row.id),
       });
 
-      if (!response.ok) {
+      if (!response) {
         throw new Error('Network response was not ok');
       }
 
-      const data = await response.json();
-      setReportData(data);
+      setReportData(response);
     } catch (error) {
       setNotification({
         kind: 'error',
