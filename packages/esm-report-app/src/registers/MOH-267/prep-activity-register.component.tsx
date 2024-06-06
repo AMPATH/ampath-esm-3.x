@@ -90,7 +90,7 @@ const PrepRegister: React.FC = () => (
         </TableRow>
       </TableHead>
       <TableBody>
-        {Array.from({ length: 15 }, (_, i) => (
+        {Array.from({ length: 2 }, (_, i) => (
           <React.Fragment key={i}>
             <TableRow>
               <TableCell rowSpan={2}></TableCell>

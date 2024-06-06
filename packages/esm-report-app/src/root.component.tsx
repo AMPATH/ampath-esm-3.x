@@ -39,6 +39,7 @@ const Root: React.FC = () => {
         <ReportDashboard />
 
         <RenderMOH405 />
+        <RenderMOH406 />
 
         <RenderMOH362 />
 

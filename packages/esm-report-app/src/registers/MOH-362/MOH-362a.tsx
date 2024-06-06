@@ -17,7 +17,6 @@ const RenderMOH362a: React.FC = () => (
         <p>Ver. July 2023</p>
       </div>
     </div>
-
     <Table>
       <TableHead>
         <TableRow>
@@ -93,7 +92,7 @@ const RenderMOH362a: React.FC = () => (
         </TableRow>
       </TableHead>
       <TableBody>
-        {Array.from({ length: 15 }, (_, i) => (
+        {Array.from({ length: 2 }, (_, i) => (
           <React.Fragment key={i}>
             <TableRow>
               <TableCell rowSpan={2}></TableCell>
