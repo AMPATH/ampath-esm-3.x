@@ -20,6 +20,7 @@ import RenderMOH362 from './registers/MOH-362/MOH_362_component';
 import NutritionRegisters from './registers/MOH-407/nutrition-register-component';
 import PrepRegister from './registers/MOH-267/prep-activity-register.component';
 import RenderMOH405 from './registers/MOH-405/MOH_405_component';
+import RenderMOH406 from './registers/MOH-406/MOH_406_component';
 
 const Root: React.FC = () => {
   const { t } = useTranslation();
@@ -36,6 +37,7 @@ const Root: React.FC = () => {
         <IptReportComponent />
 
         <ReportDashboard />
+
         <RenderMOH405 />
 
         <RenderMOH362 />
@@ -43,6 +45,8 @@ const Root: React.FC = () => {
         <NutritionRegisters />
 
         <PrepRegister />
+
+        <RenderMOH406 />
       </div>
     </div>
   );
