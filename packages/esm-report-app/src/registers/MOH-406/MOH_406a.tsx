@@ -6,17 +6,17 @@ import { TableBody } from '@carbon/react';
 import { TableCell } from '@carbon/react';
 
 const RenderMOH406a: React.FC = () => (
-  <TableContainer className={styles['table-container']} title="MOH 362 HTS LAB, REFERRAL AND LINKAGE REGISTER">
+  <TableContainer className={styles['table-container']}>
     <div className={styles['header']}>
       <div className={styles['left']}>
-        <p>MOH 406 PNC REGISTER</p>
+        <p>Ministry of Health</p>
       </div>
-      {/* <div className={styles['center']}>
-        <h2>MOH 406 PNC REGISTER</h2>
+      <div className={styles['center']}>
+        <h2>MOH 406a PNC REGISTER</h2>
       </div>
       <div className={styles['right']}>
         <p>Ver. July 2023</p>
-      </div> */}
+      </div>
     </div>
 
     <Table>
