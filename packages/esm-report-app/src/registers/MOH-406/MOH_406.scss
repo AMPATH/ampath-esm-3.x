@@ -19,6 +19,10 @@ p {
   align-items: center;
   text-align: center;
   width: 100%;
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Add horizontal scrolling */
+  }
 
   table {
     border-collapse: collapse;

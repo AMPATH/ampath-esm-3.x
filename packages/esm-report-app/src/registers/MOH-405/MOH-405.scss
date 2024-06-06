@@ -1,11 +1,11 @@
-// body {
-//   font-family: 'Arial', sans-serif;
-//   color: #bb0b0b;
-//   background-color: #fff;
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
+body {
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 h1,
 h2,
@@ -27,43 +27,39 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  //   width: 100%;
-
-  table {
-    border-collapse: collapse;
-    // width: 100%;
-    color: #000000;
-
-    th,
-    td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: center;
-      vertical-align: middle;
-      font-family: inherit;
-      color: inherit;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    td.dotted-border {
-      border: 1px dotted black;
-    }
-  }
+  width: 100%;
+  padding: 10px;
 
   .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
     width: 100%;
     color: #000000;
+  }
+
+  .left,
+  .center,
+  .right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: 768px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left,
+    .center,
+    .right {
+      width: auto;
+      margin-bottom: 0;
+    }
 
     .left {
       flex: 1;
@@ -82,6 +78,41 @@ p {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+    }
+  }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Add horizontal scrolling */
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%; /* Ensure the table width is 100% */
+    max-width: 100%; /* Ensure the table width is 100% */
+    color: #000000;
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+      font-family: inherit;
+      color: inherit;
+      word-wrap: break-word;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    td.dotted-border {
+      border: 1px dotted black;
     }
   }
 }
