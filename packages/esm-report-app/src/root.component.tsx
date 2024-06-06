@@ -32,20 +32,20 @@ const Root: React.FC = () => {
         {t("reportsHeader", "Reports Dashboard")}
       </h3>
       <Resources /> */}
-        {/* <ReportHeader /> */}
+        <ReportHeader />
 
-        {/* <IptReportComponent /> */}
+        <IptReportComponent />
 
-        {/* <ReportDashboard /> */}
+        <ReportDashboard />
 
         <RenderMOH405 />
-        {/* <RenderMOH406 /> */}
+        <RenderMOH406 />
 
-        {/* <RenderMOH362 /> */}
+        <RenderMOH362 />
 
-        {/* <NutritionRegisters /> */}
+        <NutritionRegisters />
 
-        {/* <PrepRegister /> */}
+        <PrepRegister />
       </div>
     </div>
   );
