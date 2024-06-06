@@ -9,14 +9,14 @@ const RenderMOH406b: React.FC = () => (
   <TableContainer className={styles['table-container']}>
     <div className={styles['header']}>
       <div className={styles['left']}>
-        <p>MOH 406 PNC REGISTER</p>
+        <p>Ministry of Health</p>
       </div>
-      {/*   <div className={styles['center']}>
-        <h2>MOH 362 HTS LAB REGISTER</h2>
-      </div> */}
-      {/*  <div className={styles['right']}>
+      <div className={styles['center']}>
+        <h2>MOH 406 PNC REGISTER</h2>
+      </div>
+      <div className={styles['right']}>
         <p>Ver. July 2023</p>
-      </div> */}
+      </div>
     </div>
 
     <Table>
