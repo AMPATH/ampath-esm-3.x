@@ -58,7 +58,7 @@ const RenderMOH406b: React.FC = () => (
             more than 6weeks
           </TableHeader>
           <TableHeader rowSpan={4}> Results 1=normal, 2=suspected 3=confirmed 4=not done</TableHeader>
-          <TableHeader rowSpan={2}>From</TableHeader>
+          <TableHeader rowSpan={4}>From</TableHeader>
           <TableHeader rowSpan={2}>To</TableHeader>
           <TableHeader rowSpan={4}>Reasons for referal (specify) </TableHeader>
         </TableRow>
@@ -77,9 +77,8 @@ const RenderMOH406b: React.FC = () => (
           <TableHeader rowSpan={1}>Lot No.</TableHeader>
           <TableHeader rowSpan={1}>Lot No.</TableHeader>
           <TableHeader rowSpan={1}>Lot No.</TableHeader>
-          <TableHeader rawSpan={6}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
           <TableHeader rawSpan={6}>HAART</TableHeader>
-          <TableHeader rawSpan={6}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
+          <TableHeader rawSpan={7}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
           <TableHeader rawSpan={6}>HAART</TableHeader>
           <TableHeader rawSpan={4}>Counseled method received</TableHeader>
           <TableHeader rawSpan={4}> 1= community unit, 2= another health facility 3=not applicable</TableHeader>
@@ -89,14 +88,14 @@ const RenderMOH406b: React.FC = () => (
         <TableRow>
           <TableHeader rawSpan={2}>Expiary No.</TableHeader>
           <TableHeader rawSpan={2}>Expiary No.</TableHeader>
-          <TableHeader rawSpan={2}>Expiary No.</TableHeader>
+          <TableHeader rowSpan={2}>Expiary No.</TableHeader>
           <TableHeader colSpan={1} rowSpan={1}>
             less than or =6weeks
           </TableHeader>
           <TableHeader colSpan={1} rowSpan={1}>
             more than 6weeks
           </TableHeader>
-          <TableHeader rawSpan={1}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
+          <TableHeader rowSpan={1}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
         </TableRow>
         <TableRow>
           <TableCell rowSpan={1}>(x)</TableCell>
