@@ -150,6 +150,7 @@ const NutritionRegister: React.FC = () => (
             </TableRow>
             <TableRow>
               <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
             </TableRow>
           </React.Fragment>
         ))}

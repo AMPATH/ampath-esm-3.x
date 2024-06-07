@@ -96,6 +96,7 @@ const RenderMOH406b: React.FC = () => (
           <TableHeader colSpan={1} rowSpan={1}>
             more than 6weeks
           </TableHeader>
+          <TableHeader rawSpan={1}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
         </TableRow>
         <TableRow>
           <TableCell rowSpan={1}>(x)</TableCell>
