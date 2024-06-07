@@ -289,7 +289,109 @@ const RenderMOH406: React.FC = () => (
             <TableHeader></TableHeader>
             <TableHeader></TableHeader>
           </TableRow>
+          <TableRow>
+            <TableCell rowSpan={2}>(a)</TableCell>
+            <TableCell rowSpan={2}>(b)</TableCell>
+            <TableCell rowSpan={2}>(c)</TableCell>
+            <TableCell rowSpan={2}>(d)</TableCell>
+            <TableCell rowSpan={2}>(e)</TableCell>
+            <TableCell rowSpan={2}>(f)</TableCell>
+            <TableCell rowSpan={2}>(g)</TableCell>
+            <TableCell rowSpan={2}>(h)</TableCell>
+            <TableCell rowSpan={2}>(i)</TableCell>
+            <TableCell rowSpan={2}>(j)</TableCell>
+            <TableCell rowSpan={2}>(k)</TableCell>
+            <TableCell rowSpan={2}>(l)</TableCell>
+            <TableCell rowSpan={2}>(m)</TableCell>
+            <TableCell rowSpan={2}>(n)</TableCell>
+            <TableCell rowSpan={2}>(o)</TableCell>
+            <TableCell rowSpan={2}>(p)</TableCell>
+            <TableCell rowSpan={2}>(q)</TableCell>
+            <TableCell rowSpan={2}>(r)</TableCell>
+            <TableCell rowSpan={2}>(s)</TableCell>
+            <TableCell rowSpan={2}>(t)</TableCell>
+            <TableCell rowSpan={2}>(u)</TableCell>
+            <TableCell rowSpan={2}>(v)</TableCell>
+            <TableCell rowSpan={2}>(w)</TableCell>
+            <TableCell rowSpan={1}>(x)</TableCell>
+            <TableCell rowSpan={1}>(y)</TableCell>
+            <TableCell rowSpan={1}>(z)</TableCell>
+            <TableCell rowSpan={1}>(aa)</TableCell>
+            <TableCell rowSpan={1}>(ab)</TableCell>
+            <TableCell rowSpan={1}>(ac)</TableCell>
+            <TableCell rowSpan={1}>(ad)</TableCell>
+            <TableCell rowSpan={1}>(ae)</TableCell>
+            <TableCell rowSpan={1}>(af)</TableCell>
+            <TableCell rowSpan={1}>(ag)</TableCell>
+            <TableCell rowSpan={1}>(ah)</TableCell>
+            <TableCell rowSpan={1}>(ai)</TableCell>
+            <TableCell rowSpan={1}>(aj)</TableCell>
+            <TableCell rowSpan={1}>(ak)</TableCell>
+            <TableCell rowSpan={1}>(al)</TableCell>
+            <TableCell rowSpan={1}>(am)</TableCell>
+            <TableCell rowSpan={1}>(an)</TableCell>
+            <TableCell rowSpan={1}>(ao)</TableCell>
+            <TableCell rowSpan={1}>(ap)</TableCell>
+          </TableRow>
         </TableHead>
+        <TableBody>
+          {Array.from({ length: 2 }, (_, i) => (
+            <React.Fragment key={i}>
+              <TableRow>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={1}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={1}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={1}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={1}></TableCell>
+                <TableCell rowSpan={1}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+                <TableCell rowSpan={2}></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+              </TableRow>
+            </React.Fragment>
+          ))}
+        </TableBody>
       </Table>
     </div>
   </TableContainer>
