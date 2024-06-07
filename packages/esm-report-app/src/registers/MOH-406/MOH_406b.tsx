@@ -22,81 +22,184 @@ const RenderMOH406b: React.FC = () => (
     <Table>
       <TableHead>
         <TableRow>
-          <TableHeader rowSpan={1}>TB Screaning</TableHeader>
-          <TableHeader rowSpan={1} colSpan={6}></TableHeader>
-          <TableHeader rowSpan={1} colSpan={4}>
+          <TableHeader colSpan={1} rowSpan={1}>
+            {' '}
+            TB Screening
+          </TableHeader>
+          <TableHeader colSpan={6} rowSpan={1}>
+            {' '}
+            Blank
+          </TableHeader>
+          <TableHeader colSpan={4} rowSpan={1}>
+            {' '}
             HAART & Infant Prophylaxis and Treatment
           </TableHeader>
-          <TableHeader rowSpan={1} colSpan={1}>
+          <TableHeader colSpan={1} rowSpan={1}>
+            {' '}
             Cervical Cancer Screening (VIA/VIL/PAP Smear/ND)
           </TableHeader>
-          <TableHeader rowSpan={3} colSpan={1}>
+          <TableHeader colSpan={1} rowSpan={3}>
+            {' '}
             Modern Post partum Family Planning (Y/N)
           </TableHeader>
-          <TableHeader rowSpan={5}>Other Maternal Complications </TableHeader>
-          <TableHeader rowSpan={5}>Haemanatics (Y/N)</TableHeader>
-          <TableHeader rowSpan={1} colSpan={3}>
-            Referals
+          <TableHeader colSpan={1} rowSpan={6}>
+            {' '}
+            Other maternal Complications
           </TableHeader>
-          <TableHeader rowSpan={5}>Remarks</TableHeader>
+          <TableHeader colSpan={1} rowSpan={6}>
+            {' '}
+            Haematinics
+          </TableHeader>
+          <TableHeader colSpan={3} rowSpan={1}>
+            {' '}
+            Referrals
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={7}>
+            {' '}
+            Remarks
+          </TableHeader>
         </TableRow>
+
         <TableRow>
-          <TableHeader colSpan={1} rowSpan={4}>
-            TB Screening 1:Presumed TB 2:NO signs 3:On TB Treatment 4:Not done
+          <TableHeader colSpan={1} rowSpan={5}>
+            TB Screening
           </TableHeader>
-          <TableHeader rowSpan={4}>Tested PNC</TableHeader>
-          <TableHeader rowSpan={1}>HIV Test 1</TableHeader>
-          <TableHeader rowSpan={1}>HIV Test 2</TableHeader>
-          <TableHeader rowSpan={1}>HIV Test 3</TableHeader>
-          <TableHeader rowSpan={3} colSpan={2}>
+          <TableHeader colSpan={1} rowSpan={5}>
+            Tested PNC
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            HIV Test 1
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            HIV Test 2
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            HIV Test 3
+          </TableHeader>
+          <TableHeader colSpan={2} rowSpan={4}>
             Results in PNC
           </TableHeader>
+
           <TableHeader colSpan={2} rowSpan={1}>
-            less than or =6weeks
+            6 wks
           </TableHeader>
           <TableHeader colSpan={2} rowSpan={1}>
-            more than 6weeks
+            6 Wks
           </TableHeader>
-          <TableHeader rowSpan={4}> Results 1=normal, 2=suspected 3=confirmed 4=not done</TableHeader>
-          <TableHeader rowSpan={4}>From</TableHeader>
-          <TableHeader rowSpan={2}>To</TableHeader>
-          <TableHeader rowSpan={4}>Reasons for referal (specify) </TableHeader>
+          <TableHeader colSpan={1} rowSpan={5}>
+            Results 1=normal, 2=suspected 3=confirmed 4=not done{' '}
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={2}>
+            From
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={2}>
+            To
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={5}>
+            Reason for Referral
+          </TableHeader>
         </TableRow>
 
         <TableRow>
-          <TableHeader>Kit Name:</TableHeader>
-          <TableHeader>Kit Name:</TableHeader>
-          <TableHeader>Kit Name:</TableHeader>
-          <TableHeader>infant</TableHeader>
-          <TableHeader>mother</TableHeader>
-          <TableHeader>infant</TableHeader>
-          <TableHeader>mother</TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Kit Name 1
+          </TableHeader>
+          {/* </TableRow>
+        <TableHeader></TableHeader>
+          <TableHeader>(I,R,ND,KP)</TableHeader>
+          <TableHeader>(N,P,I,NA)</TableHeader>
+          <TableHeader>(N,P,I,NA)</TableHeader>
+          <TableHeader>(N,P,I,NA)</TableHeader>
+          <TableHeader>(N/P/Ic/NA)</TableHeader>
+          <TableHeader>(N/P/Ic/NA)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+        <TableRow> */}{' '}
+          <TableHeader colSpan={1} rowSpan={1}>
+            Kit Name 2
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Kit Name 3
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Infant
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Mother
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Infant
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Mother
+          </TableHeader>
+        </TableRow>
+        <TableRow>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Lot No
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Lot No
+          </TableHeader>
+          <TableHeader colSpan={1} rowSpan={1}>
+            Lot No
+          </TableHeader>
+          <TableHeader rowSpan={3}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
+          <TableHeader rowSpan={3}>HAART</TableHeader>
+
+          <TableHeader rowSpan={3}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
+          <TableHeader rowSpan={3}>HAART</TableHeader>
+
+          <TableHeader rowSpan={3}> Counselled Method Received</TableHeader>
+          <TableHeader rowSpan={3}>1= community unit, 2= another health facility 3=not applicable</TableHeader>
+          <TableHeader rowSpan={3}>1= community unit, 2= another health facility 3=not applicable</TableHeader>
         </TableRow>
 
         <TableRow>
-          <TableHeader rowSpan={1}>Lot No.</TableHeader>
-          <TableHeader rowSpan={1}>Lot No.</TableHeader>
-          <TableHeader rowSpan={1}>Lot No.</TableHeader>
-          <TableHeader rawSpan={6}>HAART</TableHeader>
-          <TableHeader rawSpan={7}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
-          <TableHeader rawSpan={6}>HAART</TableHeader>
-          <TableHeader rawSpan={4}>Counseled method received</TableHeader>
-          <TableHeader rawSpan={4}> 1= community unit, 2= another health facility 3=not applicable</TableHeader>
-          <TableHeader rawSpan={4}>1= community unit, 2= another health facility 3=not applicable</TableHeader>
+          <TableHeader rowSpan={2}>Expiry No</TableHeader>
+          <TableHeader rowSpan={2}>Expiry No</TableHeader>
+          <TableHeader rowSpan={2}>Expiry No</TableHeader>
         </TableRow>
 
         <TableRow>
-          <TableHeader rawSpan={2}>Expiary No.</TableHeader>
-          <TableHeader rawSpan={2}>Expiary No.</TableHeader>
-          <TableHeader rowSpan={2}>Expiary No.</TableHeader>
           <TableHeader colSpan={1} rowSpan={1}>
             less than or =6weeks
           </TableHeader>
           <TableHeader colSpan={1} rowSpan={1}>
             more than 6weeks
           </TableHeader>
-          <TableHeader rowSpan={1}>NVP + AZT+ CTX or NVP + CTX</TableHeader>
         </TableRow>
+
+        <TableRow>
+          <TableHeader></TableHeader>
+          <TableHeader>(I,R,ND,KP)</TableHeader>
+          <TableHeader>(N,P,I,NA)</TableHeader>
+          <TableHeader>(N,P,I,NA)</TableHeader>
+          <TableHeader>(N,P,I,NA)</TableHeader>
+          <TableHeader>(N/P/Ic/NA)</TableHeader>
+          <TableHeader>(N/P/Ic/NA)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader>(Y/N/NA/R)</TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+          <TableHeader></TableHeader>
+        </TableRow>
+
         <TableRow>
           <TableCell rowSpan={1}>(x)</TableCell>
           <TableCell rowSpan={1}>(y)</TableCell>

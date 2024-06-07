@@ -111,9 +111,9 @@ const RenderMOH362a: React.FC = () => {
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
                     {item.patient_id}
                   </TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                  {/* <TableCell className={styles['dotted-border']} rowSpan={1}>
                     {item.patient_id}
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               </React.Fragment>
             ))
