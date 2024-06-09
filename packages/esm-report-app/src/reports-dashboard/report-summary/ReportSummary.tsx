@@ -15,7 +15,7 @@ import {
 } from '@carbon/react';
 import styles from './ReportSummary.css';
 
-const ReportSummary: React.FC<{ title: string; rows: { id: string; name: string }[] }> = ({ title, rows }) => {
+const ReportSummary: React.FC<{ rows: { id: string; report_name: string; description?: string }[] }> = ({ rows }) => {
   const headers = [
     { key: 'status', header: 'Report Status' },
     { key: 'month', header: 'Month' },

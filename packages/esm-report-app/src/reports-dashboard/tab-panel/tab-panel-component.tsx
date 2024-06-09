@@ -4,9 +4,9 @@ import { Download } from '@carbon/react/icons';
 import ReportTable from '../left-justified-components/report-table-component';
 import styles from './tab-panel.scss';
 import ReportSummary from '../report-summary/ReportSummary';
-import { generateSpReport, getSPReports } from './tab.panel.resource';
+import { generateSpReport } from './tab.panel.resource';
 
-const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string }[] }> = ({ title, rows }) => {
+const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
@@ -61,18 +61,16 @@ const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string
     setNotification({ kind: '', title: '', subtitle: '', hide: true });
 
     try {
-      const response = generateSpReport({
-        startDate,
-        endDate,
-        sp_name: selectedRow.map((row: any) => row.value),
-        report_id: selectedRow.map((row: any) => row.id),
-      });
-
-      if (!response) {
-        throw new Error('Network response was not ok');
-      }
-
-      setReportData(response);
+      // const response = generateSpReport({
+      //   startDate,
+      //   endDate,
+      //   sp_name: selectedRow.map((row: any) => row.value),
+      //   report_id: selectedRow.map((row: any) => row.id),
+      // });
+      // if (!response) {
+      //   throw new Error('Network response was not ok');
+      // }
+      // setReportData(response);
     } catch (error) {
       setNotification({
         kind: 'error',
@@ -88,7 +86,7 @@ const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string
   return (
     <div className={styles.container}>
       <div className={styles.leftPanel}>
-        <ReportTable title={title} rows={rows} onRowClick={handleRowClick} />
+        <ReportTable rows={rows} onRowClick={handleRowClick} />
       </div>
       <div className={styles.rightPanel}>
         {!notification.hide && (
@@ -135,8 +133,8 @@ const RenderTabPanel: React.FC<{ title: string; rows: { id: string; name: string
         </div>
         {loading ? (
           <InlineLoading description="Generating report..." />
-        ) : selectedRow && reportData ? (
-          <ReportSummary title={title} rows={rows} />
+        ) : selectedRow ? (
+          <ReportSummary rows={rows} />
         ) : (
           <div className={styles.emptyState}>No data, please click on Generate</div>
         )}
