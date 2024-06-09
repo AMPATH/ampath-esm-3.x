@@ -19,23 +19,6 @@ interface ReportTableProps {
 }
 
 const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
-  // const [parsedRows, setParsedRows] = useState<any[]>([]);
-
-  // useEffect(() => {
-  //   try {
-  //     const jsonObject = JSON.parse(rows);
-  //     if (Array.isArray(jsonObject)) {
-  //       setParsedRows(jsonObject);
-  //     } else {
-  //       console.error('Parsed JSON is not an array');
-  //       setParsedRows([]);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error parsing JSON:', error);
-  //     setParsedRows([]);
-  //   }
-  // }, [rows]);
-
   const headers = [{ key: 'report_name', header: 'Name' }];
 
   const handleRowClick = (row: any) => {
