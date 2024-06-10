@@ -29,32 +29,86 @@ const RenderMOH362a: React.FC = () => {
               Serial <br />
               Number
             </TableHeader>
-            <TableHeader rowSpan={1}>National Identification Number</TableHeader>
-            <TableHeader rowSpan={5}>Date of visit (DD/MM/YYYY)</TableHeader>
-            <TableHeader rowSpan={5}>Client Name (First,Middle,Last)</TableHeader>
-            <TableHeader rowSpan={5}>Age</TableHeader>
-            <TableHeader rowSpan={5}>Sex (M/F)</TableHeader>
-            <TableHeader rowSpan={5}>Telephone Number</TableHeader>
-            <TableHeader rowSpan={5}>Marital Status 1=Married 2=Widowed 3=Single 4=Divorced 5=Separated</TableHeader>
+            <TableHeader rowSpan={1}>
+              National <br />
+              Identification <br />
+              Number
+            </TableHeader>
             <TableHeader rowSpan={5}>
-              Population Type 1.Gen Pop 2.Key and Vulnerable Pop. Codes for KVP -DC -MSM/MSW -FSW -PWID/PWUD -VP
+              Date of visit <br />
+              (DD/MM/YYYY)
+            </TableHeader>
+            <TableHeader rowSpan={5}>
+              Client Name <br />
+              (First, Middle, Last)
+            </TableHeader>
+            <TableHeader rowSpan={5}>Age</TableHeader>
+            <TableHeader rowSpan={5}>
+              Sex <br />
+              (M/F)
+            </TableHeader>
+            <TableHeader rowSpan={5}>
+              Telephone <br />
+              Number
+            </TableHeader>
+            <TableHeader rowSpan={5}>
+              Marital Status <br />
+              1=Married <br />
+              2=Widowed <br />
+              3=Single <br />
+              4=Divorced <br />
+              5=Separated
+            </TableHeader>
+            <TableHeader rowSpan={5}>
+              Population Type <br />
+              1. Gen Pop <br />
+              2. Key and <br />
+              Vulnerable Pop. <br />
+              Codes for KVP <br />
+              -DC <br />
+              -MSM/MSW <br />
+              -FSW <br />
+              -PWID/PWUD <br />
+              -VP
             </TableHeader>
             <TableHeader rowSpan={5}>Setting</TableHeader>
             <TableHeader rowSpan={1}>HIV Test 1</TableHeader>
             <TableHeader rowSpan={1}>HIV Test 2</TableHeader>
             <TableHeader rowSpan={1}>HIV Test 3</TableHeader>
-            <TableHeader rowSpan={4}>Final HIV Result</TableHeader>
-            <TableHeader rowSpan={4}>Discordant Couple</TableHeader>
-            <TableHeader rowSpan={5}>Referred for Prevention Services 1.Prep 2.PEP 3.VMMC 4.PMTCT 5.NA</TableHeader>
-            <TableHeader rowSpan={5}>HTS Provider (Name)</TableHeader>
+            <TableHeader rowSpan={4}>
+              Final HIV <br />
+              Result
+            </TableHeader>
+            <TableHeader rowSpan={4}>
+              Discordant <br />
+              Couple
+            </TableHeader>
+            <TableHeader rowSpan={5}>
+              Referred for <br />
+              Prevention <br />
+              Services <br />
+              1. PrEP <br />
+              2. PEP <br />
+              3. VMMC <br />
+              4. PMTCT <br />
+              5. NA
+            </TableHeader>
+            <TableHeader rowSpan={5}>
+              HTS Provider <br />
+              (Name)
+            </TableHeader>
             <TableHeader rowSpan={5}>Remarks</TableHeader>
           </TableRow>
 
           <TableRow>
-            <TableHeader rowSpan={4}>National Unique Patient Identifier (NUPI) Number</TableHeader>
+            <TableHeader rowSpan={4}>
+              National Unique <br />
+              Patient Identifier <br />
+              (NUPI) Number
+            </TableHeader>
             <TableHeader rowSpan={1}>Kit Name:</TableHeader>
             <TableHeader rowSpan={1}>Kit Name:</TableHeader>
-            <TableHeader rowSpan={1}>Kit Name</TableHeader>
+            <TableHeader rowSpan={1}>Kit Name:</TableHeader>
           </TableRow>
           <TableRow>
             <TableHeader rowSpan={1}>Lot No.</TableHeader>
@@ -91,11 +145,11 @@ const RenderMOH362a: React.FC = () => {
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
                     {item.patient_id}
                   </TableCell>
+                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
@@ -111,9 +165,6 @@ const RenderMOH362a: React.FC = () => {
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
                     {item.patient_id}
                   </TableCell>
-                  {/* <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.patient_id}
-                  </TableCell> */}
                 </TableRow>
               </React.Fragment>
             ))
