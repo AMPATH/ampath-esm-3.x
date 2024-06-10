@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { DatePicker, DatePickerInput, Button, InlineLoading, InlineNotification } from '@carbon/react';
 import { Download } from '@carbon/react/icons';
-import ReportTable from '../left-justified-components/report-table-component';
+import ReportTable from '../report-table/report-table-component';
 import styles from './tab-panel.scss';
 import ReportSummary from '../report-summary/ReportSummary';
-import { generateSpReport } from './tab.panel.resource';
+import { generateSpReport } from '../../api/api';
 
 const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [selectedRow, setSelectedRow] = useState(null);
@@ -15,7 +15,12 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [notification, setNotification] = useState({ kind: '', title: '', subtitle: '', hide: true });
 
   const handleRowClick = (rowdata: any) => {
-    setSelectedRow(rowdata);
+    const processedRowData = rowdata.map((row: any) => {
+      const { id, value } = row;
+      return { id, value };
+    });
+
+    setSelectedRow(processedRowData);
   };
 
   const handleDateChange = (setDate: React.Dispatch<React.SetStateAction<Date | null>>) => (eventOrDates: any) => {
@@ -42,16 +47,6 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
         kind: 'error',
         title: 'Invalid Date Range',
         subtitle: 'Start date must be before end date.',
-        hide: false,
-      });
-      return;
-    }
-
-    if (!selectedRow) {
-      setNotification({
-        kind: 'error',
-        title: 'No SP Selected',
-        subtitle: 'Please select an SP.',
         hide: false,
       });
       return;
@@ -134,7 +129,7 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
         {loading ? (
           <InlineLoading description="Generating report..." />
         ) : selectedRow ? (
-          <ReportSummary rows={rows} />
+          <ReportSummary rows={selectedRow} />
         ) : (
           <div className={styles.emptyState}>No data, please click on Generate</div>
         )}

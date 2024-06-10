@@ -16,36 +16,13 @@ import ClinicalDashboardComponent from './clinical-dashboard/clinical-dashboard.
 import IptReportComponent from './clinical-dashboard/ipt-report/ipt-report.component';
 import { ReportHeader } from './headers/report-header-component';
 import ReportDashboard from './reports-dashboard/report-dashboard-component';
-import RenderMOH362 from './registers/MOH-362/MOH_362_component';
-import NutritionRegisters from './registers/MOH-407/nutrition-register-component';
-import PrepRegister from './registers/MOH-267/prep-activity-register.component';
-import RenderMOH405 from './registers/MOH-405/MOH_405_component';
-import RenderMOH406 from './registers/MOH-406/MOH_406_component';
 
 const Root: React.FC = () => {
-  const { t } = useTranslation();
-
   return (
     <div>
       <div className={styles.container}>
-        {/* <h3 className={styles.welcome}>
-        {t("reportsHeader", "Reports Dashboard")}
-      </h3>
-      <Resources /> */}
         <ReportHeader />
-
-        <IptReportComponent />
-
         <ReportDashboard />
-
-        <RenderMOH405 />
-        <RenderMOH406 />
-
-        <RenderMOH362 />
-
-        <NutritionRegisters />
-
-        <PrepRegister />
       </div>
     </div>
   );

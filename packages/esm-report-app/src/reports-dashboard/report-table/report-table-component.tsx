@@ -17,11 +17,17 @@ interface ReportTableProps {
   onRowClick: (row: any) => void;
   rows: any;
 }
+import { fetchReportLogsByLocationAndId } from '../../api/api';
+import { useSession } from '@openmrs/esm-framework';
 
 const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
   const headers = [{ key: 'report_name', header: 'Name' }];
+  const locationUuid = useSession()?.sessionLocation?.uuid;
 
   const handleRowClick = (row: any) => {
+    const idParts = row[0].id.split(':');
+    const numericId = Number(idParts[0]);
+    // const { response, isLoading, error, isValidating } = fetchReportLogsByLocationAndId(locationUuid, numericId);
     onRowClick(row);
   };
 

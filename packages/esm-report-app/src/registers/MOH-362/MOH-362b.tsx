@@ -4,9 +4,9 @@ import { TableContainer, TableHead, TableRow, TableHeader } from '@carbon/react'
 import { Table } from '@carbon/react';
 import { TableBody } from '@carbon/react';
 import { TableCell } from '@carbon/react';
-import { useAPI362b } from './MOH_362.resource';
+import { generateMOH362Reports } from '../../api/api';
 const RenderMOH362b: React.FC = () => {
-  const { moh362b, isLoading, error } = useAPI362b();
+  const { mohData: moh362b, isLoading, error } = generateMOH362Reports();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
