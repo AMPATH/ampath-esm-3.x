@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid, Column, Tabs, TabList, Tab, TabPanels, TabPanel, Checkbox, Button, TextInput } from '@carbon/react';
 import styles from './report-tabs.scss';
 import RenderTabPanel from '../tab-panel/tab-panel-component';
+import { getSPReports } from '../tab-panel/tab.panel.resource';
+
 export const RenderReportTab: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('HIV Treatment');
+  const { response, isLoading, error, isValidating } = getSPReports();
 
   const tabPanelsContent = [
     {
@@ -96,9 +99,30 @@ export const RenderReportTab: React.FC = () => {
     },
   ];
 
+  const [parsedRows, setParsedRows] = useState<any[]>([]);
+
+  useEffect(() => {
+    try {
+      const jsonObject = JSON.parse(response);
+      if (Array.isArray(jsonObject)) {
+        setParsedRows(jsonObject);
+      } else {
+        console.error('Parsed JSON is not an array');
+        setParsedRows([]);
+      }
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      setParsedRows([]);
+    }
+  }, [response]);
+
   const handleTabClick = (tabName: string) => {
     setSelectedTab(tabName);
   };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
@@ -116,7 +140,7 @@ export const RenderReportTab: React.FC = () => {
         <TabPanels>
           {tabPanelsContent.map((tab, index) => (
             <TabPanel key={index} className={styles['tab-panels']}>
-              {selectedTab === tab.title && <RenderTabPanel title={tab.title} rows={tab.rows} />}
+              {selectedTab === tab.title && <RenderTabPanel rows={parsedRows} />}
             </TabPanel>
           ))}
         </TabPanels>

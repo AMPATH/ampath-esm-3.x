@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   DataTable,
   TableContainer,
@@ -13,12 +13,13 @@ import {
   Pagination,
 } from '@carbon/react';
 
-const ReportTable: React.FC<{ onRowClick: any; title: string; rows: { id: string; name: string }[] }> = ({
-  onRowClick,
-  title,
-  rows,
-}) => {
-  const headers = [{ key: 'name', header: 'Name' }];
+interface ReportTableProps {
+  onRowClick: (row: any) => void;
+  rows: any;
+}
+
+const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
+  const headers = [{ key: 'report_name', header: 'Name' }];
 
   const handleRowClick = (row: any) => {
     onRowClick(row);
@@ -26,7 +27,7 @@ const ReportTable: React.FC<{ onRowClick: any; title: string; rows: { id: string
 
   return (
     <>
-      <TableContainer title={`${title} Reports`}>
+      <TableContainer title={`Reports`}>
         <DataTable
           rows={rows}
           headers={headers}
@@ -36,19 +37,27 @@ const ReportTable: React.FC<{ onRowClick: any; title: string; rows: { id: string
                 <TableRow>
                   <TableSelectAll />
                   {headers.map((header) => (
-                    <TableHeader {...getHeaderProps({ header })}>{header.header}</TableHeader>
+                    <TableHeader {...getHeaderProps({ header })} key={header.key}>
+                      {header.header}
+                    </TableHeader>
                   ))}
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
-                  <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.cells)}>
-                    <TableSelectRow />
-                    {row.cells.map((cell) => (
-                      <TableCell key={cell.id}>{cell.value}</TableCell>
-                    ))}
+                {rows.length > 0 ? (
+                  rows.map((row) => (
+                    <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.cells)}>
+                      <TableSelectRow />
+                      {row.cells.map((cell) => (
+                        <TableCell key={cell.id}>{cell.value}</TableCell>
+                      ))}
+                    </TableRow>
+                  ))
+                ) : (
+                  <TableRow>
+                    <TableCell colSpan={headers.length + 1}>No data available</TableCell>
                   </TableRow>
-                ))}
+                )}
               </TableBody>
             </Table>
           )}
