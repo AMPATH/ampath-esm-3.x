@@ -53,3 +53,19 @@ export const getSPReports = () => {
     isValidating,
   };
 };
+
+export const fetchReportLogsByLocationAndId = (locationUuid: string, reportId: number) => {
+  const { data, isLoading, error, isValidating } = useSWR(
+    `${BASE_URL}/logs?locationUuid=${locationUuid}&report_id=${reportId}`,
+    fetcher,
+  );
+
+  const response = data ? (data as any)?.result : [];
+
+  return {
+    response,
+    isLoading,
+    error,
+    isValidating,
+  };
+};

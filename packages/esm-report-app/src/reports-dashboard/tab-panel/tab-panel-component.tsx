@@ -15,7 +15,12 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [notification, setNotification] = useState({ kind: '', title: '', subtitle: '', hide: true });
 
   const handleRowClick = (rowdata: any) => {
-    setSelectedRow(rowdata);
+    const processedRowData = rowdata.map((row: any) => {
+      const { id, value } = row;
+      return { id, value };
+    });
+
+    setSelectedRow(processedRowData);
   };
 
   const handleDateChange = (setDate: React.Dispatch<React.SetStateAction<Date | null>>) => (eventOrDates: any) => {
@@ -124,7 +129,7 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
         {loading ? (
           <InlineLoading description="Generating report..." />
         ) : selectedRow ? (
-          <ReportSummary rows={rows} />
+          <ReportSummary rows={selectedRow} />
         ) : (
           <div className={styles.emptyState}>No data, please click on Generate</div>
         )}

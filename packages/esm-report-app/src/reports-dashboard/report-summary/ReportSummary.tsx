@@ -15,7 +15,7 @@ import {
 } from '@carbon/react';
 import styles from './ReportSummary.css';
 
-const ReportSummary: React.FC<{ rows: { id: string; report_name: string; description?: string }[] }> = ({ rows }) => {
+const ReportSummary: React.FC<any> = ({ rows }) => {
   const headers = [
     { key: 'status', header: 'Report Status' },
     { key: 'month', header: 'Month' },
@@ -40,7 +40,7 @@ const ReportSummary: React.FC<{ rows: { id: string; report_name: string; descrip
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
+                {/* <TableRow>
                   <TableSelectRow />
                   <TableCell>0</TableCell>
                   <TableCell>JUNE</TableCell>
@@ -50,11 +50,11 @@ const ReportSummary: React.FC<{ rows: { id: string; report_name: string; descrip
                   <TableCell>
                     <button className={styles.download_button}>Download</button>
                   </TableCell>
-                </TableRow>
-                {/* {rows.map((row) => (
+                </TableRow> */}
+                {rows.map((row) => (
                   <TableRow key={row.id} {...getRowProps({ row })}>
                     <TableSelectRow {...row} />
-                    <TableCell>{title}</TableCell>
+                    <TableCell>title</TableCell>
                     <TableCell>JUNE</TableCell>
                     <TableCell>
                       <button className={styles.view_button}>View</button>
@@ -63,7 +63,7 @@ const ReportSummary: React.FC<{ rows: { id: string; report_name: string; descrip
                       <button className={styles.download_button}>Download</button>
                     </TableCell>
                   </TableRow>
-                ))} */}
+                ))}
               </TableBody>
             </Table>
           )}
