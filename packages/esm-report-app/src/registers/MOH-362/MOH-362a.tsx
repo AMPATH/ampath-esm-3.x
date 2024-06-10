@@ -71,7 +71,10 @@ const RenderMOH362a: React.FC = () => {
               -PWID/PWUD <br />
               -VP
             </TableHeader>
-            <TableHeader rowSpan={5}>Setting</TableHeader>
+            <TableHeader rowSpan={5}>
+              Setting <br /> (1=Facility <br />
+              2=Community)
+            </TableHeader>
             <TableHeader rowSpan={1}>HIV Test 1</TableHeader>
             <TableHeader rowSpan={1}>HIV Test 2</TableHeader>
             <TableHeader rowSpan={1}>HIV Test 3</TableHeader>
@@ -128,6 +131,26 @@ const RenderMOH362a: React.FC = () => {
             <TableHeader rowSpan={1}>(N,P,I,NA)</TableHeader>
             <TableHeader rowSpan={1}>(N,P,Ic)</TableHeader>
             <TableHeader rowSpan={1}>(Y/N/NA)</TableHeader>
+          </TableRow>
+          <TableRow>
+            <TableCell rowSpan={2}>(a)</TableCell>
+            <TableCell rowSpan={2}>(b)</TableCell>
+            <TableCell rowSpan={2}>(c)</TableCell>
+            <TableCell rowSpan={2}>(d)</TableCell>
+            <TableCell rowSpan={2}>(e)</TableCell>
+            <TableCell rowSpan={2}>(f)</TableCell>
+            <TableCell rowSpan={2}>(g)</TableCell>
+            <TableCell rowSpan={2}>(h)</TableCell>
+            <TableCell rowSpan={2}>(i)</TableCell>
+            <TableCell rowSpan={2}>(j)</TableCell>
+            <TableCell rowSpan={2}>(k)</TableCell>
+            <TableCell rowSpan={2}>(l)</TableCell>
+            <TableCell rowSpan={2}>(m)</TableCell>
+            <TableCell rowSpan={2}>(n)</TableCell>
+            <TableCell rowSpan={2}>(o)</TableCell>
+            <TableCell rowSpan={2}>(p)</TableCell>
+            <TableCell rowSpan={2}>(q)</TableCell>
+            <TableCell rowSpan={2}>(r)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
