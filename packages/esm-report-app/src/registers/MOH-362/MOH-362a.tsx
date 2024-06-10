@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAPI362a } from './MOH_362.resource';
+import { generateMOH362Reports } from '../../api/api';
 import styles from './MOH-362.scss';
 import { TableContainer, TableHead, TableRow, TableHeader, Table, TableBody, TableCell } from '@carbon/react';
 
 const RenderMOH362a: React.FC = () => {
-  const { moh362a, isLoading, error } = useAPI362a();
+  const { mohData: moh362a, isLoading, error } = generateMOH362Reports();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
