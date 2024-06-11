@@ -13,7 +13,7 @@ const RenderMOH406: React.FC = () => (
         <p>Ministry of Health</p>
       </div>
       <div className={styles['center']}>
-        <h2>MOH 406a PNC REGISTER</h2>
+        <h2>MOH 406 PNC REGISTER</h2>
       </div>
       <div className={styles['right']}>
         <p>Ver. July 2023</p>
@@ -45,7 +45,6 @@ const RenderMOH406: React.FC = () => (
             </TableHeader>
             <TableHeader colSpan={6} rowSpan={1}>
               {' '}
-              Blank
             </TableHeader>
             <TableHeader colSpan={4} rowSpan={1}>
               {' '}
@@ -157,11 +156,11 @@ const RenderMOH406: React.FC = () => (
             </TableHeader>
             <TableHeader rowSpan={5} colSpan={1}>
               {' '}
-              1 = no change, 2 = 10 days to 14 days, 3 = 4 to 6 weeks, 4 = 4 to 6 months
+              1 = no change <br /> 2 = 10 days to 14 days <br /> 3 = 4 to 6 weeks <br /> 4 = 4 to 6 months
             </TableHeader>
             <TableHeader rowSpan={5} colSpan={1}>
               {' '}
-              1 = no change, 2 = 10 days to 14 days, 3 = 4 to 6 weeks, 4 = 4 to 6 months
+              1 = no change <br /> 2 = 10 days to 14 days <br /> 3 = 4 to 6 weeks <br /> 4 = 4 to 6 months
             </TableHeader>
             <TableHeader rowSpan={5} colSpan={1}>
               {' '}
