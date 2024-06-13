@@ -24,11 +24,14 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
   const headers = [{ key: 'report_name', header: 'Name' }];
   const locationUuid = useSession()?.sessionLocation?.uuid;
 
-  const handleRowClick = (row: any) => {
-    const idParts = row[0].id.split(':');
-    const numericId = Number(idParts[0]);
-    // const { response, isLoading, error, isValidating } = fetchReportLogsByLocationAndId(locationUuid, numericId);
-    onRowClick(row);
+  const handleRowClick = async (row: any) => {
+    try {
+      const reportId = row[0].id;
+      const response = await fetchReportLogsByLocationAndId(1, 1);
+      onRowClick(response);
+    } catch (error) {
+      console.error('Error fetching report logs', error);
+    }
   };
 
   return (

@@ -11,16 +11,10 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
   const [loading, setLoading] = useState(false);
-  const [reportData, setReportData] = useState(null);
   const [notification, setNotification] = useState({ kind: '', title: '', subtitle: '', hide: true });
 
   const handleRowClick = (rowdata: any) => {
-    const processedRowData = rowdata.map((row: any) => {
-      const { id, value } = row;
-      return { id, value };
-    });
-
-    setSelectedRow(processedRowData);
+    setSelectedRow(rowdata);
   };
 
   const handleDateChange = (setDate: React.Dispatch<React.SetStateAction<Date | null>>) => (eventOrDates: any) => {

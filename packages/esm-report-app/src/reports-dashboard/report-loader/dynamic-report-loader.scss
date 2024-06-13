@@ -1,3 +1,33 @@
+/* dynamic-report-loader.scss */
 .container {
-  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.downloadButton {
+  background-color: #007d79;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+  background-color: #005f5b;
+}
+
+.downloadButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #42a4a1;
 }
