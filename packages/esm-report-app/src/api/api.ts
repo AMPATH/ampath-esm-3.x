@@ -19,7 +19,7 @@ const fetcher = async (url) => {
 async function postData(url: string, ac = new AbortController()) {
   const response = await openmrsFetch(url, {
     signal: ac.signal,
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -66,21 +66,13 @@ export const getSPReports = () => {
   };
 };
 
-export const fetchReportLogsByLocationAndId = async (locationUuid: any, reportId: number) => {
-  try {
-    const response = await fetch(
-      `https://ngx.ampath.or.ke/amrs${BASE_URL}/logs?locationUuid=${locationUuid}&report_id=${reportId}`,
-      // {
-      //   mode: 'no-cors',
-      // },
-    );
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching report logs', error);
-    return [];
-  }
+export const fetchReportLogsByLocationAndId = async (
+  locationUuid: any,
+  reportId: number,
+  ac = new AbortController(),
+) => {
+  const results = await openmrsFetch(`${BASE_URL}/logs?locationUuid=${locationUuid}&report_id=${reportId}`, {
+    signal: ac.signal,
+  });
+  return results.data;
 };

@@ -125,7 +125,7 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
         ) : selectedRow ? (
           <ReportSummary rows={selectedRow} />
         ) : (
-          <div className={styles.emptyState}>No data, please click on Generate</div>
+          <div>No data, please click on Generate</div>
         )}
       </div>
     </div>
