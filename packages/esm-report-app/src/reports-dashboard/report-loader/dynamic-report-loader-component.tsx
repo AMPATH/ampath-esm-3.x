@@ -6,6 +6,7 @@ import NutritionRegisters from '../../registers/MOH-407/nutrition-register-compo
 import PrepRegister from '../../registers/MOH-267/prep-activity-register.component';
 import { useParams } from 'react-router-dom';
 import styles from './dynamic-report-loader.scss';
+import RenderMOH408 from '../../registers/MOH-408/MOH-408-component';
 
 const reportComponentMapping = {
   'MOH 405 - AnteNatal(ANC) Register': RenderMOH405,
@@ -13,6 +14,7 @@ const reportComponentMapping = {
   'MOH 362 A - HTS LABS REGISTER': RenderMOH362,
   'MOH 407 Nutrition Service Register': NutritionRegisters,
   'uuid-for-prep-register': PrepRegister,
+  'MOH 408 HEI REGISTER': RenderMOH408,
 };
 
 const DynamicReportLoader: React.FC = () => {
