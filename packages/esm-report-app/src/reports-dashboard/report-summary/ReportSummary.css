@@ -43,3 +43,8 @@
 .download_button:active {
   background-color: #0c4e1f; /* Darkest green on active */
 }
+
+.wrapper_container {
+  overflow: auto;
+  max-height: 300px;
+}

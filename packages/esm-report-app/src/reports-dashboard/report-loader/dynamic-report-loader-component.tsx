@@ -18,8 +18,30 @@ const reportComponentMapping = {
 const DynamicReportLoader: React.FC = () => {
   const { reportUuid } = useParams<{ reportUuid: string }>();
   const ReportComponent = reportComponentMapping[reportUuid];
+  const downloadPDF = () => {};
 
-  return <div className={styles.container}>{ReportComponent ? <ReportComponent /> : <div>Report not found</div>}</div>;
+  const downloadExcel = () => {};
+  return (
+    <div className={styles.container}>
+      {ReportComponent ? (
+        <>
+          <div className={styles.buttons}>
+            <button className={styles.downloadButton} onClick={downloadPDF}>
+              Download PDF
+            </button>
+            <button className={styles.downloadButton} onClick={downloadExcel}>
+              Download Excel
+            </button>
+          </div>
+          <div id="report-content">
+            <ReportComponent />
+          </div>
+        </>
+      ) : (
+        <div>Report not found</div>
+      )}
+    </div>
+  );
 };
 
 export default DynamicReportLoader;
