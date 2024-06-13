@@ -57,14 +57,20 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
-                  <TableRow key={row.id} {...getRowProps({ row })}>
-                    <TableSelectRow {...row} />
-                    {row.cells.map((cell) => (
-                      <TableCell key={cell.id}>{cell.value}</TableCell>
-                    ))}
+                {rows && rows.length > 0 ? (
+                  rows.map((row) => (
+                    <TableRow key={row.id} {...getRowProps({ row })}>
+                      <TableSelectRow {...row} />
+                      {row.cells.map((cell) => (
+                        <TableCell key={cell.id}>{cell.value}</TableCell>
+                      ))}
+                    </TableRow>
+                  ))
+                ) : (
+                  <TableRow>
+                    <TableCell colSpan={headers.length + 1}>No data available</TableCell>
                   </TableRow>
-                ))}
+                )}
               </TableBody>
             </Table>
           )}

@@ -27,7 +27,7 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
   const handleRowClick = async (row: any) => {
     try {
       const reportId = row[0].id;
-      const response = await fetchReportLogsByLocationAndId(1, 1);
+      const response = await fetchReportLogsByLocationAndId(locationUuid, reportId);
       onRowClick(response);
     } catch (error) {
       console.error('Error fetching report logs', error);
