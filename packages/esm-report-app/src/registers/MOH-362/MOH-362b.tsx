@@ -32,7 +32,12 @@ const RenderMOH362b: React.FC = () => {
               Serial <br />
               Number
             </TableHeader>
-            <TableHeader rowSpan={1}>National Identification Number</TableHeader>
+            <TableHeader rowSpan={1}>
+              {' '}
+              National <br />
+              Identification <br />
+              Number
+            </TableHeader>
             <TableHeader rowSpan={2}>Client Names</TableHeader>
             <TableHeader rowSpan={1}>Telephone Number</TableHeader>
             <TableHeader rowSpan={2}>Identification Strategy (VCT/IT/HIVST/SNS)</TableHeader>
