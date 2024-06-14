@@ -7,6 +7,7 @@ import PrepRegister from '../../registers/MOH-267/prep-activity-register.compone
 import { useParams } from 'react-router-dom';
 import styles from './dynamic-report-loader.scss';
 import RenderMOH408 from '../../registers/MOH-408/MOH-408-component';
+import UseBreadcrumb from '../breadcrumb/bread-crumb';
 
 const reportComponentMapping = {
   'MOH 405 - AnteNatal(ANC) Register': RenderMOH405,
@@ -27,6 +28,7 @@ const DynamicReportLoader: React.FC = () => {
     <div className={styles.container}>
       {ReportComponent ? (
         <>
+          <UseBreadcrumb />
           <div className={styles.buttons}>
             <button className={styles.downloadButton} onClick={downloadPDF}>
               Download PDF
