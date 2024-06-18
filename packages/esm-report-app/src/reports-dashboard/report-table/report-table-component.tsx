@@ -24,9 +24,14 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
   const headers = [{ key: 'report_name', header: 'Name' }];
   const locationUuid = useSession()?.sessionLocation?.uuid;
 
+  function extractNumber(str) {
+    const match = str.match(/^\d+/);
+    return match ? match[0] : null;
+  }
+
   const handleRowClick = async (row: any) => {
     try {
-      const reportId = row[0].id;
+      const reportId = Number(row.id);
       const response = await fetchReportLogsByLocationAndId(locationUuid, reportId);
       onRowClick(response);
     } catch (error) {
@@ -55,7 +60,7 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
               <TableBody>
                 {rows.length > 0 ? (
                   rows.map((row) => (
-                    <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row.cells)}>
+                    <TableRow {...getRowProps({ row })} onClick={() => handleRowClick(row)}>
                       <TableSelectRow />
                       {row.cells.map((cell) => (
                         <TableCell key={cell.id}>{cell.value}</TableCell>
