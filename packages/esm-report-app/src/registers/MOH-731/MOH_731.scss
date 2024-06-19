@@ -1,0 +1,208 @@
+.table {
+  width: 100%;
+  margin: 20px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.height {
+  display: flex;
+  height: 10;
+}
+th {
+  border-bottom: 1px solid black;
+  padding: 8px;
+  justify-content: center;
+  font-weight: bold;
+}
+.space {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.container {
+  margin: 20px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.title-one {
+  background-color: lightgrey;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+.bold {
+  font-weight: bold;
+  padding: 20px;
+}
+
+.table-two {
+  width: 100%;
+  margin: 20px;
+  border-collapse: collapse;
+  border: 1px solid black;
+
+  th {
+    width: 100%;
+  }
+
+  td {
+    align-items: center;
+    background-color: white;
+    border: none;
+    padding: 0;
+    padding-left: 20px;
+    text-align: left;
+    position: relative;
+    margin-left: 20px;
+  }
+
+  .small-cont {
+    height: 20px;
+    width: 70px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .smalll-cont {
+    height: 20px;
+    width: 70px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .border-one {
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+
+  .border-two {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .bold {
+    font-weight: bolder;
+  }
+
+  .div-one {
+    position: relative;
+    width: 70vw;
+    height: 120vh;
+  }
+
+  .one-one {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+
+  .one-two {
+    position: absolute;
+    left: 65%;
+    top: 20px;
+  }
+
+  .one-three {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+  }
+  .one-four {
+    position: absolute;
+    left: 45%;
+    bottom: 20px;
+  }
+  .one-five {
+    position: absolute;
+    bottom: 32%;
+    left: 90%;
+  }
+
+  .div-two {
+    position: relative;
+    width: 70vw;
+    height: 100vh;
+  }
+
+  .two-one {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+
+  .two-two {
+    position: absolute;
+    top: 40vh;
+    left: 10px;
+  }
+
+  .two-three {
+    position: absolute;
+    top: 68vh;
+    left: 10px;
+  }
+
+  .two-four {
+    position: absolute;
+    left: 60%;
+    top: 20px;
+  }
+  .two-five {
+    position: absolute;
+    left: 60%;
+    top: 20vh;
+  }
+  .two-six {
+    position: absolute;
+    left: 60%;
+    top: 52vh;
+  }
+
+  .two-seven {
+    position: absolute;
+    left: 60%;
+    top: 68vh;
+  }
+
+  .part-three {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90vw;
+    height: 175vh;
+  }
+  .column1 {
+    flex: 3;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20vh;
+  }
+  .column2 {
+    flex: 2;
+    border-right: 2px dashed black;
+    border-left: 2px dashed black;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .column3 {
+    flex: 2;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
