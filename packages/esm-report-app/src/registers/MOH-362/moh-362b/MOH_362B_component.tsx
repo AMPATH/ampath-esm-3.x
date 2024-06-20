@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './MOH-362.scss';
 import { TableContainer, TableHead, TableRow, TableHeader } from '@carbon/react';
 import { Table } from '@carbon/react';
 import { TableBody } from '@carbon/react';
 import { TableCell } from '@carbon/react';
-import { generateMOH362Reports } from '../../api/api';
+import { generateMOH362Reports } from '../../../api/api';
+import styles from '../MOH-362.scss';
 const RenderMOH362b: React.FC = () => {
   const { mohData: moh362b, isLoading, error } = generateMOH362Reports();
 

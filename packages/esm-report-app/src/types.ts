@@ -152,3 +152,11 @@ export interface BedDetails extends Bed {
     identifiers: Array<{ identifier: string }>;
   };
 }
+
+export interface ReportData {
+  locationUuid: string;
+  report_id: string;
+  start_date: string;
+  end_date: string;
+  sp_name: string;
+}
