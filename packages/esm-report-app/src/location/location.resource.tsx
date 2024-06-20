@@ -9,7 +9,7 @@ const password = '';
 const basicAuthBase64 = Buffer.from(`${username}:${password}`).toString('base64');
 const fetcher = async (url) => {
   try {
-    const response = await fetch(url, {
+    const response = await openmrsFetch(url, {
       headers: { Authorization: `Basic ${basicAuthBase64}` },
     });
     if (!response.ok) {
@@ -24,7 +24,7 @@ const fetcher = async (url) => {
 export const useFacilityLocation = () => {
   const { basicAuthBase64 } = useConfig<FacilityLocationsConfig>();
 
-  const url = `https://ngx.ampath.or.ke/amrs/ws/rest/v1/location?v=default`;
+  const url = `/ws/rest/v1/location?v=default`;
   const { data, isLoading, error, isValidating } = useSWR(url, () => fetcher(url));
 
   return {
