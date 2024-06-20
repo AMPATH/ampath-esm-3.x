@@ -12,8 +12,6 @@ const AMRSChartLink = () => {
 
   return (
     <Button
-      //onClick={() => navigate({ to: `/openmrs/kenyaemr/chart/chartViewPatient.page?patientId=${patient?.patientId}&` })}
-
       onClick={() =>
         navigate({
           to: `https://ngx.ampath.or.ke/ng2-amrs/#/patient-dashboard/patient/${patient?.patientId}/general/general/landing-page`,
