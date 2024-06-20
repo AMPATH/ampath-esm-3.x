@@ -1,18 +1,20 @@
 /* dynamic-report-loader.scss */
+
 .container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
+  height: 100vh;
+  padding: 0 8px 18px 8px;
 }
 
 .buttons {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .downloadButton {
+  // margin-left: 8px;
   background-color: #007d79;
   color: white;
   border: none;
@@ -30,4 +32,12 @@
 .downloadButton:focus {
   outline: none;
   box-shadow: 0 0 0 2px #42a4a1;
+}
+
+#report-content {
+  flex-grow: 1;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 16px;
+  background-color: #fff;
 }

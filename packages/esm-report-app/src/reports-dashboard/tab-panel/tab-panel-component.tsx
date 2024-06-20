@@ -4,7 +4,8 @@ import { Download } from '@carbon/react/icons';
 import ReportTable from '../report-table/report-table-component';
 import styles from './tab-panel.scss';
 import ReportSummary from '../report-summary/ReportSummary';
-import { generateSpReport } from '../../api/api';
+import { generateFrozenReport } from '../../api/api';
+import { type ReportData } from '../../types';
 
 const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [selectedRow, setSelectedRow] = useState(null);
@@ -15,6 +16,14 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
 
   const handleRowClick = (rowdata: any) => {
     setSelectedRow(rowdata);
+  };
+
+  const formatDate = (date: Date): string => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
+    const day = String(date.getDate()).padStart(2, '0');
+
+    return `${year}-${month}-${day}`;
   };
 
   const handleDateChange = (setDate: React.Dispatch<React.SetStateAction<Date | null>>) => (eventOrDates: any) => {
@@ -50,16 +59,33 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
     setNotification({ kind: '', title: '', subtitle: '', hide: true });
 
     try {
-      // const response = generateSpReport({
-      //   startDate,
-      //   endDate,
-      //   sp_name: selectedRow.map((row: any) => row.value),
-      //   report_id: selectedRow.map((row: any) => row.id),
-      // });
-      // if (!response) {
-      //   throw new Error('Network response was not ok');
-      // }
-      // setReportData(response);
+      const reportData: ReportData = {
+        locationUuid: '1', // Update with actual data
+        report_id: '1', // Update with actual data
+        start_date: formatDate(startDate),
+        end_date: formatDate(endDate),
+        sp_name: selectedRow?.sp_name || 'sp_test', // Adjust as needed
+      };
+
+      const response = await generateFrozenReport(reportData);
+
+      if (response && response.length > 0) {
+        const rowsInserted = response[0]['Rows inserted'];
+
+        setNotification({
+          kind: 'success',
+          title: 'Report Generated',
+          subtitle: `Rows inserted: ${rowsInserted}`,
+          hide: false,
+        });
+      } else {
+        setNotification({
+          kind: 'warning',
+          title: 'No Data',
+          subtitle: 'No rows were inserted. Please check the input data or try again.',
+          hide: false,
+        });
+      }
     } catch (error) {
       setNotification({
         kind: 'error',

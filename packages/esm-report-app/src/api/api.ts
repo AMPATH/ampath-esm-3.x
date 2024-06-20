@@ -2,6 +2,7 @@ import useSWR from 'swr';
 import { Buffer } from 'buffer';
 import { openmrsFetch, restBaseUrl, useConfig } from '@openmrs/esm-framework';
 import { FacilityLocationsConfig } from '../config-schema';
+import { type ReportData } from '../types';
 
 export const BASE_URL = '/ws/rest/v1/amrscore/reports';
 export const url = '/ws/rest/v1';
@@ -47,17 +48,16 @@ export const generateMOH362Reports = () => {
   };
 };
 
-export const generateSpReport = (result) => {
-  const { data, isLoading, error, isValidating } = useSWR(`${BASE_URL}/generate`, fetcher);
-
-  const response = data ? (data as any)?.results : [];
-
-  return {
-    response,
-    isLoading,
-    error,
-    isValidating,
-  };
+export const generateFrozenReport = async (data: ReportData, ac = new AbortController()) => {
+  const results = await openmrsFetch(`${BASE_URL}/generate`, {
+    signal: ac.signal,
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  return results.data;
 };
 
 export const getSPReports = () => {

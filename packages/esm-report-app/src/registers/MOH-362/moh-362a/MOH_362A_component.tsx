@@ -1,6 +1,6 @@
 import React from 'react';
-import { generateMOH362Reports } from '../../api/api';
-import styles from './MOH-362.scss';
+import { generateMOH362Reports } from '../../../api/api';
+import styles from '../MOH-362.scss';
 import { TableContainer, TableHead, TableRow, TableHeader, Table, TableBody, TableCell } from '@carbon/react';
 
 const RenderMOH362a: React.FC = () => {
