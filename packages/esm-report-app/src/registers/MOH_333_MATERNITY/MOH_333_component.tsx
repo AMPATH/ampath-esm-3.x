@@ -11,9 +11,15 @@ const MOH333: React.FC = () => {
       <Table className={styles['table']}>
         <TableHead>
           <TableRow>
-            <TableHeader rowSpan={6}></TableHeader>
-            <TableHeader></TableHeader>
-            <TableHeader rowSpan={6}></TableHeader>
+            <TableHeader rowSpan={6}>
+              Date of <br /> Admission <br /> (dd/mm/yyyy)
+            </TableHeader>
+            <TableHeader>
+              Admission <br /> number
+            </TableHeader>
+            <TableHeader rowSpan={6}>
+              Fullname <br /> (First, Middle, surname)
+            </TableHeader>
             <TableHeader>
               Date of Birth <br /> (dd/mm/yy)
             </TableHeader>
