@@ -14,7 +14,7 @@ import {
 } from '@carbon/react';
 
 interface ReportTableProps {
-  onRowClick: (row: any) => void;
+  onRowClick: (row: any, id: number) => void;
   rows: any;
 }
 import { fetchReportLogsByLocationAndId } from '../../api/api';
@@ -33,7 +33,7 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
     try {
       const reportId = Number(row.id);
       const response = await fetchReportLogsByLocationAndId(locationUuid, reportId);
-      onRowClick(response);
+      onRowClick(response, row.id);
     } catch (error) {
       console.error('Error fetching report logs', error);
     }

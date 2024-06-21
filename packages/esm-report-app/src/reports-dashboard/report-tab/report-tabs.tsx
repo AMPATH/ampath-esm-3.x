@@ -5,7 +5,7 @@ import RenderTabPanel from '../tab-panel/tab-panel-component';
 import { getSPReports } from '../../api/api';
 
 export const RenderReportTab: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState('BILLING');
+  const [selectedTab, setSelectedTab] = useState('');
   const { response, isLoading, error, isValidating } = getSPReports();
 
   const [parsedRows, setParsedRows] = useState<any[]>([]);
@@ -25,9 +25,15 @@ export const RenderReportTab: React.FC = () => {
     }
   }, [response]);
 
+  useEffect(() => {
+    if (parsedRows.length > 0) {
+      const firstTabTitle = parsedRows[0].category_name;
+      setSelectedTab(firstTabTitle);
+    }
+  }, [parsedRows]);
+
   const handleTabClick = (tabName: any) => {
     setSelectedTab(tabName);
-    // console.log('parsedRows', parsedRows);
   };
 
   if (isLoading) {
@@ -52,12 +58,11 @@ export const RenderReportTab: React.FC = () => {
       <div>
         <Tabs>
           <TabList aria-label="List of tabs" contained className={styles['full-width-tablist']}>
-            {parsedRows.length > 0 &&
-              tabPanelsContent.map((tab, index) => (
-                <Tab key={index} onClick={() => handleTabClick(tab.title)}>
-                  {tab.title}
-                </Tab>
-              ))}
+            {tabPanelsContent.map((tab, index) => (
+              <Tab key={index} onClick={() => handleTabClick(tab.title)}>
+                {tab.title}
+              </Tab>
+            ))}
           </TabList>
 
           <TabPanels>
