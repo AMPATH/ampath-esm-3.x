@@ -104,3 +104,10 @@ export const getFacilityLocations = () => {
     isValidating,
   };
 };
+
+export const getLocations = async (locationUuid: any, ac = new AbortController()) => {
+  const results = await openmrsFetch(`${url}/amrscore/locations?locationUuid=${locationUuid}`, {
+    signal: ac.signal,
+  });
+  return results.data;
+};

@@ -40,7 +40,7 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
 
   return (
     <div className={styles.wrapper_container}>
-      <TableContainer title="Frozen Reports">
+      <TableContainer title="Reports logs">
         <DataTable
           rows={rowsWithButtons}
           headers={headers}

@@ -1,0 +1,12 @@
+{
+    "MOH 405 - AnteNatal(ANC) Register": "MOH_405_component",
+    "MOH 406 A PNC REGISTER": "MOH_406_component",
+    "MOH 362 A - HTS LABS REGISTER": "MOH_362A_component",
+    "MOH 362 B - HTS LABS REGISTER": "MOH_362B_component",
+    "MOH 407 Nutrition Service Register": "Nutrition_component",
+    "ClientFollowUp Service Register MOH 407": "ClientFollowUp_component",
+    "uuid-for-prep-register": "prep-activity-register.component",
+    "MOH 408 HEI REGISTER": "MOH-408-component"
+  }
+  
+  

@@ -1,27 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown, MultiSelect } from '@carbon/react';
 import styles from './location.scss';
 import IptTableComponent from '../clinical-dashboard/ipt-report/ipt-table-component';
-import { getFacilityLocations } from '../api/api';
+import { getFacilityLocations, getLocations } from '../api/api';
+import { useSession } from '@openmrs/esm-framework';
 
 export const LocationsComponent = ({ facilitylocations }) => {
   const { t } = useTranslation();
-  const [currentLocation, setCurrentLocation] = useState(facilitylocations[0]);
+  const [currentLocation, setCurrentLocation] = useState(null);
   const { facilityLocations } = getFacilityLocations();
-  const locations = [
-    { value: 'MTRH Module 1', label: 'MTRH Module 1' },
-    { value: 'Mosoriot', label: 'Mosoriot' },
-    { value: 'Turbo', label: 'Turbo' },
-    { value: 'Burnt Forest', label: 'Burnt Forest' },
-  ];
+  const locationUuid = useSession()?.sessionLocation?.uuid;
+  const [currentLocations, setCurrentLocations] = useState([]);
 
-  //   if (facilitylocations.length)
+  useEffect(() => {
+    const fetchLocations = async () => {
+      const response = await getLocations(locationUuid);
+      try {
+        const resultsArray = JSON.parse(response.results);
+        if (Array.isArray(resultsArray)) {
+          setCurrentLocations(
+            resultsArray.map((location) => ({
+              value: location.uuid,
+              label: location.location_name,
+            })),
+          );
+        } else {
+          console.error('Error: Parsed results is not an array.');
+        }
+      } catch (error) {
+        console.error('Error parsing response.results:', error);
+      }
+    };
+
+    fetchLocations();
+  }, [locationUuid]);
+
   return (
     <div className={styles.container}>
       <MultiSelect
         label="Locations"
-        items={locations}
+        items={currentLocations}
         placeholder="Select locations"
         onChange={(selectedItems) => setCurrentLocation(selectedItems)}
       />
