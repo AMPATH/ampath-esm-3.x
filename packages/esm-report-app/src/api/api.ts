@@ -48,7 +48,7 @@ export const generateMOH362Reports = () => {
   };
 };
 
-export const generateFrozenReport = async (data: ReportData, ac = new AbortController()) => {
+export const generateReportLogs = async (data: ReportData, ac = new AbortController()) => {
   const results = await openmrsFetch(`${BASE_URL}/generate`, {
     signal: ac.signal,
     method: 'POST',
