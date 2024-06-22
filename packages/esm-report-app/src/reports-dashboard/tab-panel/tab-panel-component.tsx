@@ -4,13 +4,14 @@ import { Download } from '@carbon/react/icons';
 import ReportTable from '../report-table/report-table-component';
 import styles from './tab-panel.scss';
 import ReportSummary from '../report-summary/ReportSummary';
-import { generateFrozenReport } from '../../api/api';
+import { generateReportLogs } from '../../api/api';
 import { type ReportData } from '../../types';
 import { useSession } from '@openmrs/esm-framework';
 
 const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [reportId, setReportId] = useState(null);
+  const [reportUuid, setReportUuid] = useState(null);
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
   const [loading, setLoading] = useState(false);
@@ -18,9 +19,10 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [summaryKey, setSummaryKey] = useState(0);
   const locationUuid = useSession()?.sessionLocation?.uuid;
 
-  const handleRowClick = (rowdata: any, id: number) => {
+  const handleRowClick = (rowdata: any, id: number, uuid: string) => {
     setSelectedRow(rowdata);
     setReportId(id);
+    setReportUuid(uuid);
   };
 
   const formatDate = (date: Date): string => {
@@ -59,6 +61,16 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
       return;
     }
 
+    if (!selectedRow && !reportUuid) {
+      setNotification({
+        kind: 'error',
+        title: 'No report is selected',
+        subtitle: 'Report must be selected.',
+        hide: false,
+      });
+      return;
+    }
+
     setLoading(true);
     setNotification({ kind: '', title: '', subtitle: '', hide: true });
 
@@ -66,12 +78,13 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
       const reportData: ReportData = {
         locationUuid: locationUuid,
         report_id: reportId,
+        uuid: reportUuid,
         start_date: formatDate(startDate),
         end_date: formatDate(endDate),
-        sp_name: selectedRow?.[0]?.sp_name || 'sp_test',
+        sp_name: selectedRow?.[0]?.sp_name,
       };
 
-      const response = await generateFrozenReport(reportData);
+      const response = await generateReportLogs(reportData);
 
       if (response && response.length > 0) {
         const rowsInserted = response[0]['Rows inserted'];

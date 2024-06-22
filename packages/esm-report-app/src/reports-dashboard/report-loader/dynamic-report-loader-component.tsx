@@ -7,6 +7,9 @@ import RenderMOH362B from '../../registers/MOH-362/moh-362b/MOH_362B_component';
 import NutritionRegisters from '../../registers/MOH-407/nutrition/Nutrition_component';
 import ClientFollowUpRegister from '../../registers/MOH-407/clientFollowUp/ClientFollowUp_component';
 import PrepRegister from '../../registers/MOH-267/prep-activity-register.component';
+import MOH731 from '../../registers/MOH-731/MOH_731';
+import CareAndTreatment from '../../registers/CARE_AND_TREATMENT/Care_and_Treatment';
+import MOH333 from '../../registers/MOH_333_MATERNITY/MOH_333_component';
 import { useParams } from 'react-router-dom';
 import styles from './dynamic-report-loader.scss';
 import RenderMOH408 from '../../registers/MOH-408/MOH-408-component';
@@ -21,8 +24,11 @@ const reportComponentMapping = {
   'MOH 362 B - HTS LABS REGISTER': RenderMOH362B,
   'MOH 407 Nutrition Service Register': NutritionRegisters,
   'ClientFollowUp Service Register MOH 407': ClientFollowUpRegister,
-  'uuid-for-prep-register': PrepRegister,
+  'PrEP DAR': PrepRegister,
   'MOH 408 HEI REGISTER': RenderMOH408,
+  'MOH 731': MOH731,
+  'Care & Treatment': CareAndTreatment,
+  'MOH 333 Maternity Register': MOH333,
 };
 
 const DynamicReportLoader: React.FC = () => {

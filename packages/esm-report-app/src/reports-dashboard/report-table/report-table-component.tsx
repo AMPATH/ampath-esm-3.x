@@ -14,7 +14,7 @@ import {
 } from '@carbon/react';
 
 interface ReportTableProps {
-  onRowClick: (row: any, id: number) => void;
+  onRowClick: (row: any, id: number, uuid: string) => void;
   rows: any;
 }
 import { fetchReportLogsByLocationAndId } from '../../api/api';
@@ -32,8 +32,10 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
   const handleRowClick = async (row: any) => {
     try {
       const reportId = Number(row.id);
+      const foundItem = rows.find((item) => item.id === row.id);
+      const uuid = foundItem ? foundItem.uuid : undefined;
       const response = await fetchReportLogsByLocationAndId(locationUuid, reportId);
-      onRowClick(response, row.id);
+      onRowClick(response, row.id, uuid);
     } catch (error) {
       console.error('Error fetching report logs', error);
     }

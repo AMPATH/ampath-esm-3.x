@@ -156,6 +156,7 @@ export interface BedDetails extends Bed {
 export interface ReportData {
   locationUuid: string;
   report_id: string;
+  uuid: string;
   start_date: string;
   end_date: string;
   sp_name: string;
