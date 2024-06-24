@@ -1,16 +1,7 @@
 import React from 'react';
-import { TableContainer, TableHead, TableRow, TableHeader } from '@carbon/react';
-import { Table } from '@carbon/react';
-import { TableBody } from '@carbon/react';
-import { TableCell } from '@carbon/react';
-import { generateMOH362Reports } from '../../../api/api';
+import { TableContainer, TableHead, TableRow, TableHeader, Table, TableCell, TableBody } from '@carbon/react';
 import styles from '../MOH-362.scss';
-const RenderMOH362b: React.FC = () => {
-  const { mohData: moh362b, isLoading, error } = generateMOH362Reports();
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading data</div>;
-
+const RenderMOH362b: React.FC<{ reportData: any }> = ({ reportData }) => {
   return (
     <TableContainer className={styles['table-container']} title="MOH 362 HTS LAB, REFERRAL AND LINKAGE REGISTER">
       <div className={styles['header']}>
@@ -67,8 +58,8 @@ const RenderMOH362b: React.FC = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {moh362b && moh362b.length > 0 ? (
-            moh362b.map((item, i) => (
+          {reportData && reportData.length > 0 ? (
+            reportData.map((item, i) => (
               <React.Fragment key={i}>
                 <TableRow>
                   <TableCell rowSpan={2}> {item.patient_id}</TableCell>

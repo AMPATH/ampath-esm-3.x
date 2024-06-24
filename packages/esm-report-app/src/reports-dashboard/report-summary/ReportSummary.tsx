@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   DataTable,
   TableContainer,
@@ -10,13 +10,16 @@ import {
   TableCell,
   TableSelectAll,
   TableSelectRow,
-  Button,
-  Pagination,
+  Loading,
 } from '@carbon/react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './ReportSummary.css';
+import reportMapping from '../report-loader/reportMapping.json';
+import { generateReportData } from '../../api/api';
 
 const ReportSummary: React.FC<any> = ({ rows }) => {
+  const [loading, setLoading] = useState(false);
+
   const headers = [
     { key: 'status', header: 'Status' },
     { key: 'start_date', header: 'Start Date' },
@@ -27,19 +30,40 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
     { key: 'download', header: 'Download' },
   ];
 
-  // Add view and download buttons to rows data
-  const rowsWithButtons = rows.map((row) => ({
-    ...row,
-    view: (
-      <Link to={`/reports/${row.report_name}`}>
-        <button className={styles.view_button}>View</button>
-      </Link>
-    ),
-    download: <button className={styles.download_button}>Download</button>,
-  }));
+  const navigate = useNavigate();
+
+  const handleViewClick = async (report_uuid, report_id) => {
+    setLoading(true);
+    try {
+      const response = await generateReportData(report_id);
+      const data = response.results;
+
+      navigate(`/reports/${report_uuid}`, { state: { reportData: data } });
+    } catch (error) {
+      console.error('Error fetching report data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const rowsWithButtons = rows.map((row) => {
+    const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+    return {
+      ...row,
+      view: reportMappingEntry ? (
+        <button
+          className={styles.view_button}
+          onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
+          View
+        </button>
+      ) : null,
+      download: <button className={styles.download_button}>Download</button>,
+    };
+  });
 
   return (
     <div className={styles.wrapper_container}>
+      {loading && <Loading description="Loading data..." withOverlay={true} />}
       <TableContainer title="Reports logs">
         <DataTable
           rows={rowsWithButtons}

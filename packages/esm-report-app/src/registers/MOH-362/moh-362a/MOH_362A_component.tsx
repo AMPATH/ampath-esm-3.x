@@ -1,14 +1,8 @@
 import React from 'react';
-import { generateMOH362Reports } from '../../../api/api';
 import styles from '../MOH-362.scss';
 import { TableContainer, TableHead, TableRow, TableHeader, Table, TableBody, TableCell } from '@carbon/react';
 
-const RenderMOH362a: React.FC = () => {
-  const { mohData: moh362a, isLoading, error } = generateMOH362Reports();
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading data</div>;
-
+const RenderMOH362a: React.FC<{ reportData: any }> = ({ reportData }) => {
   return (
     <TableContainer className={styles['table-container']} title="MOH 362 HTS LAB, REFERRAL AND LINKAGE REGISTER">
       <div className={styles['header']}>
@@ -154,15 +148,15 @@ const RenderMOH362a: React.FC = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {moh362a && moh362a.length > 0 ? (
-            moh362a.map((item, i) => (
+          {reportData && reportData.length > 0 ? (
+            reportData.map((item, i) => (
               <React.Fragment key={i}>
                 <TableRow>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{i}</TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
                     {item.patient_id}
                   </TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>

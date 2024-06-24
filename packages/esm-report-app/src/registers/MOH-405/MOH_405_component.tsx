@@ -1,11 +1,8 @@
 import React from 'react';
 import styles from './MOH-405.scss';
-import { TableContainer, TableHead, TableRow, TableHeader } from '@carbon/react';
-import { Table } from '@carbon/react';
-import { TableBody } from '@carbon/react';
-import { TableCell } from '@carbon/react';
+import { TableContainer, TableHead, TableRow, Table, TableBody, TableCell, TableHeader } from '@carbon/react';
 
-const RenderMOH405: React.FC = () => (
+const RenderMOH405: React.FC<{ reportData: any }> = ({ reportData }) => (
   <TableContainer className={styles['table-container']}>
     <div className={styles['header']}>
       <div className={styles['left']}>

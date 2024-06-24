@@ -36,8 +36,8 @@ async function postData(url: string, ac = new AbortController()) {
   return response.data;
 }
 
-export const generateMOH362Reports = () => {
-  const { data, error, isLoading, isValidating } = useSWR(`${BASE_URL}/view`, fetcher);
+export const generateMOH362Reports = (id) => {
+  const { data, error, isLoading, isValidating } = useSWR(`${BASE_URL}/view?id=${id}`, fetcher);
 
   const mohData = data ? (data as any)?.results : [];
   return {
@@ -79,6 +79,13 @@ export const fetchReportLogsByLocationAndId = async (
   ac = new AbortController(),
 ) => {
   const results = await openmrsFetch(`${BASE_URL}/logs?locationUuid=${locationUuid}&report_id=${reportId}`, {
+    signal: ac.signal,
+  });
+  return results.data;
+};
+
+export const generateReportData = async (reportId: number, ac = new AbortController()) => {
+  const results = await openmrsFetch(`${BASE_URL}/view?id=${reportId}`, {
     signal: ac.signal,
   });
   return results.data;
