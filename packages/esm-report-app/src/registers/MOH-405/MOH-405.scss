@@ -1,44 +1,9 @@
-// // body {
-// //   font-family: 'Arial', sans-serif;
-//   color: #000000;
-//   background-color: #fff;
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   font-size: 12px;
-//   font-weight: normal;
-// }
 
-h1,
-h2{body {
-  //   font-family: 'Arial', sans-serif;
-  //   color: #000000;
-  //   background-color: #fff;
-  //   margin: 0;
-  //   padding: 0;
-  //   box-sizing: border-box;
-  //   font-size: 12px;
-  //   font-weight: normal;
-  // }
-  
-  h1,
-  h2{
-  
-//   color: #000000;
-//   background-color: #fff;
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   font-size: 12px;
-//   font-weight: normal;
-// }
 
 h1,
 h2 {
   color: #000000;
   margin: 0;
-  font-size: 14px;
-  font-weight: bold;
   font-size: 14px;
   font-weight: bold;
 }
@@ -50,16 +15,11 @@ h6 {
   margin: 0;
   font-size: 14px;
   font-weight: normal;
-  font-size: 14px;
-  font-weight: normal;
 }
 
 p {
   margin: 0;
   padding: 0;
-  color: #000000;
-  font-size: 14px;
-  font-weight: normal;
   color: #000000;
   font-size: 14px;
   font-weight: normal;
@@ -75,9 +35,6 @@ p {
   font-size: 12px;
   color: #000000;
   font-weight: normal;
-  font-size: 12px;
-  color: #000000;
-  font-weight: normal;
 
   .header {
     display: flex;
@@ -86,8 +43,6 @@ p {
     margin-bottom: 10px;
     width: 100%;
     color: #000000;
-    font-size: 12px;
-    font-weight: normal;
     font-size: 12px;
     font-weight: normal;
   }
@@ -101,9 +56,6 @@ p {
     color: #000000;
     font-size: 12px;
     font-weight: normal;
-    color: #000000;
-    font-size: 12px;
-    font-weight: normal;
   }
 
   .header {
@@ -111,18 +63,7 @@ p {
     justify-content: space-between;
     align-items: center;
   }
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  .left,
-  .center,
-  .right {
-    width: auto;
-    margin-bottom: 0;
-  }
   .left,
   .center,
   .right {
@@ -136,27 +77,12 @@ p {
     justify-content: flex-start;
     align-items: center;
   }
-  .left {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
 
   .center {
     flex: 2;
     text-align: center;
   }
-  .center {
-    flex: 2;
-    text-align: center;
-  }
 
-  .right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
   .right {
     flex: 1;
     display: flex;
@@ -167,19 +93,13 @@ p {
   .table-wrapper {
     width: 100%;
     overflow-x: auto;
-    overflow-x: auto;
   }
 
   table {
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
-    width: 100%;
-    max-width: 100%;
     color: #000000;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
-    font-weight: normal;
     font-size: 12px;
     font-family: Arial, sans-serif;
     font-weight: normal;
@@ -194,19 +114,13 @@ p {
 
       color: #000000;
       font-size: 14px;
-      font-family: Arial, sans-serif;
-
-      color: #000000;
-      font-size: 14px;
       word-wrap: break-word;
-
     }
 
     th {
       background-color: #f2f2f2;
       font-weight: normal;
-      padding: 4px; 
-
+      padding: 4px;
     }
 
     td {
