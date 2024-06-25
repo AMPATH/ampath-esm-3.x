@@ -1,12 +1,57 @@
-{
-    "MOH 405 - AnteNatal(ANC) Register": "MOH_405_component",
-    "MOH 406 A PNC REGISTER": "MOH_406_component",
-    "MOH 362 A - HTS LABS REGISTER": "MOH_362A_component",
-    "MOH 362 B - HTS LABS REGISTER": "MOH_362B_component",
-    "MOH 407 Nutrition Service Register": "Nutrition_component",
-    "ClientFollowUp Service Register MOH 407": "ClientFollowUp_component",
-    "uuid-for-prep-register": "prep-activity-register.component",
-    "MOH 408 HEI REGISTER": "MOH-408-component"
+[
+  {
+    "report_name": "MOH 405 - AnteNatal(ANC) Register",
+    "report_uuid": "9b3a8ae4-ad09-4806-a824-3807b41ba370",
+    "component": "RenderMOH405"
+  },
+  {
+    "report_name": "MOH 406 A PNC REGISTER",
+    "report_uuid": "fa94e87a-fc49-4e8e-bbec-aee08da51add",
+    "component": "RenderMOH406"
+  },
+  {
+    "report_name": "MOH 362 A - HTS LABS REGISTER",
+    "report_uuid": "7daf4258-eceb-47c3-81ba-8ae6ddea41d9",
+    "component": "RenderMOH362A"
+  },
+  {
+    "report_name": "MOH 362 B - HTS LABS REGISTER",
+    "report_uuid": "9b55b530-908a-44b2-8974-8328b2c952dd",
+    "component": "RenderMOH362B"
+  },
+  {
+    "report_name": "MOH 407 Nutrition Service Register",
+    "report_uuid": "43ca0b4f-7767-4beb-b122-f11500602470",
+    "component": "NutritionRegisters"
+  },
+  {
+    "report_name": "ClientFollowUp Service Register MOH 407",
+    "report_uuid": "43ca0b4f-7767-4beb-b122-f11500602470",
+    "component": "ClientFollowUpRegister"
+  },
+  {
+    "report_name": "PrEP DAR",
+    "report_uuid": "d611bd51-8cec-4069-87d6-d59a205bee05",
+    "component": "PrepRegister"
+  },
+  {
+    "report_name": "MOH 408 HEI REGISTER",
+    "report_uuid": "d611bd51-8cec-4069-87d6-d59a205bee05",
+    "component": "RenderMOH408"
+  },
+  {
+    "report_name": "MOH 731",
+    "report_uuid": "f3650738-5830-4159-ac8d-e68a15852cc4",
+    "component": "MOH731"
+  },
+  {
+    "report_name": "Care & Treatment",
+    "report_uuid": "b8dcd336-d8fa-405e-95fe-fd23783db908",
+    "component": "CareAndTreatment"
+  },
+  {
+    "report_name": "MOH 333 Maternity Register",
+    "report_uuid": "e6f9b821-e087-4a6e-b7ee-1a17dcd6f9b3",
+    "component": "MOH333"
   }
-  
-  
+]

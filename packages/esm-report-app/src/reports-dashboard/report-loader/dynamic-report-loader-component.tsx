@@ -10,42 +10,43 @@ import PrepRegister from '../../registers/MOH-267/prep-activity-register.compone
 import MOH731 from '../../registers/MOH-731/MOH_731';
 import CareAndTreatment from '../../registers/CARE_AND_TREATMENT/Care_and_Treatment';
 import MOH333 from '../../registers/MOH_333_MATERNITY/MOH_333_component';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import styles from './dynamic-report-loader.scss';
 import RenderMOH408 from '../../registers/MOH-408/MOH-408-component';
 import UseBreadcrumb from '../breadcrumb/bread-crumb';
 import html2canvas from 'html2canvas';
 import { PDFDocument } from 'pdf-lib';
+import reportMapping from './reportMapping.json';
 
-const reportComponentMapping = {
-  'MOH 405 - AnteNatal(ANC) Register': RenderMOH405,
-  'MOH 406 A PNC REGISTER': RenderMOH406,
-  'MOH 362 A - HTS LABS REGISTER': RenderMOH362A,
-  'MOH 362 B - HTS LABS REGISTER': RenderMOH362B,
-  'MOH 407 Nutrition Service Register': NutritionRegisters,
-  'ClientFollowUp Service Register MOH 407': ClientFollowUpRegister,
-  'PrEP DAR': PrepRegister,
-  'MOH 408 HEI REGISTER': RenderMOH408,
-  'MOH 731': MOH731,
-  'Care & Treatment': CareAndTreatment,
-  'MOH 333 Maternity Register': MOH333,
+const componentMap = {
+  RenderMOH405,
+  RenderMOH406,
+  RenderMOH362A,
+  RenderMOH362B,
+  NutritionRegisters,
+  ClientFollowUpRegister,
+  PrepRegister,
+  RenderMOH408,
+  MOH333,
+  CareAndTreatment,
+  MOH731,
 };
 
 const DynamicReportLoader: React.FC = () => {
   const { reportUuid } = useParams<{ reportUuid: string }>();
-  const ReportComponent = reportComponentMapping[reportUuid];
+  const location = useLocation();
+  const { reportData } = location.state || {};
+
+  const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === reportUuid);
+  const ReportComponent = reportMappingEntry ? componentMap[reportMappingEntry.component] : null;
+
   const downloadPDF = async () => {
     const element = document.getElementById('report-content');
     if (element) {
-      // Capture the element as an image using html2canvas
       const canvas = await html2canvas(element);
       const imgData = canvas.toDataURL('image/png');
-
-      // Create a new PDF document
       const pdfDoc = await PDFDocument.create();
       const page = pdfDoc.addPage([canvas.width, canvas.height]);
-
-      // Draw the captured image in the PDF
       const pngImage = await pdfDoc.embedPng(imgData);
       page.drawImage(pngImage, {
         x: 0,
@@ -53,8 +54,6 @@ const DynamicReportLoader: React.FC = () => {
         width: canvas.width,
         height: canvas.height,
       });
-
-      // Save and open the PDF
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
@@ -82,11 +81,11 @@ const DynamicReportLoader: React.FC = () => {
               Download PDF
             </button>
             <button className={styles.downloadButton} onClick={downloadExcel}>
-              Download Excel
+              Export Excel
             </button>
           </div>
           <div id="report-content">
-            <ReportComponent />
+            <ReportComponent reportData={reportData} />
           </div>
         </>
       ) : (

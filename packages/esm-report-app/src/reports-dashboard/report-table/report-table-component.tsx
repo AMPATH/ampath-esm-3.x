@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   DataTable,
   TableContainer,
@@ -10,7 +10,7 @@ import {
   TableCell,
   TableSelectAll,
   TableSelectRow,
-  Pagination,
+  InlineLoading,
 } from '@carbon/react';
 
 interface ReportTableProps {
@@ -23,14 +23,11 @@ import { useSession } from '@openmrs/esm-framework';
 const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
   const headers = [{ key: 'report_name', header: 'Name' }];
   const locationUuid = useSession()?.sessionLocation?.uuid;
-
-  function extractNumber(str) {
-    const match = str.match(/^\d+/);
-    return match ? match[0] : null;
-  }
+  const [loading, setLoading] = useState(false);
 
   const handleRowClick = async (row: any) => {
     try {
+      setLoading(true);
       const reportId = Number(row.id);
       const foundItem = rows.find((item) => item.id === row.id);
       const uuid = foundItem ? foundItem.uuid : undefined;
@@ -38,6 +35,8 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
       onRowClick(response, row.id, uuid);
     } catch (error) {
       console.error('Error fetching report logs', error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -78,8 +77,8 @@ const ReportTable: React.FC<ReportTableProps> = ({ onRowClick, rows }) => {
             </Table>
           )}
         />
-        {/* <Pagination pageSizes={[10, 20, 30, 40, 50]} totalItems={3956} page={1} pageSize={10} onChange={(page) => {}} /> */}
       </TableContainer>
+      {loading && <InlineLoading description="Loading..." />}
     </>
   );
 };
