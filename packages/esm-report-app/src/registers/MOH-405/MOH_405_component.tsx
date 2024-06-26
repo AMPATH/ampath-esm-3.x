@@ -307,88 +307,97 @@ const RenderMOH405: React.FC<{ reportData: any }> = ({ reportData }) => (
           </TableRow>
         </TableHead>
         <TableBody>
-          {Array.from({ length: 2 }, (_, i) => (
-            <React.Fragment key={i}>
-              <TableRow>
-                <TableCell rowSpan={2}></TableCell>
-                {/* a */}
-                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell> {/* b */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* c */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* d */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* e */}
-                <TableCell rowSpan={1}></TableCell>
-                {/* f */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* g */}
-                <TableCell rowSpan={1}></TableCell>
-                {/* h */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* i */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* j */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* k */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* l */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* m */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* n */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* o */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* p */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* q */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* r */}
-                <TableCell rowSpan={2}></TableCell>
-                {/* s */}
-                <TableCell rowSpan={1}></TableCell>
-                {/* t */}
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-                <TableCell rowSpan={2}></TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-                <TableCell rowSpan={1}></TableCell>
-              </TableRow>
-            </React.Fragment>
-          ))}
+          {reportData && reportData.length > 0 ? (
+            reportData.map((item, i) => (
+              <React.Fragment key={i}>
+                <TableRow>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* a */}
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.marital_status}
+                  </TableCell>{' '}
+                  {/* b */}
+                  <TableCell rowSpan={2}>{item.anc_number_nupi_revisit}</TableCell>
+                  {/* c */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* d */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* e */}
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  {/* f */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* g */}
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  {/* h */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* i */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* j */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* k */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* l */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* m */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* n */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* o */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* p */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* q */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* r */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  {/* s */}
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  {/* t */}
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}></TableCell>
+                </TableRow>
+              </React.Fragment>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={19}>No data available</TableCell>
+            </TableRow>
+          )}
         </TableBody>
       </Table>
     </div>

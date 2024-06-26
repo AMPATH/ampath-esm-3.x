@@ -160,7 +160,7 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
             />
           </DatePicker>
           <Button kind="ghost" renderIcon={Download} onClick={handleGenerate}>
-            Generate
+            Process
           </Button>
         </div>
         {loading ? (

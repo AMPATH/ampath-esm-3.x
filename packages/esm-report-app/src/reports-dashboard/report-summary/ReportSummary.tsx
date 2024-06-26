@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   DataTable,
   TableContainer,
@@ -11,14 +11,18 @@ import {
   TableSelectAll,
   TableSelectRow,
   Loading,
+  Button,
 } from '@carbon/react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ReportSummary.css';
 import reportMapping from '../report-loader/reportMapping.json';
-import { generateReportData } from '../../api/api';
+import { generateReportData, getSPReports } from '../../api/api';
 
 const ReportSummary: React.FC<any> = ({ rows }) => {
   const [loading, setLoading] = useState(false);
+  const [refreshLoading, setRefreshLoading] = useState(false);
+  const [currentRows, setCurrentRows] = useState([]);
+  const navigate = useNavigate();
 
   const headers = [
     { key: 'status', header: 'Status' },
@@ -30,7 +34,23 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
     { key: 'download', header: 'Download' },
   ];
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    const rowsWithButtons = rows.map((row) => {
+      const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+      return {
+        ...row,
+        view: reportMappingEntry ? (
+          <button
+            className={styles.view_button}
+            onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
+            View
+          </button>
+        ) : null,
+        download: <button className={styles.download_button}>Download</button>,
+      };
+    });
+    setCurrentRows(rowsWithButtons);
+  }, [rows]);
 
   const handleViewClick = async (report_uuid, report_id) => {
     setLoading(true);
@@ -46,27 +66,43 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
     }
   };
 
-  const rowsWithButtons = rows.map((row) => {
-    const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
-    return {
-      ...row,
-      view: reportMappingEntry ? (
-        <button
-          className={styles.view_button}
-          onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
-          View
-        </button>
-      ) : null,
-      download: <button className={styles.download_button}>Download</button>,
-    };
-  });
+  const handleRefresh = () => {
+    setRefreshLoading(true);
+    try {
+      const rowsWithButtons = rows.map((row) => {
+        const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+        return {
+          ...row,
+          view: reportMappingEntry ? (
+            <button
+              className={styles.view_button}
+              onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
+              View
+            </button>
+          ) : null,
+          download: <button className={styles.download_button}>Download</button>,
+        };
+      });
+      window.location.reload();
+      setCurrentRows(rowsWithButtons);
+    } catch (error) {
+      console.error('Error refreshing data:', error);
+    } finally {
+      setRefreshLoading(false);
+    }
+  };
 
   return (
     <div className={styles.wrapper_container}>
       {loading && <Loading description="Loading data..." withOverlay={true} />}
       <TableContainer title="Reports logs">
+        {/* <div className={styles.buttonContainer}>
+          <Button onClick={handleRefresh} style={{ marginRight: '1rem' }} disabled={refreshLoading}>
+            {refreshLoading ? 'Refreshing...' : 'Refresh'}
+          </Button>
+        </div> */}
         <DataTable
-          rows={rowsWithButtons}
+          rows={currentRows}
           headers={headers}
           render={({ rows, headers, getHeaderProps, getRowProps, getTableProps }) => (
             <Table {...getTableProps()}>

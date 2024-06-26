@@ -124,33 +124,43 @@ const NutritionRegister: React.FC<{ reportData: any }> = ({ reportData }) => (
         </TableRow>
       </TableHead>
       <TableBody>
-        {Array.from({ length: 2 }, (_, i) => (
-          <React.Fragment key={i}>
-            <TableRow>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-            </TableRow>
-          </React.Fragment>
-        ))}
+        {reportData && reportData.length > 0 ? (
+          reportData.map((item, i) => (
+            <React.Fragment key={i}>
+              <TableRow>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}>
+                  {item.patient_id}
+                </TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}>
+                  {item.patient_id}
+                </TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+              </TableRow>
+            </React.Fragment>
+          ))
+        ) : (
+          <TableRow>
+            <TableCell colSpan={19}>No data available</TableCell>
+          </TableRow>
+        )}
       </TableBody>
     </Table>
   </TableContainer>

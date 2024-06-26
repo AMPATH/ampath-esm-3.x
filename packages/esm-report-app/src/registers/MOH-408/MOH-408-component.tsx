@@ -214,70 +214,76 @@ const RenderMOH408: React.FC<{ reportData: any }> = ({ reportData }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {Array.from({ length: 2 }, (_, i) => (
-              <React.Fragment key={i}>
-                <TableRow>
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* a */}
-                  <TableCell rowSpan={2}></TableCell> {/* b */}
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  {/* c */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* d */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* e */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* f */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* g */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* h */}
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  {/* i */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* j */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* k */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* l */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* m */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* n */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* o */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* p */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* q */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* r */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* s */}
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  {/* t */}
-                  <TableCell rowSpan={2}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* <TableCell rowSpan={2}></TableCell> */}
-                </TableRow>
-                <TableRow>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                </TableRow>
-              </React.Fragment>
-            ))}
+            {reportData && reportData.length > 0 ? (
+              reportData.map((item, i) => (
+                <React.Fragment key={i}>
+                  <TableRow>
+                    <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                    {/* a */}
+                    <TableCell rowSpan={2}></TableCell> {/* b */}
+                    <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                    {/* c */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* d */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* e */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* f */}
+                    <TableCell rowSpan={1}></TableCell>
+                    {/* g */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* h */}
+                    <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                    {/* i */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* j */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* k */}
+                    <TableCell rowSpan={1}></TableCell>
+                    {/* l */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* m */}
+                    <TableCell rowSpan={1}></TableCell>
+                    {/* n */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* o */}
+                    <TableCell rowSpan={1}></TableCell>
+                    {/* p */}
+                    <TableCell rowSpan={1}></TableCell>
+                    {/* q */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* r */}
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* s */}
+                    <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                    {/* t */}
+                    <TableCell rowSpan={2}></TableCell>
+                    <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                    <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={2}></TableCell>
+                    {/* <TableCell rowSpan={2}></TableCell> */}
+                  </TableRow>
+                  <TableRow>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                    <TableCell rowSpan={1}></TableCell>
+                  </TableRow>
+                </React.Fragment>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell colSpan={19}>No data available</TableCell>
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </div>
