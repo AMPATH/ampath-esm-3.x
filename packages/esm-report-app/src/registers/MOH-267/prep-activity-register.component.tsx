@@ -5,7 +5,7 @@ import { Table } from '@carbon/react';
 import { TableBody } from '@carbon/react';
 import { TableCell } from '@carbon/react';
 
-const PrepRegister: React.FC = () => (
+const PrepRegister: React.FC<{ reportData: any }> = ({ reportData }) => (
   <TableContainer className={styles['table-container']}>
     <div className={styles['header']}>
       <div className={styles['left']}>
@@ -90,26 +90,36 @@ const PrepRegister: React.FC = () => (
         </TableRow>
       </TableHead>
       <TableBody>
-        {Array.from({ length: 2 }, (_, i) => (
-          <React.Fragment key={i}>
-            <TableRow>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-              <TableCell rowSpan={2}></TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-            </TableRow>
-          </React.Fragment>
-        ))}
+        {reportData && reportData.length > 0 ? (
+          reportData.map((item, i) => (
+            <React.Fragment key={i}>
+              <TableRow>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell className={styles['dotted-border']} rowSpan={1}>
+                  {item.visit_date}
+                </TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className={styles['dotted-border']} rowSpan={1}>
+                  {item.visit_date}
+                </TableCell>
+              </TableRow>
+            </React.Fragment>
+          ))
+        ) : (
+          <TableRow>
+            <TableCell colSpan={19}>No data available</TableCell>
+          </TableRow>
+        )}
       </TableBody>
     </Table>
   </TableContainer>
