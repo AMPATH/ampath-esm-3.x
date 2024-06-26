@@ -48,3 +48,13 @@
   overflow: auto;
   max-height: 300px;
 }
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.buttonContainer > button {
+  margin-right: 1rem;
+}
