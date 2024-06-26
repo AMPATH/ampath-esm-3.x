@@ -84,7 +84,7 @@ const DynamicReportLoader: React.FC = () => {
               Export Excel
             </button>
           </div>
-          <div id="report-content">
+          <div className={styles.wrapperContainer} id="report-content">
             <ReportComponent reportData={reportData} />
           </div>
         </>

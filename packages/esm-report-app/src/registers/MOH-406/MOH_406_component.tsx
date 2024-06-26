@@ -335,60 +335,72 @@ const RenderMOH406: React.FC<{ reportData: any }> = ({ reportData }) => (
             reportData.map((item, i) => (
               <React.Fragment key={i}>
                 <TableRow>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.patient_id}
+                    {item.pnc_number}
                   </TableCell>
+                  <TableCell rowSpan={2}>{item.nupi}</TableCell>
+                  <TableCell rowSpan={2}>{item.full_name}</TableCell>
+                  <TableCell rowSpan={1}>{item.date_of_birth}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={1}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={1}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={1}>{item.telephone_number}</TableCell>
+                  <TableCell rowSpan={2}>{item.nupi}</TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={2}>
-                    {item.patient_id}
+                    {item.place_of_delivery}
                   </TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={1}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={1}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={1}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{item.mode_of_delivery}</TableCell>
+                  <TableCell rowSpan={2}>{item.timing_mother}</TableCell>
+                  <TableCell rowSpan={2}>{item.timing_baby}</TableCell>
+                  <TableCell rowSpan={2}>{item.temperature}</TableCell>
+                  <TableCell rowSpan={2}>{item.pulse}</TableCell>
+                  <TableCell rowSpan={2}>{item.blood_pressure}</TableCell>
+                  <TableCell rowSpan={1}>{item.pallor}</TableCell>
+                  <TableCell rowSpan={2}>{item.breast}</TableCell>
+                  <TableCell rowSpan={2}>{item.uterus}</TableCell>
+                  <TableCell rowSpan={2}>{item.pph}</TableCell>
+                  <TableCell rowSpan={2}>{item.c_section_site}</TableCell>
+                  <TableCell rowSpan={2}>{item.lochia}</TableCell>
+                  <TableCell rowSpan={2}>{item.episiotomy}</TableCell>
+                  <TableCell rowSpan={2}>{item.fistula}</TableCell>
+                  <TableCell rowSpan={2}>{item.tb_screening}</TableCell>
+                  <TableCell rowSpan={2}>{item.tested_pnc}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_1_kit_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_2_kit_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_3_kit_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.less_than_6wks}</TableCell>
+                  <TableCell rowSpan={2}>{item.more_than_6wks}</TableCell>
+                  <TableCell rowSpan={2}>{item.less_than_6wks_infant_prophylaxis}</TableCell>
+                  <TableCell rowSpan={2}>{item.less_than_6wks_maternal_haart}</TableCell>
+                  <TableCell rowSpan={2}>{item.more_than_6wks_infant_prophylaxis}</TableCell>
+                  <TableCell rowSpan={2}>{item.more_than_6wks_maternal_haart}</TableCell>
+                  <TableCell rowSpan={1}>{item.cervical_cancer_screening_method_used_results}</TableCell>
+                  <TableCell rowSpan={1}>{item.ppfp_done}</TableCell>
+                  <TableCell rowSpan={2}>{item.other_maternal_complications}</TableCell>
+                  <TableCell rowSpan={2}>{item.haematinics}</TableCell>
+                  <TableCell rowSpan={2}>{item.referrals_from}</TableCell>
+                  <TableCell rowSpan={2}>{item.referrals_to}</TableCell>
+                  <TableCell rowSpan={2}>{item.reasons_for_referral}</TableCell>
+                  <TableCell rowSpan={2}>{item.remarks}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.nupi}
+                  </TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.age}
+                  </TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.telephone_number}
+                  </TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.pallor}
+                  </TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.cervical_cancer_screening}
+                  </TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.counseled_method_received}
+                  </TableCell>
                 </TableRow>
               </React.Fragment>
             ))
