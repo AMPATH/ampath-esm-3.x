@@ -79,8 +79,13 @@ export function useConceptAnswers(conceptUuid: string): { data: Array<ConceptAns
 }
 
 const urlencoded = new URLSearchParams();
-urlencoded.append('client_id', 'palladium.partner.client');
-urlencoded.append('client_secret', '28f95b2a');
+// urlencoded.append('client_id', 'palladium.partner.client');
+// urlencoded.append('client_secret', '28f95b2a');
+// urlencoded.append('grant_type', 'client_credentials');
+// urlencoded.append('scope', 'DHP.Gateway DHP.Partners');
+
+urlencoded.append('client_id', 'ampath.partner.client');
+urlencoded.append('client_secret', '3ae8a7f6');
 urlencoded.append('grant_type', 'client_credentials');
 urlencoded.append('scope', 'DHP.Gateway DHP.Partners');
 
@@ -165,7 +170,7 @@ async function postToRegistry(
 }
 
 export const useFacilityName = (facilityCode) => {
-  const apiUrl = `/ws/rest/v1/kenyaemr/facilityName?facilityCode=${facilityCode}`;
+  const apiUrl = `/ws/rest/v1/amrscore/facilityName?facilityCode=${facilityCode}`;
   const { data, error, isLoading } = useSWRImmutable<FetchResponse>(apiUrl, openmrsFetch);
 
   return {
