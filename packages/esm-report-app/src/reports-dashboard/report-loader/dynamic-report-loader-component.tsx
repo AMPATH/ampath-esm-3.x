@@ -40,26 +40,26 @@ const DynamicReportLoader: React.FC = () => {
   const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === reportUuid);
   const ReportComponent = reportMappingEntry ? componentMap[reportMappingEntry.component] : null;
 
-  const downloadPDF = async () => {
-    const element = document.getElementById('report-content');
-    if (element) {
-      const canvas = await html2canvas(element);
-      const imgData = canvas.toDataURL('image/png');
-      const pdfDoc = await PDFDocument.create();
-      const page = pdfDoc.addPage([canvas.width, canvas.height]);
-      const pngImage = await pdfDoc.embedPng(imgData);
-      page.drawImage(pngImage, {
-        x: 0,
-        y: 0,
-        width: canvas.width,
-        height: canvas.height,
-      });
-      const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-      const url = URL.createObjectURL(blob);
-      window.open(url);
-    }
-  };
+  // const downloadPDF = async () => {
+  //   const element = document.getElementById('report-content');
+  //   if (element) {
+  //     const canvas = await html2canvas(element);
+  //     const imgData = canvas.toDataURL('image/png');
+  //     const pdfDoc = await PDFDocument.create();
+  //     const page = pdfDoc.addPage([canvas.width, canvas.height]);
+  //     const pngImage = await pdfDoc.embedPng(imgData);
+  //     page.drawImage(pngImage, {
+  //       x: 0,
+  //       y: 0,
+  //       width: canvas.width,
+  //       height: canvas.height,
+  //     });
+  //     const pdfBytes = await pdfDoc.save();
+  //     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  //     const url = URL.createObjectURL(blob);
+  //     window.open(url);
+  //   }
+  // };
 
   const downloadExcel = () => {
     const reportContent = document.getElementById('report-content');
@@ -77,14 +77,14 @@ const DynamicReportLoader: React.FC = () => {
         <>
           <UseBreadcrumb />
           <div className={styles.buttons}>
-            <button className={styles.downloadButton} onClick={downloadPDF}>
+            {/* <button className={styles.downloadButton} onClick={downloadPDF}>
               Download PDF
-            </button>
+            </button> */}
             <button className={styles.downloadButton} onClick={downloadExcel}>
               Export Excel
             </button>
           </div>
-          <div id="report-content">
+          <div className={styles.wrapperContainer} id="report-content">
             <ReportComponent reportData={reportData} />
           </div>
         </>

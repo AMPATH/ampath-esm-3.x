@@ -5,6 +5,7 @@ import { useField } from 'formik';
 import { generateFormatting } from '../../date-util';
 import { PatientRegistrationContext } from '../../patient-registration-context';
 import { OpenmrsDatePicker, useConfig } from '@openmrs/esm-framework';
+import { type CalendarDate } from '@internationalized/date';
 import { type RegistrationConfig } from '../../../config-schema';
 import styles from '../field.scss';
 
@@ -46,7 +47,7 @@ export const DobField: React.FC = () => {
   );
 
   const onDateChange = useCallback(
-    (birthdate: Date) => {
+    (birthdate: CalendarDate) => {
       setFieldValue('birthdate', birthdate);
     },
     [setFieldValue],
@@ -104,16 +105,16 @@ export const DobField: React.FC = () => {
             <OpenmrsDatePicker
               id="birthdate"
               {...birthdate}
-              dateFormat={dateFormat}
+              // dateFormat={dateFormat}
               onChange={onDateChange}
               //maxDate={today}
               labelText={t('dateOfBirthLabelText', 'Date of Birth')}
-              invalid={!!(birthdateMeta.touched && birthdateMeta.error)}
-              invalidText={birthdateMeta.error && t(birthdateMeta.error)}
+              // invalid={!!(birthdateMeta.touched && birthdateMeta.error)}
+              // invalidText={birthdateMeta.error && t(birthdateMeta.error)}
               value={birthdate.value}
-              carbonOptions={{
-                placeholder: placeHolder,
-              }}
+              // carbonOptions={{
+              //   placeholder: placeHolder,
+              // }}
             />
           </div>
         ) : (
