@@ -24,13 +24,14 @@ const fetcher = async (url) => {
   }
 };
 
-async function postData(url: string, ac = new AbortController()) {
+async function postData(data: ReportData, url: string, ac = new AbortController()) {
   const response = await openmrsFetch(url, {
     signal: ac.signal,
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
+    body: JSON.stringify(data),
   });
 
   return response.data;
