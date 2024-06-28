@@ -155,6 +155,10 @@ export interface BedDetails extends Bed {
 
 export interface ReportData {
   locationUuid: string;
+  user_name: string;
+  parent_locationUuid: string;
+  parent_locationName: string;
+  user_uuid: string;
   report_id: string;
   uuid: string;
   start_date: string;

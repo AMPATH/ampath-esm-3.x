@@ -11,7 +11,6 @@ export const ReportHeader: React.FC = () => {
   const { t } = useTranslation();
   const userSession = useSession();
   const userLocation = userSession?.sessionLocation?.display;
-
   return (
     <>
       <div className={styles.header}>

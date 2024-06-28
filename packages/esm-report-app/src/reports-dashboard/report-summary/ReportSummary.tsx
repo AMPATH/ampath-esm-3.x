@@ -17,12 +17,15 @@ import { useNavigate } from 'react-router-dom';
 import styles from './ReportSummary.css';
 import reportMapping from '../report-loader/reportMapping.json';
 import { generateReportData, getSPReports } from '../../api/api';
+import { useSession } from '@openmrs/esm-framework';
 
 const ReportSummary: React.FC<any> = ({ rows = [] }) => {
   const [loading, setLoading] = useState(false);
   const [refreshLoading, setRefreshLoading] = useState(false);
   const [currentRows, setCurrentRows] = useState([]);
+  const [selectedLocationUuids, setSelectedLocationUuids] = useState([]);
   const navigate = useNavigate();
+  const locationUuid = useSession()?.sessionLocation?.uuid;
 
   const headers = [
     { key: 'status', header: 'Status' },
@@ -58,10 +61,13 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
   const handleViewClick = async (report_uuid, report_id) => {
     setLoading(true);
     try {
-      const response = await generateReportData(report_id);
-      const data = response.results;
+      if (selectedLocationUuids.length === 0) {
+        const formattedLocationUuid = `'${locationUuid}'`;
+        const response = await generateReportData(report_id, formattedLocationUuid);
+        const data = response.results;
 
-      navigate(`/reports/${report_uuid}`, { state: { reportData: data } });
+        navigate(`/reports/${report_uuid}`, { state: { reportData: data } });
+      }
     } catch (error) {
       console.error('Error fetching report data:', error);
     } finally {
