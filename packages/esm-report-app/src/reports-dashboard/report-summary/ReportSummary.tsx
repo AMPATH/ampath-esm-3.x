@@ -18,7 +18,7 @@ import styles from './ReportSummary.css';
 import reportMapping from '../report-loader/reportMapping.json';
 import { generateReportData, getSPReports } from '../../api/api';
 
-const ReportSummary: React.FC<any> = ({ rows }) => {
+const ReportSummary: React.FC<any> = ({ rows = [] }) => {
   const [loading, setLoading] = useState(false);
   const [refreshLoading, setRefreshLoading] = useState(false);
   const [currentRows, setCurrentRows] = useState([]);
@@ -35,21 +35,24 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
   ];
 
   useEffect(() => {
-    const rowsWithButtons = rows.map((row) => {
-      const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
-      return {
-        ...row,
-        view: reportMappingEntry ? (
-          <button
-            className={styles.view_button}
-            onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
-            View
-          </button>
-        ) : null,
-        download: <button className={styles.download_button}>Download</button>,
-      };
-    });
-    setCurrentRows(rowsWithButtons);
+    if (rows && Array.isArray(rows)) {
+      const rowsWithButtons = rows.map((row) => {
+        const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+        return {
+          ...row,
+          id: row.log_id,
+          view: reportMappingEntry ? (
+            <button
+              className={styles.view_button}
+              onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
+              View
+            </button>
+          ) : null,
+          download: <button className={styles.download_button}>Download</button>,
+        };
+      });
+      setCurrentRows(rowsWithButtons);
+    }
   }, [rows]);
 
   const handleViewClick = async (report_uuid, report_id) => {
@@ -69,22 +72,24 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
   const handleRefresh = () => {
     setRefreshLoading(true);
     try {
-      const rowsWithButtons = rows.map((row) => {
-        const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
-        return {
-          ...row,
-          view: reportMappingEntry ? (
-            <button
-              className={styles.view_button}
-              onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
-              View
-            </button>
-          ) : null,
-          download: <button className={styles.download_button}>Download</button>,
-        };
-      });
-      window.location.reload();
-      setCurrentRows(rowsWithButtons);
+      if (rows && Array.isArray(rows)) {
+        const rowsWithButtons = rows.map((row) => {
+          const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+          return {
+            ...row,
+            id: row.log_id,
+            view: reportMappingEntry ? (
+              <button
+                className={styles.view_button}
+                onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
+                View
+              </button>
+            ) : null,
+            download: <button className={styles.download_button}>Download</button>,
+          };
+        });
+        setCurrentRows(rowsWithButtons);
+      }
     } catch (error) {
       console.error('Error refreshing data:', error);
     } finally {
@@ -122,7 +127,7 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
                     <TableRow key={row.id} {...getRowProps({ row })}>
                       <TableSelectRow {...row} />
                       {row.cells.map((cell) => (
-                        <TableCell key={cell.id}>{cell.value}</TableCell>
+                        <TableCell>{cell.value}</TableCell>
                       ))}
                     </TableRow>
                   ))
@@ -135,7 +140,6 @@ const ReportSummary: React.FC<any> = ({ rows }) => {
             </Table>
           )}
         />
-        {/* <Pagination pageSizes={[10, 20, 30, 40, 50]} totalItems={3956} page={1} pageSize={5} onChange={(page) => {}} /> */}
       </TableContainer>
     </div>
   );
