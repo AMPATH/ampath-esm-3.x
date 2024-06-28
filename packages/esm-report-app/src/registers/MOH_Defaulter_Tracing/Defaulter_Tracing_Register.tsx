@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Defaulter_tracing_register.scss';
 import { TableContainer, TableHead, TableRow, TableHeader, Table, TableBody, TableCell } from '@carbon/react';
 
-const DefaulterTracingRegister: React.FC = () => {
+const DefaulterTracingRegister: React.FC<{ reportData: any }> = ({ reportData }) => {
   return (
     <TableContainer>
       <Table className={styles['table']}>
@@ -88,229 +88,50 @@ const DefaulterTracingRegister: React.FC = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              1
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              2
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              3
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              4
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              5
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              6
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              7
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              8
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              9
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              10
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              11
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              12
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              13
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              14
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2} colSpan={1}>
-              15
-            </TableCell>
-            <TableCell colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={1}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={1.5}></TableCell>
-            <TableCell rowSpan={2} colSpan={2}></TableCell>
-          </TableRow>
+          {reportData && reportData.length > 0 ? (
+            reportData.map((item, i) => (
+              <React.Fragment key={i}>
+                <TableRow>
+                  <TableCell rowSpan={2} colSpan={1}>
+                    {i}
+                  </TableCell>
+                  <TableCell rowSpan={1} colSpan={1}>
+                    {item.client_id_number}
+                  </TableCell>
+                  <TableCell rowSpan={2} colSpan={3}>
+                    {item.full_names}
+                  </TableCell>
+                  <TableCell rowSpan={2} colSpan={1}>
+                    {item.village_estate_landmark}
+                  </TableCell>
+                  <TableCell rowSpan={2} colSpan={1}>
+                    {item.telephone_no}
+                  </TableCell>
+                  <TableCell rowSpan={2} colSpan={2}>
+                    {item.date_of_missed_appointment}
+                  </TableCell>
+                  <TableCell rowSpan={2} colSpan={1.5}>
+                    {item.defaulter_tracing_outcomes}
+                  </TableCell>
+                  <TableCell rowSpan={2} colSpan={1.5}>
+                    {item.date_of_outcome}
+                  </TableCell>
+                  <TableCell rowSpan={2} colSpan={2}>
+                    {item.remarks}
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell rowSpan={1} colSpan={1}>
+                    {item.nupi}
+                  </TableCell>
+                </TableRow>
+              </React.Fragment>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={9}>No data available</TableCell>
+            </TableRow>
+          )}
         </TableBody>
       </Table>
     </TableContainer>
