@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "openmrs develop --backend https://ngx.ampath.or.ke --sources packages/esm-report-app  --api-url  /amrs --spa-path /amrs/spa/ --port 8040",
+    "start": "openmrs develop --backend https://ngx.ampath.or.ke --sources packages/esm-*-app  --api-url  /amrs --spa-path /amrs/spa/ --port 8040",
     "start:core": "openmrs develop --backend https://ngx.ampath.or.ke --sources packages/esm-ampath-core-app --api-url  /amrs --spa-path /amrs/spa/ --port 8030",
     "ci:publish": "yarn workspaces foreach --all --topological --exclude @ampath/esm-3.x-app npm publish --access public --tag latest",
     "ci:prepublish": "yarn workspaces foreach --all --topological --exclude @ampath/esm-3.x-app npm publish --access public --tag next",
@@ -37,7 +37,7 @@
     "@babel/core": "^7.11.6",
     "@carbon/react": "~1.37.0",
     "@ohri/openmrs-esm-ohri-commons-lib": "next",
-    "@openmrs/esm-framework": "^5.6.1-pre.1920",
+    "@openmrs/esm-framework": "^5.6.1-pre.1979",
     "@openmrs/esm-patient-common-lib": "next",
     "@playwright/test": "1.40.1",
     "@swc/core": "^1.2.165",
@@ -74,7 +74,7 @@
     "jest-cli": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.1",
-    "openmrs": "^5.6.1-pre.1920",
+    "openmrs": "^5.6.1-pre.1979",
     "prettier": "^3.1.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
