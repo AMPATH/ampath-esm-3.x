@@ -121,7 +121,19 @@ p {
       padding: 4px;
     }
 
+    th.vertical_text {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        white-space: nowrap;
+        transform: rotate(180deg);
+
+        vertical-align: bottom;
+    }
+
     td {
+
+
+
       font-weight: normal;
     }
 

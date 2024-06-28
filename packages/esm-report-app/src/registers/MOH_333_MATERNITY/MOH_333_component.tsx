@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './MOH_333.scss';
 import { TableContainer, TableHead, TableRow, TableHeader, Table, TableBody, TableCell } from '@carbon/react';
 
-const MOH333: React.FC = () => {
+const MOH333: React.FC<{ reportData: any }> = ({ reportData }) => {
   return (
     <>
       <TableContainer className={styles['title']}>
@@ -305,694 +305,140 @@ const MOH333: React.FC = () => {
             <TableHeader rowSpan={6}>(N/P/1/NA)</TableHeader>
           </TableRow>
         </TableHead>
+        <TableRow>
+          <TableCell>(a)</TableCell>
+          <TableCell>(b)</TableCell>
+          <TableCell>(c)</TableCell>
+          <TableCell>(d)</TableCell>
+          <TableCell>(e)</TableCell>
+          <TableCell>(f)</TableCell>
+          <TableCell>(g)</TableCell>
+          <TableCell>(h)</TableCell>
+          <TableCell>(i)</TableCell>
+          <TableCell>(j)</TableCell>
+          <TableCell>(k)</TableCell>
+          <TableCell>(l)</TableCell>
+          <TableCell>(m)</TableCell>
+          <TableCell>(n)</TableCell>
+          <TableCell>(o)</TableCell>
+          <TableCell>(p)</TableCell>
+          <TableCell>(q)</TableCell>
+          <TableCell>(r)</TableCell>
+          <TableCell>(s)</TableCell>
+          <TableCell>(t)</TableCell>
+          <TableCell>(u)</TableCell>
+          <TableCell>(v)</TableCell>
+          <TableCell>(w)</TableCell>
+          <TableCell>(x)</TableCell>
+          <TableCell>(y)</TableCell>
+          <TableCell>(z)</TableCell>
+          <TableCell>(aa)</TableCell>
+          <TableCell>(ab)</TableCell>
+          <TableCell>(ac)</TableCell>
+          <TableCell>(ad)</TableCell>
+          <TableCell>(ae)</TableCell>
+          <TableCell>(af)</TableCell>
+          <TableCell>(ag)</TableCell>
+          <TableCell>(ah)</TableCell>
+          <TableCell>(ai)</TableCell>
+          <TableCell>(aj)</TableCell>
+          <TableCell colSpan={3}>(ak)</TableCell>
+          <TableCell>(al)</TableCell>
+          <TableCell>(am)</TableCell>
+          <TableCell>(an)</TableCell>
+          <TableCell>(ao)</TableCell>
+          <TableCell>(ap)</TableCell>
+          <TableCell>(aq)</TableCell>
+          <TableCell>(ar)</TableCell>
+          <TableCell>(as)</TableCell>
+          <TableCell>(at)</TableCell>
+          <TableCell>(au)</TableCell>
+          <TableCell>(av)</TableCell>
+          <TableCell>(aw)</TableCell>
+          <TableCell>(ax)</TableCell>
+        </TableRow>
         <TableBody>
-          <TableRow>
-            <TableCell>(a)</TableCell>
-            <TableCell>(b)</TableCell>
-            <TableCell>(c)</TableCell>
-            <TableCell>(d)</TableCell>
-            <TableCell>(e)</TableCell>
-            <TableCell>(f)</TableCell>
-            <TableCell>(g)</TableCell>
-            <TableCell>(h)</TableCell>
-            <TableCell>(i)</TableCell>
-            <TableCell>(j)</TableCell>
-            <TableCell>(k)</TableCell>
-            <TableCell>(l)</TableCell>
-            <TableCell>(m)</TableCell>
-            <TableCell>(n)</TableCell>
-            <TableCell>(o)</TableCell>
-            <TableCell>(p)</TableCell>
-            <TableCell>(q)</TableCell>
-            <TableCell>(r)</TableCell>
-            <TableCell>(s)</TableCell>
-            <TableCell>(t)</TableCell>
-            <TableCell>(u)</TableCell>
-            <TableCell>(v)</TableCell>
-            <TableCell>(w)</TableCell>
-            <TableCell>(x)</TableCell>
-            <TableCell>(y)</TableCell>
-            <TableCell>(z)</TableCell>
-            <TableCell>(aa)</TableCell>
-            <TableCell>(ab)</TableCell>
-            <TableCell>(ac)</TableCell>
-            <TableCell>(ad)</TableCell>
-            <TableCell>(ae)</TableCell>
-            <TableCell>(af)</TableCell>
-            <TableCell>(ag)</TableCell>
-            <TableCell>(ah)</TableCell>
-            <TableCell>(ai)</TableCell>
-            <TableCell>(aj)</TableCell>
-            <TableCell colSpan={3}>(ak)</TableCell>
-            <TableCell>(al)</TableCell>
-            <TableCell>(am)</TableCell>
-            <TableCell>(an)</TableCell>
-            <TableCell>(ao)</TableCell>
-            <TableCell>(ap)</TableCell>
-            <TableCell>(aq)</TableCell>
-            <TableCell>(ar)</TableCell>
-            <TableCell>(as)</TableCell>
-            <TableCell>(at)</TableCell>
-            <TableCell>(au)</TableCell>
-            <TableCell>(av)</TableCell>
-            <TableCell>(aw)</TableCell>
-            <TableCell>(ax)</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2} colSpan={3}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
+          {reportData && reportData.length > 0 ? (
+            reportData.map((item, i) => (
+              <React.Fragment key={i}>
+                <TableRow>
+                  <TableCell rowSpan={2}>{item.date_of_admission}</TableCell>
+                  <TableCell rowSpan={1}>{item.date_of_admission}</TableCell>
+                  <TableCell rowSpan={2}>{item.full_names}</TableCell>
+                  <TableCell rowSpan={1}>{item.date_of_birth}</TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.county}/<br />
+                    {item.sub_county}
+                  </TableCell>
+                  <TableCell rowSpan={1}>
+                    {item.village}/<br />
+                    {item.estate}/<br />
+                    {item.landmark}
+                  </TableCell>
+                  <TableCell rowSpan={2}>{item.marital_status}</TableCell>
+                  <TableCell rowSpan={2}>{item.parity}</TableCell>
+                  <TableCell rowSpan={2}>{item.gravidae}</TableCell>
+                  <TableCell rowSpan={2}>{item.number_of_anc_visits}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_of_last_menstrual_period}</TableCell>
+                  <TableCell rowSpan={2}>{item.expected_date_of_delivery}</TableCell>
+                  <TableCell rowSpan={2}>{item.diagnosis}</TableCell>
+                  <TableCell rowSpan={2}>{item.duration_of_labour}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_of_birth}</TableCell>
+                  <TableCell rowSpan={2}>{item.time_of_delivery}</TableCell>
+                  <TableCell rowSpan={2}>{item.gestation_at_birth}</TableCell>
+                  <TableCell rowSpan={2}>{item.mode_of_delivery}</TableCell>
+                  <TableCell rowSpan={2}>{item.no_of_babies_delivered}</TableCell>
+                  <TableCell rowSpan={2}>{item.placenta_complete}</TableCell>
+                  <TableCell rowSpan={2}>{item.uterotonic_given}</TableCell>
+                  <TableCell rowSpan={2}>{item.vaginal_examination}</TableCell>
+                  <TableCell rowSpan={2}>{item.blood_loss}</TableCell>
+                  <TableCell rowSpan={2}>{item.mothers_status_after_delivery}</TableCell>
+                  <TableCell rowSpan={1}>{item.maternal_deaths_notified}</TableCell>
+                  <TableCell rowSpan={2}>{item.delivery_complications}</TableCell>
+                  <TableCell rowSpan={2}>{item.apgar_score}</TableCell>
+                  <TableCell rowSpan={2}>{item.birth_outcome}</TableCell>
+                  <TableCell rowSpan={2}>{item.birth_weight}</TableCell>
+                  <TableCell rowSpan={2}>{item.sex}</TableCell>
+                  <TableCell rowSpan={1}>{item.initiated_on_BF_less_1hr}</TableCell>
+                  <TableCell rowSpan={2}>{item.teo_given_at_birth}</TableCell>
+                  <TableCell rowSpan={2}>{item.chlorhexidine_applied_on_cord_stump}</TableCell>
+                  <TableCell rowSpan={1}>{item.birth_with_deformity}</TableCell>
+                  <TableCell rowSpan={2}>{item.given_vitamin_K}</TableCell>
+                  <TableCell rowSpan={1}>{item.vdrl_rpr_results}</TableCell>
+                  <TableCell rowSpan={2}>{item.hiv_test_1_test_results}</TableCell>
+                  <TableCell rowSpan={2}>{item.hiv_test_2_test_results}</TableCell>
+                  <TableCell rowSpan={2}>{item.hiv_test_3_test_results}</TableCell>
+                  <TableCell rowSpan={1}>{item.hiv_result_maternity}</TableCell>
+                  <TableCell rowSpan={2}>{item.maternal_haart}</TableCell>
+                  <TableCell rowSpan={2}>{item.infant_prophylaxis}</TableCell>
+                  <TableCell rowSpan={2}>{item.partner_tested_for_hiv}</TableCell>
+                  <TableCell rowSpan={2}>{item.counselled_on_infant_feeding}</TableCell>
+                  <TableCell rowSpan={2}>{item.delivery_conducted_by}</TableCell>
+                  <TableCell rowSpan={2}>{item.birth_notification_number}</TableCell>
+                  <TableCell rowSpan={2}>{item.discharge_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.discharge_status_of_baby}</TableCell>
+                  <TableCell rowSpan={2}>{item.referrals_from}</TableCell>
+                  <TableCell rowSpan={2}>{item.referrals_to}</TableCell>
+                  <TableCell rowSpan={2}>{item.reason_for_referral}</TableCell>
+                  <TableCell rowSpan={2}>{item.comments}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell rowSpan={1}>{item.nupi}</TableCell>
+                  <TableCell rowSpan={1}>{item.age}</TableCell>
+                  <TableCell rowSpan={1}>{item.phone_number}</TableCell>
+                  <TableCell rowSpan={1}>{item.maternal_deaths_notified_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.kangaroo_mother_care}</TableCell>
+                  <TableCell rowSpan={1}>{item.birth_with_deformity_type}</TableCell>
+                  <TableCell rowSpan={1}>{}</TableCell>
+                  <TableCell rowSpan={1}>{reportData.hiv_result_maternity_type}</TableCell>
+                </TableRow>
+              </React.Fragment>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={19}>No data available</TableCell>
+            </TableRow>
+          )}
         </TableBody>
       </Table>
     </>

@@ -94,23 +94,23 @@ const PrepRegister: React.FC<{ reportData: any }> = ({ reportData }) => (
           reportData.map((item, i) => (
             <React.Fragment key={i}>
               <TableRow>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.prep_number}</TableCell>
                 <TableCell rowSpan={2}>{item.visit_date}</TableCell>
                 <TableCell className={styles['dotted-border']} rowSpan={1}>
-                  {item.visit_date}
+                  {item.national_id}
                 </TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                <TableCell rowSpan={2}>{item.age}</TableCell>
+                <TableCell rowSpan={2}>{item.gender}</TableCell>
+                <TableCell rowSpan={2}>{item.pop_type}</TableCell>
+                <TableCell rowSpan={2}>{item.prep_status}</TableCell>
+                <TableCell rowSpan={2}>{item.prep_method}</TableCell>
+                <TableCell rowSpan={2}>{item.hiv_results}</TableCell>
+                <TableCell rowSpan={2}>{item.with_sti}</TableCell>
+                <TableCell rowSpan={2}>{item.remarks}</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className={styles['dotted-border']} rowSpan={1}>
-                  {item.visit_date}
+                  {item.nupi}
                 </TableCell>
               </TableRow>
             </React.Fragment>

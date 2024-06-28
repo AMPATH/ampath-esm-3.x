@@ -48,10 +48,18 @@
     "report_name": "Care & Treatment",
     "report_uuid": "b8dcd336-d8fa-405e-95fe-fd23783db908",
     "component": "CareAndTreatment"
-  },
+  }
+  ,
   {
     "report_name": "MOH 333 Maternity Register",
     "report_uuid": "e6f9b821-e087-4a6e-b7ee-1a17dcd6f9b3",
     "component": "MOH333"
   }
+  ,
+  {
+    "report_name": "Jua Mtoto Wako",
+    "report_uuid": "jmw123",
+    "component": "RenderJuaMtotoWako"
+  }
+
 ]
