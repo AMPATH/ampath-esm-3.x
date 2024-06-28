@@ -4,7 +4,7 @@ import { Download } from '@carbon/react/icons';
 import ReportTable from '../report-table/report-table-component';
 import styles from './tab-panel.scss';
 import ReportSummary from '../report-summary/ReportSummary';
-import { generateReportLogs } from '../../api/api';
+import { generateReportLogs, getParentLocation } from '../../api/api';
 import { type ReportData } from '../../types';
 import { useSession } from '@openmrs/esm-framework';
 
@@ -17,7 +17,28 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState({ kind: '', title: '', subtitle: '', hide: true });
   const [summaryKey, setSummaryKey] = useState(0);
+  const [parentLocationUuid, setParentLocationUuid] = useState('');
+  const [parentLocationName, setParentLocationName] = useState('');
   const locationUuid = useSession()?.sessionLocation?.uuid;
+  const username = useSession()?.user?.username;
+  const userUuid = useSession()?.user?.uuid;
+
+  useEffect(() => {
+    const fetchParentLocation = async () => {
+      try {
+        const response = await getParentLocation(locationUuid);
+        let data = JSON.parse(response.results);
+        setParentLocationUuid(data[0].parent_locationUuid);
+        setParentLocationName(data[0].parent_locationName);
+      } catch (error) {
+        console.error('Error fetching parent location:', error);
+      }
+    };
+
+    if (locationUuid) {
+      fetchParentLocation();
+    }
+  }, [locationUuid]);
 
   const handleRowClick = (rowdata: any, id: number, uuid: string) => {
     setSelectedRow(rowdata);
@@ -40,7 +61,7 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
 
   const isValidDateRange = () => startDate && endDate && startDate <= endDate;
 
-  const handleGenerate = async () => {
+  const handleReportProcessing = async () => {
     if (!startDate || !endDate) {
       setNotification({
         kind: 'error',
@@ -77,6 +98,10 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
     try {
       const reportData: ReportData = {
         locationUuid: locationUuid,
+        parent_locationUuid: parentLocationUuid,
+        parent_locationName: parentLocationName,
+        user_uuid: userUuid,
+        user_name: username,
         report_id: reportId,
         uuid: reportUuid,
         start_date: formatDate(startDate),
@@ -159,7 +184,7 @@ const RenderTabPanel: React.FC<{ rows: any[] }> = ({ rows }) => {
               className={styles.datePickerInput}
             />
           </DatePicker>
-          <Button kind="ghost" renderIcon={Download} onClick={handleGenerate}>
+          <Button kind="ghost" renderIcon={Download} onClick={handleReportProcessing}>
             Process
           </Button>
         </div>

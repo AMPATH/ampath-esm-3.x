@@ -4,7 +4,7 @@ import { openmrsFetch, restBaseUrl, useConfig } from '@openmrs/esm-framework';
 import { FacilityLocationsConfig } from '../config-schema';
 import { type ReportData } from '../types';
 
-export const BASE_URL = '/ws/rest/v1/amrscore/reports';
+export const BASE_URL = '/ws/rest/v1/amrscore';
 export const url = '/ws/rest/v1';
 
 const username = '';
@@ -38,7 +38,7 @@ async function postData(data: ReportData, url: string, ac = new AbortController(
 }
 
 export const generateMOH362Reports = (id) => {
-  const { data, error, isLoading, isValidating } = useSWR(`${BASE_URL}/view?id=${id}`, fetcher);
+  const { data, error, isLoading, isValidating } = useSWR(`${BASE_URL}/reports/view?id=${id}`, fetcher);
 
   const mohData = data ? (data as any)?.results : [];
   return {
@@ -50,7 +50,7 @@ export const generateMOH362Reports = (id) => {
 };
 
 export const generateReportLogs = async (data: ReportData, ac = new AbortController()) => {
-  const results = await openmrsFetch(`${BASE_URL}/generate`, {
+  const results = await openmrsFetch(`${BASE_URL}/reports/generate`, {
     signal: ac.signal,
     method: 'POST',
     headers: {
@@ -62,7 +62,7 @@ export const generateReportLogs = async (data: ReportData, ac = new AbortControl
 };
 
 export const getSPReports = () => {
-  const { data, isLoading, error, isValidating } = useSWR(BASE_URL, fetcher);
+  const { data, isLoading, error, isValidating } = useSWR(`${BASE_URL}/reports`, fetcher);
 
   const response = data ? (data as any)?.results : [];
 
@@ -79,14 +79,21 @@ export const fetchReportLogsByLocationAndId = async (
   reportId: number,
   ac = new AbortController(),
 ) => {
-  const results = await openmrsFetch(`${BASE_URL}/logs?locationUuid=${locationUuid}&report_id=${reportId}`, {
+  const results = await openmrsFetch(`${BASE_URL}/reports/logs?locationUuid=${locationUuid}&report_id=${reportId}`, {
     signal: ac.signal,
   });
   return results.data;
 };
 
-export const generateReportData = async (reportId: number, ac = new AbortController()) => {
-  const results = await openmrsFetch(`${BASE_URL}/view?id=${reportId}`, {
+export const generateReportData = async (reportId: number, multiLocations: any, ac = new AbortController()) => {
+  const results = await openmrsFetch(`${BASE_URL}/reports/view?id=${reportId}&multilocations=${multiLocations}`, {
+    signal: ac.signal,
+  });
+  return results.data;
+};
+
+export const getParentLocation = async (locationUuid: string, ac = new AbortController()) => {
+  const results = await openmrsFetch(`${BASE_URL}/parentlocation?locationUuid=${locationUuid}`, {
     signal: ac.signal,
   });
   return results.data;
