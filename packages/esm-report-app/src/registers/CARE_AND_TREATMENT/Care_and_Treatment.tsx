@@ -2,7 +2,7 @@ import React from 'react';
 import { TableContainer, Table, TableHead, TableHeader, TableCell, TableRow, TableBody } from '@carbon/react';
 import styles from './Care_and_Treatment.scss';
 
-const CareAndTreatment: React.FC = () => {
+const CareAndTreatment: React.FC<{ reportData: any }> = ({ reportData }) => {
   return (
     <TableContainer>
       <div className={styles['title']}>
@@ -202,220 +202,187 @@ const CareAndTreatment: React.FC = () => {
             <TableCell>(am)</TableCell>
             <TableCell>(an)</TableCell>
           </TableRow>
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
-          <br />
-          <TableRow>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-            <TableCell rowSpan={2}></TableCell>
-          </TableRow>
+          {reportData && reportData.length > 0 ? (
+            reportData.map((item, i) => (
+              <React.Fragment>
+                <TableRow>
+                  <TableCell rowSpan={2}>{i}</TableCell>
+                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={1}>{item.national_id_no}</TableCell>
+                  <TableCell rowSpan={2}>{item.client_ccc_number}</TableCell>
+                  <TableCell rowSpan={2}>{item.age}</TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age < 1 && item.gender === 'M' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age < 1 && item.gender === 'F' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 1 && item.age <= 4 && item.gender === 'M' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 1 && item.age <= 4 && item.gender === 'F' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 5 && item.age <= 9 && item.gender === 'M' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 5 && item.age <= 9 && item.gender === 'F' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 10 && item.age <= 14 && item.gender === 'M' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 10 && item.age <= 14 && item.gender === 'F' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 15 && item.age <= 19 && item.gender === 'M' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 15 && item.age <= 19 && item.gender === 'F' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 20 && item.age <= 24 && item.gender === 'M' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 20 && item.age <= 24 && item.gender === 'F' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 25 && item.gender === 'M' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 25 && item.gender === 'F' && item.started_on_art === 1 ? (
+                      <span>&#10003;</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </TableCell>
+                  <TableCell rowSpan={2}>{item.age < 15 ? item.screened_for_tb : ''}</TableCell>
+                  <TableCell rowSpan={2}>{item.age > 15 ? item.screened_for_tb : ''}</TableCell>
+                  <TableCell rowSpan={2}>{item.age < 15 ? item.started_on_tpt : ''}</TableCell>
+                  <TableCell rowSpan={2}>{item.age > 15 ? item.started_on_tpt : ''}</TableCell>
+                  <TableCell rowSpan={2}>{item.age < 1 && item.gender === 'M' ? '' : ''}</TableCell>
+                  <TableCell rowSpan={2}>{item.age < 1 && item.gender === 'F' ? '' : ''}</TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 1 && item.age <= 4 && item.gender === 'M'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 1 && item.age <= 4 && item.gender === 'F'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 5 && item.age <= 9 && item.gender === 'M'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 5 && item.age <= 9 && item.gender === 'F'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 10 && item.age <= 14 && item.gender === 'M'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 10 && item.age <= 14 && item.gender === 'F'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 15 && item.age <= 19 && item.gender === 'M'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 15 && item.age <= 19 && item.gender === 'F'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 20 && item.age <= 24 && item.gender === 'M'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 20 && item.age <= 24 && item.gender === 'F'
+                      ? new Date().getMonth() - item.visit_date.getMonth()
+                      : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 25 && item.gender === 'M' ? new Date().getMonth() - item.visit_date.getMonth() : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.age >= 25 && item.gender === 'F' ? new Date().getMonth() - item.visit_date.getMonth() : ''}
+                  </TableCell>
+                  <TableCell rowSpan={2}>{item.dsd_status}</TableCell>
+                  <TableCell rowSpan={2}>{item.dsd_type}</TableCell>
+                  <TableCell rowSpan={2}>{item.remarks}</TableCell>
+                </TableRow>
+                <TableRow rowSpan={1}>{item.nupi}</TableRow>
+              </React.Fragment>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={19}>No data available</TableCell>
+            </TableRow>
+          )}
         </TableBody>
       </Table>
     </TableContainer>
