@@ -312,90 +312,131 @@ const RenderMOH405: React.FC<{ reportData: any }> = ({ reportData }) => (
               <React.Fragment key={i}>
                 <TableRow>
                   <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* a */}
+                  {/* Date of visit */}
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.marital_status}
+                    {item.anc_number}
                   </TableCell>{' '}
-                  {/* b */}
-                  <TableCell rowSpan={2}>{item.anc_number_nupi_revisit}</TableCell>
+                  {/* ANC Number */}
+                  <TableCell rowSpan={2}>{item.anc_number_nupi_revisit} </TableCell>
                   {/* c */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* d */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* e */}
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  {/* f */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* g */}
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  {/* h */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* i */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* j */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* k */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* l */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* m */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* n */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* o */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* p */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* q */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* r */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  {/* s */}
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  {/* t */}
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={1}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.visit_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.no_of_anc_visits} </TableCell>
+                  {/* Number of Visits */}
+                  <TableCell rowSpan={2}>{item.full_names} </TableCell>
+                  {/* Full Name */}
+                  <TableCell rowSpan={1}>{item.date_of_birth} </TableCell>
+                  {/* Date of birth */}
+                  <TableCell rowSpan={2}>{item.county_subcounty} </TableCell>
+                  {/* Subcounty/County */}
+                  <TableCell rowSpan={1}>{item.village_estate_landmark} </TableCell>
+                  {/* Village/Estate/Landmark */}
+                  <TableCell rowSpan={2}>{item.marital_status} </TableCell>
+                  {/* Marital Status */}
+                  <TableCell rowSpan={2}>{item.parity} </TableCell>
+                  {/* Parity */}
+                  <TableCell rowSpan={2}>{item.gravidae} </TableCell>
+                  {/* Gravidae */}
+                  <TableCell rowSpan={2}>{item.lmp} </TableCell>
+                  {/* Last Menstrual Period(LMP) */}
+                  <TableCell rowSpan={2}>{item.edd} </TableCell>
+                  {/* EDD */}
+                  <TableCell rowSpan={2}>{item.gestation_in_weeks} </TableCell>
+                  {/* Gestation in Weeks */}
+                  <TableCell rowSpan={2}>{item.muac} </TableCell>
+                  {/* MUAC */}
+                  <TableCell rowSpan={2}>{item.height_in_cm} </TableCell>
+                  {/* Height */}
+                  <TableCell rowSpan={2}>{item.weight_in_kg} </TableCell>
+                  {/* Weight */}
+                  <TableCell rowSpan={2}>{item.blood_pressure} </TableCell>
+                  {/* Blood Pressure */}
+                  <TableCell rowSpan={2}>{item.breast_exam} </TableCell>
+                  {/* Breast Exam */}
+                  <TableCell rowSpan={1}>{item.fgm_done} </TableCell>
+                  {/* FGM (Y/N) */}
+                  <TableCell rowSpan={2}>{item.haemoglobin} </TableCell>
+                  {/*Haemoglobin */}
+                  <TableCell rowSpan={2}>{item.blood_sugar_testing_for_diabetes} </TableCell>
+                  {/*Blood Sugar Testing for Diabetes*/}
+                  <TableCell rowSpan={2}>{item.blood_group_and_rhesus} </TableCell>
+                  {/*Blood Group and rhesus*/}
+                  {/*Referrals To*/}
+                  <TableCell rowSpan={2}>{item.urinalysis} </TableCell>
+                  {/*Urinalysis */}
+                  <TableCell rowSpan={1}>{item.type_of_test} </TableCell>
+                  {/*Type of Test*/}
+                  <TableCell rowSpan={1}>{item.hepatitis_b_screening_result} </TableCell>
+                  {/*Hepatitis B Virus Screening Result */}
+                  <TableCell rowSpan={2}>{item.tb_screening_codes} </TableCell>
+                  {/*TB Screening Codes */}
+                  <TableCell rowSpan={2}>{item.hiv_test_type} </TableCell>
+                  {/*HIV testing (Initial or Retest, Known Positive or Revisit)*/}
+                  <TableCell rowSpan={1}>{item.test_1_result} </TableCell>
+                  {/*HIV test1_result*/}
+                  <TableCell rowSpan={1}>{item.test_2_result} </TableCell>
+                  {/*HIV test2 */}
+                  <TableCell rowSpan={1}>{item.test_3_result} </TableCell>
+                  {/*HIV test3 results*/}
+                  <TableCell rowSpan={1}>{item.final_test_results} </TableCell>
+                  {/*Final Test Results */}
+                  <TableCell rowSpan={2}>{item.maternal_haart} </TableCell>
+                  {/*Maternal HAART */}
+                  <TableCell rowSpan={2}>{item.infant_prophylaxis} </TableCell>
+                  {/*Infant Prophylaxis */}
+                  <TableCell rowSpan={2}>{item.partner_hiv_status} </TableCell>
+                  {/*Partner HIV Testing*/}
+                  <TableCell rowSpan={1}>{item.other_conditions} </TableCell>
+                  {/*Other Conditions and Treatment */}
+                  <TableCell rowSpan={2}>{item.deworming} </TableCell>
+                  {/*Deworming */}
+                  <TableCell rowSpan={2}>{item.ipt_1_3} </TableCell>
+                  {/*IPT 1-3 */}
+                  <TableCell rowSpan={2}>{item.tt_dose} </TableCell>
+                  {/* TT Dose */}
+                  <TableCell rowSpan={2}>{item.supplementation}</TableCell>
+                  {/*Referrals */}
+                  <TableCell rowSpan={2}>{item.llitns} </TableCell>
+                  {/*LLITNS */}
+                  <TableCell rowSpan={2}>{item.refferals_from} </TableCell>
+                  {/*Referrals From */}
+                  <TableCell rowSpan={2}>{item.refferrals_to} </TableCell>
+                  {/*Referrals To*/}
+                  <TableCell rowSpan={2}>{item.reason_for_referral} </TableCell>
+                  {/*Reason for Referral Specify */}
+                  <TableCell rowSpan={2}>{item.remarks} </TableCell>
+                  {/*Reason for Referral Specify */}
                 </TableRow>
                 <TableRow>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell rowSpan={1}>{item.nupi}</TableCell>
+                  {/*NUPI */}
+
+                  <TableCell rowSpan={1}>{item.age} </TableCell>
+                  {/*age */}
+                  <TableCell rowSpan={1}>{item.telephone_number} </TableCell>
+                  {/*telephone number */}
+
+                  <TableCell rowSpan={1}> {item.fgm_associated_complications} </TableCell>
+                  {/*FGM Associated Complications */}
+                  <TableCell rowSpan={1}> {item.test_results} </TableCell>
+                  {/*telephone number */}
+                  <TableCell rowSpan={1}> {item.other_conditions_treatment} </TableCell>
+                  {/*other conditions Treatment */}
+                  {/*telephone number */}
+                  <TableCell rowSpan={1}> </TableCell>
+                  {/*hiv_test_1 */}
+                  <TableCell rowSpan={1}> </TableCell>
+                  {/*hiv_test_2 */}
+                  <TableCell rowSpan={1}> </TableCell>
+                  {/*hiv_test_3 */}
+                  <TableCell rowSpan={1}> </TableCell>
+                  {/*telephone number */}
+                  <TableCell rowSpan={1}>{item.hepatitis_b_treatment} </TableCell>
+                  {/*Treatment (Y/N/NA)  */}
                 </TableRow>
               </React.Fragment>
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={19}>No data available</TableCell>
+              <TableCell colSpan={19}>Data Not Available in this Location</TableCell>
             </TableRow>
           )}
         </TableBody>
