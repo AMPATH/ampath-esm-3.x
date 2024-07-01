@@ -122,18 +122,15 @@ p {
     }
 
     th.vertical_text {
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        white-space: nowrap;
-        transform: rotate(180deg);
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+      white-space: nowrap;
+      transform: rotate(180deg);
 
-        vertical-align: bottom;
+      vertical-align: bottom;
     }
 
     td {
-
-
-
       font-weight: normal;
     }
 

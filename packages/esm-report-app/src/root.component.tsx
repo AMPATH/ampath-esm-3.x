@@ -16,13 +16,16 @@ import ClinicalDashboardComponent from './clinical-dashboard/clinical-dashboard.
 import IptReportComponent from './clinical-dashboard/ipt-report/ipt-report.component';
 import { ReportHeader } from './headers/report-header-component';
 import ReportDashboard from './reports-dashboard/report-dashboard-component';
+import { SelectedLocationsProvider } from '../src/hooks/useSelectedLocations';
 
 const Root: React.FC = () => {
   return (
     <div>
       <div className={styles.container}>
-        <ReportHeader />
-        <ReportDashboard />
+        <SelectedLocationsProvider>
+          <ReportHeader />
+          <ReportDashboard />
+        </SelectedLocationsProvider>
       </div>
     </div>
   );
