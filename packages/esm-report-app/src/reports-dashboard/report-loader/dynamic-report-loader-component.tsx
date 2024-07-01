@@ -18,6 +18,7 @@ import UseBreadcrumb from '../breadcrumb/bread-crumb';
 import html2canvas from 'html2canvas';
 import { PDFDocument } from 'pdf-lib';
 import reportMapping from './reportMapping.json';
+import RenderOtzregister from '../../registers/OTZ/MOH_otz_component';
 
 const componentMap = {
   RenderMOH405,
@@ -32,6 +33,7 @@ const componentMap = {
   CareAndTreatment,
   MOH731,
   RenderJuaMtotoWako,
+  RenderOtzregister,
 };
 
 const DynamicReportLoader: React.FC = () => {
