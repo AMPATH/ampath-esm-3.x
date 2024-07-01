@@ -4,7 +4,7 @@ import RenderMOH405 from '../../registers/MOH-405/MOH_405_component';
 import RenderMOH406 from '../../registers/MOH-406/MOH_406_component';
 import RenderMOH362A from '../../registers/MOH-362/moh-362a/MOH_362A_component';
 import RenderMOH362B from '../../registers/MOH-362/moh-362b/MOH_362B_component';
-import RenderJuaMtotoWako from '../../registers/jua_mtoto_wako/jua_mtoto_wako';
+import RenderJuaMtotoWako from '../../registers/Jua_Mtoto_Wako/Jua_Mtoto_Wako';
 import NutritionRegisters from '../../registers/MOH-407/nutrition/Nutrition_component';
 import ClientFollowUpRegister from '../../registers/MOH-407/clientFollowUp/ClientFollowUp_component';
 import PrepRegister from '../../registers/MOH-267/prep-activity-register.component';
