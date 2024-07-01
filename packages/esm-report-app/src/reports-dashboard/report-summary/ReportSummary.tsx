@@ -18,14 +18,16 @@ import styles from './ReportSummary.css';
 import reportMapping from '../report-loader/reportMapping.json';
 import { generateReportData, getSPReports } from '../../api/api';
 import { useSession } from '@openmrs/esm-framework';
+import { useSelectedLocations } from '../../hooks/useSelectedLocations';
 
 const ReportSummary: React.FC<any> = ({ rows = [] }) => {
   const [loading, setLoading] = useState(false);
   const [refreshLoading, setRefreshLoading] = useState(false);
   const [currentRows, setCurrentRows] = useState([]);
-  const [selectedLocationUuids, setSelectedLocationUuids] = useState([]);
   const navigate = useNavigate();
   const locationUuid = useSession()?.sessionLocation?.uuid;
+  const { selectedLocations } = useSelectedLocations();
+  const [multipleLocations, setMultipleLocations] = useState([]);
 
   const headers = [
     { key: 'status', header: 'Status' },
@@ -38,6 +40,7 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
   ];
 
   useEffect(() => {
+    setMultipleLocations(selectedLocations);
     if (rows && Array.isArray(rows)) {
       const rowsWithButtons = rows.map((row) => {
         const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
@@ -47,7 +50,7 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
           view: reportMappingEntry ? (
             <button
               className={styles.view_button}
-              onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
+              onClick={() => handleViewClick(selectedLocations, reportMappingEntry.report_uuid, Number(row.log_id))}>
               View
             </button>
           ) : null,
@@ -56,18 +59,23 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
       });
       setCurrentRows(rowsWithButtons);
     }
-  }, [rows]);
+  }, [selectedLocations]);
 
-  const handleViewClick = async (report_uuid, report_id) => {
+  const handleViewClick = async (locations, report_uuid, report_id) => {
     setLoading(true);
     try {
-      if (selectedLocationUuids.length === 0) {
-        const formattedLocationUuid = `'${locationUuid}'`;
-        const response = await generateReportData(report_id, formattedLocationUuid);
-        const data = response.results;
+      let formattedLocationUuid = null;
 
-        navigate(`/reports/${report_uuid}`, { state: { reportData: data } });
+      if (locations && locations?.selectedItems.length > 0) {
+        formattedLocationUuid = locations?.selectedItems.map((item) => `'${item.value}'`).join(',');
+      } else {
+        formattedLocationUuid = `'${locationUuid}'`;
       }
+
+      const response = await generateReportData(report_id, formattedLocationUuid);
+      const data = response.results;
+
+      navigate(`/reports/${report_uuid}`, { state: { reportData: data } });
     } catch (error) {
       console.error('Error fetching report data:', error);
     } finally {
@@ -75,33 +83,33 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
     }
   };
 
-  const handleRefresh = () => {
-    setRefreshLoading(true);
-    try {
-      if (rows && Array.isArray(rows)) {
-        const rowsWithButtons = rows.map((row) => {
-          const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
-          return {
-            ...row,
-            id: row.log_id,
-            view: reportMappingEntry ? (
-              <button
-                className={styles.view_button}
-                onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
-                View
-              </button>
-            ) : null,
-            download: <button className={styles.download_button}>Download</button>,
-          };
-        });
-        setCurrentRows(rowsWithButtons);
-      }
-    } catch (error) {
-      console.error('Error refreshing data:', error);
-    } finally {
-      setRefreshLoading(false);
-    }
-  };
+  // const handleRefresh = () => {
+  //   setRefreshLoading(true);
+  //   try {
+  //     if (rows && Array.isArray(rows)) {
+  //       const rowsWithButtons = rows.map((row) => {
+  //         const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+  //         return {
+  //           ...row,
+  //           id: row.log_id,
+  //           view: reportMappingEntry ? (
+  //             <button
+  //               className={styles.view_button}
+  //               onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
+  //               View
+  //             </button>
+  //           ) : null,
+  //           download: <button className={styles.download_button}>Download</button>,
+  //         };
+  //       });
+  //       setCurrentRows(rowsWithButtons);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error refreshing data:', error);
+  //   } finally {
+  //     setRefreshLoading(false);
+  //   }
+  // };
 
   return (
     <div className={styles.wrapper_container}>

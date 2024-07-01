@@ -5,6 +5,7 @@ import styles from './location.scss';
 import IptTableComponent from '../clinical-dashboard/ipt-report/ipt-table-component';
 import { getFacilityLocations, getLocations } from '../api/api';
 import { useSession } from '@openmrs/esm-framework';
+import { useSelectedLocations } from '../hooks/useSelectedLocations';
 
 export const LocationsComponent = ({ facilitylocations }) => {
   const { t } = useTranslation();
@@ -12,6 +13,7 @@ export const LocationsComponent = ({ facilitylocations }) => {
   const { facilityLocations } = getFacilityLocations();
   const locationUuid = useSession()?.sessionLocation?.uuid;
   const [currentLocations, setCurrentLocations] = useState([]);
+  const { setSelectedLocations } = useSelectedLocations();
 
   useEffect(() => {
     const fetchLocations = async () => {
@@ -36,13 +38,23 @@ export const LocationsComponent = ({ facilitylocations }) => {
     fetchLocations();
   }, [locationUuid]);
 
+  const handleLocationChange = (selectedItems) => {
+    if (Array.isArray(selectedItems)) {
+      const selectedValues = selectedItems.map((item) => item.value);
+      setCurrentLocation(selectedValues);
+    } else {
+      setSelectedLocations(selectedItems);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <MultiSelect
         label="Locations"
         items={currentLocations}
         placeholder="Select locations"
-        onChange={(selectedItems) => setCurrentLocation(selectedItems)}
+        onChange={handleLocationChange}
+        // onChange={(selectedItems) => setCurrentLocation(selectedItems)}
       />
       {/* <IptTableComponent locationUuid={'18c343eb-b353-462a-9139-b16606e6b6c2'} endDate={'2024-02-29'} /> */}
     </div>
