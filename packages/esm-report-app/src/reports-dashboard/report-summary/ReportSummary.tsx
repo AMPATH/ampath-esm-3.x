@@ -60,7 +60,6 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
       setCurrentRows(rowsWithButtons);
     }
   }, [selectedLocations]);
-
   const handleViewClick = async (locations, report_uuid, report_id) => {
     setLoading(true);
     try {
