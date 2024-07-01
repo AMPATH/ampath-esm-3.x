@@ -11,15 +11,4 @@
   "exclude": [
     "src/**/*.test.tsx"
   ]
-  "compilerOptions": {
-    "jsx": "react",
-    "esModuleInterop": true,
-    "skipLibCheck": true
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/**/*.test.tsx"
-  ]
 }

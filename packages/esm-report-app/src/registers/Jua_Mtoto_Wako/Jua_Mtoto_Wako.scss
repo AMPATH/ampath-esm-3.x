@@ -130,27 +130,23 @@ p {
       padding: 10px;
       vertical-align: bottom;
       text-align: right;
-      }
+    }
 
     td {
       font-weight: normal;
     }
 
     th.red {
-
       background-color: red;
     }
     th.green {
-
-      background-color:#e2efd9;
+      background-color: #e2efd9;
     }
     th.brown {
-
-      background-color:#fbe4d5;
+      background-color: #fbe4d5;
     }
     th.blue {
-
-      background-color:#0070c0;
+      background-color: #0070c0;
     }
 
     tr:nth-child(even) {

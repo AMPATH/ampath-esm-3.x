@@ -174,6 +174,61 @@ const RenderJuaMtotoWako: React.FC<{}> = () => (
             </TableHeader>
           </TableRow>
         </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell rowSpan={1}>(a)</TableCell>
+            <TableCell rowSpan={1}>(b)</TableCell>
+            <TableCell rowSpan={1}>(c)</TableCell>
+            <TableCell rowSpan={1}>(d)</TableCell>
+            <TableCell rowSpan={1}>(e)</TableCell>
+            <TableCell rowSpan={1}>(f)</TableCell>
+            <TableCell rowSpan={1}>(g)</TableCell>
+            <TableCell rowSpan={1}>(h)</TableCell>
+            <TableCell rowSpan={1}>(i)</TableCell>
+            <TableCell rowSpan={1}>(j)</TableCell>
+            <TableCell rowSpan={1}>(k)</TableCell>
+            <TableCell rowSpan={1}>(l)</TableCell>
+            <TableCell rowSpan={1}>(m)</TableCell>
+            <TableCell rowSpan={1}>(n)</TableCell>
+            <TableCell rowSpan={1}>(o)</TableCell>
+            <TableCell rowSpan={1}>(p)</TableCell>
+            <TableCell rowSpan={1}>(q)</TableCell>
+            <TableCell rowSpan={1}>(r)</TableCell>
+            <TableCell rowSpan={1}>(s)</TableCell>
+            <TableCell rowSpan={1}>(t)</TableCell>
+            <TableCell rowSpan={1}>(u)</TableCell>
+            <TableCell rowSpan={1}>(v)</TableCell>
+            <TableCell rowSpan={1}>(w)</TableCell>
+            <TableCell rowSpan={1}>(x)</TableCell>
+            <TableCell rowSpan={1}>(y)</TableCell>
+            <TableCell rowSpan={1}>(z)</TableCell>
+            <TableCell rowSpan={1}>(aa)</TableCell>
+            <TableCell rowSpan={1}>(ab)</TableCell>
+            <TableCell rowSpan={1}>(ac)</TableCell>
+            <TableCell rowSpan={1}>(ad)</TableCell>
+            <TableCell rowSpan={1}>(ae)</TableCell>
+            <TableCell rowSpan={1}>(af)</TableCell>
+            <TableCell rowSpan={1}>(ag)</TableCell>
+            <TableCell rowSpan={1}>(ah)</TableCell>
+            <TableCell rowSpan={1}>(ai)</TableCell>
+            <TableCell rowSpan={1}>(aj)</TableCell>
+            <TableCell rowSpan={1}>(ak)</TableCell>
+            <TableCell rowSpan={1}>(al)</TableCell>
+            <TableCell rowSpan={1}>(am)</TableCell>
+            <TableCell rowSpan={1}>(an)</TableCell>
+            <TableCell rowSpan={1}>(ao)</TableCell>
+            <TableCell rowSpan={1}>(ap)</TableCell>
+            <TableCell rowSpan={1}>(aq)</TableCell>
+            <TableCell rowSpan={1}>(ar)</TableCell>
+            <TableCell rowSpan={1}>(as)</TableCell>
+            <TableCell rowSpan={1}>(at)</TableCell>
+            <TableCell rowSpan={1}>(au)</TableCell>
+            <TableCell rowSpan={1}>(av)</TableCell>
+          </TableRow>
+          {Array.from({ length: 48 }, (_, i) => (
+            <TableCell key={i} rowSpan={1}></TableCell>
+          ))}
+        </TableBody>
       </Table>
     </div>
   </TableContainer>
