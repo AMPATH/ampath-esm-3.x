@@ -16,7 +16,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import styles from './ReportSummary.css';
 import reportMapping from '../report-loader/reportMapping.json';
-import { generateReportData, getSPReports } from '../../api/api';
+import { fetchReportLogsByLocationAndId, generateReportData, getSPReports } from '../../api/api';
 import { useSession } from '@openmrs/esm-framework';
 import { useSelectedLocations } from '../../hooks/useSelectedLocations';
 
@@ -28,6 +28,7 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
   const locationUuid = useSession()?.sessionLocation?.uuid;
   const { selectedLocations } = useSelectedLocations();
   const [multipleLocations, setMultipleLocations] = useState([]);
+  const [reportCurrentId, setReportCurrentId] = useState(null);
 
   const headers = [
     { key: 'status', header: 'Status' },
@@ -82,43 +83,47 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
     }
   };
 
-  // const handleRefresh = () => {
-  //   setRefreshLoading(true);
-  //   try {
-  //     if (rows && Array.isArray(rows)) {
-  //       const rowsWithButtons = rows.map((row) => {
-  //         const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
-  //         return {
-  //           ...row,
-  //           id: row.log_id,
-  //           view: reportMappingEntry ? (
-  //             <button
-  //               className={styles.view_button}
-  //               onClick={() => handleViewClick(reportMappingEntry.report_uuid, Number(row.log_id))}>
-  //               View
-  //             </button>
-  //           ) : null,
-  //           download: <button className={styles.download_button}>Download</button>,
-  //         };
-  //       });
-  //       setCurrentRows(rowsWithButtons);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error refreshing data:', error);
-  //   } finally {
-  //     setRefreshLoading(false);
-  //   }
-  // };
+  const handleRefresh = async () => {
+    setRefreshLoading(true);
+    try {
+      const response = await fetchReportLogsByLocationAndId(locationUuid, reportCurrentId);
+      if (response && Array.isArray(response)) {
+        const latestRows = response.map((row) => {
+          const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+          return {
+            ...row,
+            id: row.id,
+            view: reportMappingEntry ? (
+              <button
+                className={styles.view_button}
+                onClick={() => {
+                  setReportCurrentId(Number(row.id));
+                  handleViewClick(locationUuid, reportMappingEntry.report_uuid, Number(row.id));
+                }}>
+                View
+              </button>
+            ) : null,
+            download: <button className={styles.download_button}>Download</button>,
+          };
+        });
+        setCurrentRows(latestRows);
+      }
+    } catch (error) {
+      console.error('Error refreshing data:', error);
+    } finally {
+      setRefreshLoading(false);
+    }
+  };
 
   return (
     <div className={styles.wrapper_container}>
       {loading && <Loading description="Loading data..." withOverlay={true} />}
       <TableContainer title="Reports logs">
-        {/* <div className={styles.buttonContainer}>
+        <div className={styles.buttonContainer}>
           <Button onClick={handleRefresh} style={{ marginRight: '1rem' }} disabled={refreshLoading}>
             {refreshLoading ? 'Refreshing...' : 'Refresh'}
           </Button>
-        </div> */}
+        </div>
         <DataTable
           rows={currentRows}
           headers={headers}
