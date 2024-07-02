@@ -98,7 +98,7 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
               <button
                 className={styles.view_button}
                 onClick={() => {
-                  handleViewClick(locationUuid, reportMappingEntry.report_uuid, Number(row.id));
+                  handleViewClick(selectedLocations, reportMappingEntry.report_uuid, Number(row.log_id));
                 }}>
                 View
               </button>
