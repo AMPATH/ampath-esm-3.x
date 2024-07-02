@@ -93,7 +93,7 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
           const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
           return {
             ...row,
-            id: row.id,
+            id: row.log_id,
             view: reportMappingEntry ? (
               <button
                 className={styles.view_button}
