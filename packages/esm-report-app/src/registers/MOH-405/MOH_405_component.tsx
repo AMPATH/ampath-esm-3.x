@@ -436,7 +436,7 @@ const RenderMOH405: React.FC<{ reportData: any }> = ({ reportData }) => (
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={42}>Data Not Available in this Location</TableCell>
+              <TableCell colSpan={45}>No data available</TableCell>
             </TableRow>
           )}
         </TableBody>
