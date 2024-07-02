@@ -45,6 +45,7 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
     if (rows && Array.isArray(rows)) {
       const rowsWithButtons = rows.map((row) => {
         const reportMappingEntry = reportMapping.find((entry) => entry.report_uuid === row.uuid);
+        setReportCurrentId(Number(row.id));
         return {
           ...row,
           id: row.log_id,
@@ -97,7 +98,6 @@ const ReportSummary: React.FC<any> = ({ rows = [] }) => {
               <button
                 className={styles.view_button}
                 onClick={() => {
-                  setReportCurrentId(Number(row.id));
                   handleViewClick(locationUuid, reportMappingEntry.report_uuid, Number(row.id));
                 }}>
                 View
