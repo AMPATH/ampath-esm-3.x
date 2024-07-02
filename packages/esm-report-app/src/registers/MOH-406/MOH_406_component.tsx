@@ -406,7 +406,7 @@ const RenderMOH406: React.FC<{ reportData: any }> = ({ reportData }) => (
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={19}>No data available</TableCell>
+              <TableCell colSpan={42}>No data available</TableCell>
             </TableRow>
           )}
         </TableBody>
