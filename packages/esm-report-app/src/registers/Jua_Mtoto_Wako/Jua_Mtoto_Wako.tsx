@@ -23,7 +23,7 @@ const RenderJuaMtotoWako: React.FC<{ reportData: any }> = ({ reportData }) => (
             <TableHeader colSpan={8} rowSpan={1}>
               1.0 CALHIV
             </TableHeader>
-            <TableHeader colSpan={4} rowSpan={1}>
+            <TableHeader colSpan={3} rowSpan={1}>
               2.0 Care giver details and characteristics
             </TableHeader>
             <TableHeader colSpan={12} rowSpan={1}>
@@ -53,7 +53,6 @@ const RenderJuaMtotoWako: React.FC<{ reportData: any }> = ({ reportData }) => (
             <TableHeader className={styles['vertical_text']} rowSpan={1}>
               Month of <br /> enrollment <br /> to JMW (Cohort)
             </TableHeader>
-            <TableHeader rowSpan={1}></TableHeader>
 
             <TableHeader className={`${styles['vertical_text']} ${styles['blue']}`} rowSpan={1}>
               HIV Status of <br /> the Care Giver (Pos, <br /> Neg, Uknown)
@@ -221,7 +220,6 @@ const RenderJuaMtotoWako: React.FC<{ reportData: any }> = ({ reportData }) => (
             <TableCell rowSpan={1}>(as)</TableCell>
             <TableCell rowSpan={1}>(at)</TableCell>
             <TableCell rowSpan={1}>(au)</TableCell>
-            <TableCell rowSpan={1}>(av)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -229,71 +227,68 @@ const RenderJuaMtotoWako: React.FC<{ reportData: any }> = ({ reportData }) => (
             reportData.map((item, i) => (
               <React.Fragment key={i}>
                 <TableRow>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  {/* a */}
-                  <TableCell rowSpan={2}></TableCell> {/* b */}
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  {/* c */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* d */}
-                  <TableCell rowSpan={2}></TableCell>{' '}
-                  <TableBody>{reportData?.map((item, i) => <TableCell key={i} rowSpan={1}></TableCell>)}</TableBody>
-                  {/* e */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* f */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* g */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* h */}
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  {/* i */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* j */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* k */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* l */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* m */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* n */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* o */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* p */}
-                  <TableCell rowSpan={1}></TableCell>
-                  {/* q */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* r */}
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* s */}
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  {/* t */}
-                  <TableCell rowSpan={2}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell className={styles['dotted-border']} rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={2}></TableCell>
-                  {/* <TableCell rowSpan={2}></TableCell> */}
+                  <TableCell rowSpan={2}>{item.s_no}</TableCell>
+                  <TableCell rowSpan={2}>{item.facility}</TableCell>
+                  <TableCell rowSpan={2}>{item.ccc_no}</TableCell>
+                  <TableCell rowSpan={2}>{item.full_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.sex}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_of_birth}</TableCell>
+                  <TableCell rowSpan={2}>{item.age_of_enrollment_to_jmw}</TableCell>
+                  <TableCell rowSpan={2}>{item.month_of_enrollment_to_jmw}</TableCell>
+                  <TableCell rowSpan={2}>{item.caregiver_hiv_status}</TableCell>
+                  <TableCell rowSpan={2}>{item.caregiver_supression_status}</TableCell>
+                  <TableCell rowSpan={2}>{item.caregiver_education}</TableCell>
+                  <TableCell rowSpan={2}>{item.hiv_disclosure_status}</TableCell>
+                  <TableCell rowSpan={2}>{item.hiv_disclosure_status_child_and_adolescents}</TableCell>
+                  <TableCell rowSpan={2}>{item.current_art_regimen_line}</TableCell>
+                  <TableCell rowSpan={2}>{item.current_art_regimen}</TableCell>
+                  <TableCell rowSpan={2}>{item.is_the_regimen_correct}</TableCell>
+                  <TableCell rowSpan={2}>{item.current_regimen_start_date}</TableCell>
+                  <TableCell rowSpan={2}>{item.viral_load_copies}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_vl_done}</TableCell>
+                  <TableCell rowSpan={2}>{item.weight}</TableCell>
+                  <TableCell rowSpan={2}>{item.height}</TableCell>
+                  <TableCell rowSpan={2}>{item.bmi}</TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.mdt_1}
+                  </TableCell>
+                  <TableCell rowSpan={2}>{item.main_reason_for_nonsuppression}</TableCell>
+                  <TableCell rowSpan={2}>{item.other_reason_for_nonsuppression}</TableCell>
+                  <TableCell rowSpan={2}>{item.priority_solution}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_of_intervention}</TableCell>
+                  <TableCell rowSpan={2}>{item.adherence_session_date_1}</TableCell>
+                  <TableCell rowSpan={2}>{item.adherence_session_date_2}</TableCell>
+                  <TableCell rowSpan={2}>{item.adherence_session_date_3}</TableCell>
+                  <TableCell rowSpan={2}>{item.home_visit_date_done}</TableCell>
+                  <TableCell rowSpan={2}>{item.repeat_viral_load}</TableCell>
+                  <TableCell rowSpan={2}>{item.repeat_viral_load_date_vl_done}</TableCell>
+                  <TableCell rowSpan={2}>{item.eligible_for_switching_to_second_line}</TableCell>
+                  <TableCell rowSpan={2}>{item.regimen}</TableCell>
+                  <TableCell rowSpan={2}>{item.eligible_for_drt}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_done}</TableCell>
+                  <TableCell rowSpan={2}>{item.new_regimen}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_of_new_regimen_initiation}</TableCell>
+                  <TableCell rowSpan={2}>{item.date_second_mdt_done}</TableCell>
+                  <TableCell rowSpan={2}>{item.repeat_viral_load_test_after_second_intervention}</TableCell>
+                  <TableCell rowSpan={2}>
+                    {item.repeat_viral_load_test_after_second_intervention_date_vl_done}
+                  </TableCell>
+                  <TableCell rowSpan={2}>{item.support_intervention1_post_suppression}</TableCell>
+                  <TableCell rowSpan={2}>{item.support_intervention2_post_suppression}</TableCell>
+                  <TableCell rowSpan={2}>{item.support_intervention3_post_suppression}</TableCell>
+                  <TableCell rowSpan={2}>{item.status_as_at_july}</TableCell>
+                  <TableCell rowSpan={2}>{item.comments}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
-                  <TableCell rowSpan={1}></TableCell>
+                  <TableCell className={styles['dotted-border']} rowSpan={1}>
+                    {item.mdt_1_date}
+                  </TableCell>
                 </TableRow>
               </React.Fragment>
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={19}>No data available</TableCell>
+              <TableCell colSpan={42}>No data available</TableCell>
             </TableRow>
           )}
         </TableBody>
