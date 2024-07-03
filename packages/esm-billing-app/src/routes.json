@@ -1,7 +1,8 @@
 {
   "$schema": "https://json.openmrs.org/routes.schema.json",
   "backendDependencies": {
-    "amrscore": "^1.0.0"
+    "amrscore": "^1.0.0",
+    "amrsreporting": "^1.0.0"
   },
   "pages": [
     {
