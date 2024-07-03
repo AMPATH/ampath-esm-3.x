@@ -4,7 +4,7 @@ import { openmrsFetch, restBaseUrl, useConfig } from '@openmrs/esm-framework';
 import { FacilityLocationsConfig } from '../config-schema';
 import { type ReportData } from '../types';
 
-export const BASE_URL = '/ws/rest/v1/amrscore';
+export const BASE_URL = '/ws/rest/v1/amrsetl';
 export const url = '/ws/rest/v1';
 
 const username = '';
@@ -121,7 +121,7 @@ export const getFacilityLocations = () => {
 };
 
 export const getLocations = async (locationUuid: any, ac = new AbortController()) => {
-  const results = await openmrsFetch(`${url}/amrscore/locations?locationUuid=${locationUuid}`, {
+  const results = await openmrsFetch(`${url}/amrsetl/locations?locationUuid=${locationUuid}`, {
     signal: ac.signal,
   });
   return results.data;
