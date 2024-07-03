@@ -156,5 +156,26 @@ p {
     td.dotted-border {
       border: 1px dotted black;
     }
+    th:nth-child(9),
+    th:nth-child(10),
+    th:nth-child(11),
+
+    td:nth-child(9),
+    td:nth-child(10),
+    td:nth-child(11),
+    td:nth-child(13),
+    td:nth-child(34),
+    td:nth-child(35),
+    td:nth-child(36) {
+      background-color: #0070c0;
+    }
+
+    td:nth-child(43),
+    td:nth-child(44),
+    td:nth-child(45),
+    td:nth-child(46),
+    td:nth-child(47) {
+      background-color: red;
+    }
   }
 }
