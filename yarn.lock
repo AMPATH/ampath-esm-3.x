@@ -203,6 +203,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ampath/esm-patient-clinical-view-app@workspace:packages/esm-patient-clinical-view-app":
+  version: 0.0.0-use.local
+  resolution: "@ampath/esm-patient-clinical-view-app@workspace:packages/esm-patient-clinical-view-app"
+  dependencies:
+    "@carbon/charts-react": "npm:^1.5.2"
+    "@carbon/react": "npm:^1.12.0"
+    d3: "npm:^7.6.1"
+    lodash-es: "npm:^4.17.21"
+    webpack: "npm:^5.74.0"
+  peerDependencies:
+    "@openmrs/esm-framework": 5.x
+    react: ^18.1.0
+    react-i18next: 11.x
+    react-router-dom: 6.x
+  languageName: unknown
+  linkType: soft
+
 "@ampath/esm-patient-flags-app@workspace:packages/esm-patient-flags-app":
   version: 0.0.0-use.local
   resolution: "@ampath/esm-patient-flags-app@workspace:packages/esm-patient-flags-app"
@@ -1687,6 +1704,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@carbon/charts-react@npm:^1.5.2":
+  version: 1.19.2
+  resolution: "@carbon/charts-react@npm:1.19.2"
+  dependencies:
+    "@carbon/charts": "npm:1.19.2"
+    "@carbon/icons-react": "npm:^11.45.0"
+    "@ibm/telemetry-js": "npm:^1.6.0"
+  peerDependencies:
+    react: ^16.8.6 || ^17.0.1 || ^18.2.0
+    react-dom: ^16.8.6 || ^17.0.1 || ^18.2.0
+  checksum: 10/83d2c801c9eda3fe321544ecd3e2ee241d205584df437dd9ef9fbed85c4f8615a5b2818111f15da8a6eb3258874f25a7d7ba458cb381e8bf21b5b0707ac5ba64
+  languageName: node
+  linkType: hard
+
 "@carbon/charts@npm:1.17.2, @carbon/charts@npm:^1.12.0":
   version: 1.17.2
   resolution: "@carbon/charts@npm:1.17.2"
@@ -1705,6 +1736,27 @@ __metadata:
     topojson-client: "npm:^3.1.0"
     tslib: "npm:^2.6.3"
   checksum: 10/bade51acb73af3891b8c8402bf04fa1785adf6ce94b34fc2a16815c115e225cfc19002e9168ff08ecb526ddff85f32bf4890768b1ff72aa57f8d1c060987b90f
+  languageName: node
+  linkType: hard
+
+"@carbon/charts@npm:1.19.2":
+  version: 1.19.2
+  resolution: "@carbon/charts@npm:1.19.2"
+  dependencies:
+    "@carbon/colors": "npm:^11.23.1"
+    "@carbon/utils-position": "npm:^1.3.0"
+    "@ibm/telemetry-js": "npm:^1.6.0"
+    carbon-components: "npm:^10.58.15"
+    d3: "npm:^7.9.0"
+    d3-cloud: "npm:^1.2.7"
+    d3-sankey: "npm:^0.12.3"
+    date-fns: "npm:^3.6.0"
+    dompurify: "npm:^3.1.6"
+    html-to-image: "npm:^1.11.11"
+    lodash-es: "npm:^4.17.21"
+    topojson-client: "npm:^3.1.0"
+    tslib: "npm:^2.6.3"
+  checksum: 10/4cf09b980d2d50551fc1d1025169db11a96a7da5e68d9b0655355afe02a3e754faf8bffd5a95ab01733a48fcb362098fa3305311c61e82b6adda3361a2ac1cd2
   languageName: node
   linkType: hard
 
@@ -1743,7 +1795,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/icon-helpers@npm:^10.49.1":
+"@carbon/icon-helpers@npm:^10.49.0, @carbon/icon-helpers@npm:^10.49.1":
   version: 10.49.1
   resolution: "@carbon/icon-helpers@npm:10.49.1"
   dependencies:
@@ -1762,6 +1814,19 @@ __metadata:
   peerDependencies:
     react: ">=16"
   checksum: 10/a546db550789e72d4d5e3b8dcab96341d36a7f4005d49ebdbbd3bcf88fcbaa8b175792d6bfa78818b3d5fb3b05f16eb7241cccb0a69655bdbf13aac164321e97
+  languageName: node
+  linkType: hard
+
+"@carbon/icons-react@npm:^11.45.0":
+  version: 11.45.0
+  resolution: "@carbon/icons-react@npm:11.45.0"
+  dependencies:
+    "@carbon/icon-helpers": "npm:^10.49.0"
+    "@ibm/telemetry-js": "npm:^1.5.0"
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    react: ">=16"
+  checksum: 10/dd367f2f53d0f489ffc324fbb55e7e99d09f121f189214be7494f0a39a2ce895d5300d17190d97da1edd8c02a26170c0125c6b220cb711c56dbbf03056762c6e
   languageName: node
   linkType: hard
 
@@ -2144,6 +2209,15 @@ __metadata:
   bin:
     ibmtelemetry: dist/collect.js
   checksum: 10/1dcc971e78a927baba382a7179f75bc2b6fb1b237d8e9e88941c6410810e716a862e9135c709887a245daaf0e3e158ac3d01bf7e830457933ec91afffc479146
+  languageName: node
+  linkType: hard
+
+"@ibm/telemetry-js@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@ibm/telemetry-js@npm:1.6.0"
+  bin:
+    ibmtelemetry: dist/collect.js
+  checksum: 10/09132a2c10bbac47d9ba1c02437c1b0c9f94d2158474dcfc7b9676e36feeccde61835bbb423f34a00135988d1227fbc387e759f5e375f2d0524f9a448a8e7f04
   languageName: node
   linkType: hard
 
@@ -9028,7 +9102,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3@npm:^7.8.0, d3@npm:^7.9.0":
+"d3@npm:^7.6.1, d3@npm:^7.8.0, d3@npm:^7.9.0":
   version: 7.9.0
   resolution: "d3@npm:7.9.0"
   dependencies:
@@ -9513,6 +9587,13 @@ __metadata:
   version: 3.1.5
   resolution: "dompurify@npm:3.1.5"
   checksum: 10/4ea935df48b49a0a76c66b6eee8522ca12783f2643119482b8329867f1e8adb34ff1d2dd56973927be9de5f01079948556907f22e882b06fa7b0c0ba281bf14a
+  languageName: node
+  linkType: hard
+
+"dompurify@npm:^3.1.6":
+  version: 3.1.6
+  resolution: "dompurify@npm:3.1.6"
+  checksum: 10/036844bc9b717b172ba27f5863b56f950289a05d8eebfb702d6953bbf80bd021e480ce4217bd084567186f2d0ada13358ce5556963492cfe402d774e8667f120
   languageName: node
   linkType: hard
 
