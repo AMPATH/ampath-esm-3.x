@@ -10,7 +10,7 @@ interface AboutProps {}
 
 const About: React.FC<AboutProps> = () => {
   const { modules, isLoading } = useModules();
-  const AMRS = modules.find(({ uuid }) => uuid === 'amrscore');
+  const AMRS = modules.find(({ uuid }) => uuid === 'amrs');
   //const { mflCodeResource } = useSystemSetting('facility.mflcode');
   //const mflCode = mflCodeResource ? `(${mflCodeResource?.value ?? ''})` : '';
   const facilityName = useDefaultFacility();
