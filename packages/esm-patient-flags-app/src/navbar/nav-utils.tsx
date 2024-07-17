@@ -87,4 +87,10 @@ export const moduleLinks = [
     icon: <HospitalBed size={24} />,
     requiresAdmin: true,
   },
+  {
+    label: 'Providers',
+    url: `${openmrsSpaBase}home/providers`,
+    icon: <Events size={24} />,
+    requiresAdmin: true,
+  },
 ];
