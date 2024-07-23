@@ -6,6 +6,10 @@ type ResponseObject = {
   results: Array<OpenmrsResource>;
 };
 
+type ServiceTypesResponse = {
+  setMembers: { uuid: string; display: string }[];
+};
+
 export const useBillableServices = () => {
   const url = `/ws/rest/v1/cashier/billableService?v=custom:(uuid,name,shortName,serviceStatus,serviceType:(display),servicePrices:(uuid,name,price))`;
   const { data, isLoading, isValidating, error, mutate } = useSWR<{ data: ResponseObject }>(url, openmrsFetch, {});
@@ -13,8 +17,8 @@ export const useBillableServices = () => {
 };
 
 export function useServiceTypes() {
-  const url = `/ws/rest/v1/concept/d7bd4cc0-90b1-4f22-90f2-ab7fde936727?v=custom:(setMembers:(uuid,display))`;
-  const { data, error, isLoading } = useSWR<{ data: any }>(url, openmrsFetch, {});
+  const url = `/ws/rest/v1/concept/d2ece9e9-3907-440d-b5c3-5d3b148594f5?v=custom:(setMembers:(uuid,display))`;
+  const { data, error, isLoading } = useSWR<{ data: ServiceTypesResponse }>(url, openmrsFetch, {});
   return { serviceTypes: data?.data.setMembers ?? [], error, isLoading };
 }
 

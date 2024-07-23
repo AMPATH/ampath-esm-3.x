@@ -19,6 +19,6 @@ export const usePatientFlags = (patientUuid: string): PatientFlagsReturnType => 
     patientFlagsUrl,
     openmrsFetch,
   );
-  const patientFlags = typeof data?.data === 'string' ? [] : data?.data?.results ?? [];
+  const patientFlags = typeof data?.data === 'string' ? [] : (data?.data?.results ?? []);
   return { patientFlags, isLoading, error };
 };

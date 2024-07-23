@@ -1,8 +1,7 @@
 {
   "$schema": "https://json.openmrs.org/routes.schema.json",
   "backendDependencies": {
-    "ampathemr": "^1.0.0",
-    "amrsreporting": "^1.0.0"
+    "ampathemr": "^1.0.0"
   },
   "pages": [
     {
@@ -87,9 +86,29 @@
       "slot": "top-of-lab-order-form-slot"
     },
     {
+      "name": "procedure-order-billable-item",
+      "component": "procedureOrder",
+      "slot": "top-of-procedure-order-form-slot"
+    },
+    {
+      "name": "imaging-order-billable-item",
+      "component": "imagingOrder",
+      "slot": "top-of-imaging-order-form-slot"
+    },
+    {
+      "name": "price-info-order",
+      "component": "priceInfoOrder"
+    },
+    {
       "name": "drug-order-billable-item",
       "component": "drugOrder",
       "slot": "medication-info-slot"
+    },
+    {
+      "name": "test-order-action",
+      "component": "testOrderAction",
+      "slot": "tests-ordered-actions-slot",
+      "order": 0
     }
   ]
 }

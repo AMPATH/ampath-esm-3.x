@@ -1,3 +1,4 @@
+import { type OpenmrsResource } from '@openmrs/esm-framework';
 import { type Drug, type OrderBasketItem } from '@openmrs/esm-patient-common-lib';
 export interface MappedBill {
   uuid: string;
@@ -66,6 +67,7 @@ export interface LineItem {
   lineItemOrder: number;
   resourceVersion: string;
   paymentStatus: string;
+  itemOrServiceConceptUuid: string;
 }
 
 interface PatientLink {
@@ -110,18 +112,6 @@ interface PaymentInstanceType {
   description: string;
   retired: boolean;
 }
-
-export interface Payment {
-  uuid: string;
-  instanceType: PaymentInstanceType;
-  attributes: Attribute[];
-  amount: number;
-  amountTendered: number;
-  dateCreated: number;
-  voided: boolean;
-  resourceVersion: string;
-}
-
 export interface PatientInvoice {
   uuid: string;
   display: string;
@@ -257,3 +247,32 @@ export type PaymentMethod = {
   name: string;
   retired: boolean;
 };
+
+export interface Payment {
+  uuid: string;
+  instanceType: PaymentInstanceType;
+  attributes: Attribute[];
+  amount: number;
+  amountTendered: number;
+  dateCreated: string;
+  voided: boolean;
+  resourceVersion: string;
+}
+
+export type FormPayment = { method: string; amount: string | number; referenceCode?: number | string };
+
+export type PaymentFormValue = {
+  payment: Array<FormPayment>;
+};
+
+export type QueueEntry = {
+  queueEntry: {
+    uuid: string;
+    priority: OpenmrsResource;
+    status: OpenmrsResource;
+    queue: OpenmrsResource;
+    queueComingFrom: OpenmrsResource;
+  };
+};
+
+export type RequestStatus = 'INITIATED' | 'COMPLETE' | 'FAILED' | 'NOT-FOUND';

@@ -18,5 +18,5 @@ export const hivCareAndTreatmentNavGroup = {
   slotName: 'hiv-care-and-treatment-slot',
   isExpanded: false,
   isChild: true,
-  showWhenExpression: "enrollment.includes('HIV')",
+  //showWhenExpression: "enrollment.includes('HIV')",
 };
