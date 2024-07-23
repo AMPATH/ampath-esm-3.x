@@ -9,6 +9,8 @@ import BillingHeader from '../billing-header/billing-header.component';
 import { Wallet, Money } from '@carbon/react/icons';
 import { UserHasAccess, navigate } from '@openmrs/esm-framework';
 import BillWaiver from './bill-waiver/bill-waiver.component';
+import BillingTariffs from './billing-tariffs/billing-tariffs.component';
+import AddTariffsService from './billing-tariffs/add-billings-tariffs-service.component';
 const basePath = `${window.spaBase}/billable-services`;
 const BillableServiceHome: React.FC = () => {
   const { t } = useTranslation();
@@ -28,7 +30,12 @@ const BillableServiceHome: React.FC = () => {
               </SideNavLink>
               <UserHasAccess privilege="coreapps.systemAdministration">
                 <SideNavLink onClick={() => handleNavigation('waive-bill')} renderIcon={Money}>
-                  {t('billWaiver', 'Bill waiver')}
+                  {t('billWaiver', 'Bill Waiver')}
+                </SideNavLink>
+              </UserHasAccess>
+              <UserHasAccess privilege="coreapps.systemAdministration">
+                <SideNavLink onClick={() => handleNavigation('bill-tariffs')} renderIcon={Money}>
+                  {t('billTariffs', 'Insurance Tariffs')}
                 </SideNavLink>
               </UserHasAccess>
             </SideNavItems>
@@ -40,6 +47,8 @@ const BillableServiceHome: React.FC = () => {
             <Route path="/" element={<BillableServicesDashboard />} />
             <Route path="/add-service" element={<AddBillableService />} />
             <Route path="/waive-bill" element={<BillWaiver />} />
+            <Route path="/bill-tariffs" element={<BillingTariffs />} />
+            <Route path="/add-tariffs" element={<AddTariffsService />} />
           </Routes>
         </section>
       </main>

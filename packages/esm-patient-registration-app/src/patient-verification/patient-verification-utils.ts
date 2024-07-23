@@ -115,9 +115,9 @@ export function handleClientRegistryResponse(
             'a8a0a00e-1350-11df-a1f1-0026b9348838':
               clientResponse.client.occupation === undefined || clientResponse.client.occupation === null
                 ? 'a899e0ac-1350-11df-a1f1-0026b9348838'
-                : props.values.concepts.find(
+                : (props.values.concepts.find(
                     (concept) => concept.display?.toLowerCase() === clientResponse.client.occupation?.toLowerCase(),
-                  )?.uuid ?? 'a8aaf3e2-1350-11df-a1f1-0026b9348838',
+                  )?.uuid ?? 'a8aaf3e2-1350-11df-a1f1-0026b9348838'),
           },
         });
         dispose();

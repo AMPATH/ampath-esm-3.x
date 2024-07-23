@@ -100,20 +100,26 @@ const MetricsHeader = () => {
           />
         </div>
         <div style={{ marginBottom: '20px' }}>
+          <TextInput
+            data-modal-primary-focus
+            id="text-input-1"
+            labelText="License Number*"
+            placeholder="Enter License Number"
+            required
+            style={{
+              marginBottom: '1rem',
+            }}
+          />
           <DatePicker datePickerType="single">
-            <DatePickerInput placeholder="mm/dd/yyyy" labelText="Date of Death" id="date-picker-single" size="md" />
+            <DatePickerInput
+              placeholder="mm/dd/yyyy"
+              labelText="License Expiry Date"
+              id="date-picker-single"
+              size="md"
+            />
           </DatePicker>
         </div>
-        <TextInput
-          data-modal-primary-focus
-          id="text-input-1"
-          labelText="Place Death*"
-          placeholder="Enter place of Death"
-          required
-          style={{
-            marginBottom: '1rem',
-          }}
-        />
+
         <div style={{ marginBottom: '20px' }}>
           <ComboBox
             allowCustomValue

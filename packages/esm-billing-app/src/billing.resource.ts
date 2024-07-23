@@ -97,7 +97,7 @@ export const useBill = (billUuid: string) => {
       cashPointUuid: bill?.cashPoint?.uuid,
       cashPointName: bill?.cashPoint?.name,
       cashPointLocation: bill?.cashPoint?.location?.display,
-      dateCreated: bill?.dateCreated ? formatDate(parseDate(bill.dateCreated), { mode: 'wide' }) : '--',
+      dateCreated: bill?.dateCreated ?? '--',
       lineItems: bill.lineItems,
       billingService: bill.lineItems.map((bill) => bill.item).join(' '),
       payments: bill.payments,
@@ -132,7 +132,7 @@ export const processBillPayment = (payload, billUuid: string) => {
 
 export function useDefaultFacility() {
   const { authenticated } = useSession();
-  const url = '/ws/rest/v1/amrs/default-facility';
+  const url = '/ws/rest/v1/kenyaemr/default-facility';
   const { data, isLoading } = useSWR<{ data: FacilityDetail }>(authenticated ? url : null, openmrsFetch, {});
   return { data: data?.data, isLoading: isLoading };
 }
@@ -181,8 +181,9 @@ export const usePaymentModes = (excludeWaiver: boolean = true) => {
   });
   const allowedPaymentModes =
     excludedPaymentMode?.length > 0
-      ? data?.data?.results.filter((mode) => !excludedPaymentMode.some((excluded) => excluded.uuid === mode.uuid)) ?? []
-      : data?.data?.results ?? [];
+      ? (data?.data?.results.filter((mode) => !excludedPaymentMode.some((excluded) => excluded.uuid === mode.uuid)) ??
+        [])
+      : (data?.data?.results ?? []);
   return {
     paymentModes: excludeWaiver ? allowedPaymentModes : data?.data?.results,
     isLoading,
