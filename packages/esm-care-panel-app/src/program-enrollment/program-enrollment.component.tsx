@@ -16,10 +16,10 @@ import {
 import styles from './program-enrollment.scss';
 import isEmpty from 'lodash/isEmpty';
 import dayjs from 'dayjs';
-import { formatDate } from '@openmrs/esm-framework';
+import { formatDate, useVisit } from '@openmrs/esm-framework';
 import orderBy from 'lodash/orderBy';
 import { mutate } from 'swr';
-import { launchPatientWorkspace } from '@openmrs/esm-patient-common-lib';
+import { getPatientUuidFromUrl, launchPatientWorkspace } from '@openmrs/esm-patient-common-lib';
 
 export interface ProgramEnrollmentProps {
   patientUuid: string;
@@ -33,8 +33,6 @@ const programDetailsMap = {
     dateEnrolled: 'Enrolled on',
     whoStage: 'WHO Stage',
     entryPoint: 'Entry Point',
-    regimenShortDisplay: 'Regimen',
-    changeReasons: 'Reason for regimen change',
     reason: 'Reason for discontinuation',
   },
   TB: {
@@ -66,6 +64,7 @@ const programDetailsMap = {
 
 const ProgramEnrollment: React.FC<ProgramEnrollmentProps> = ({ enrollments = [], programName }) => {
   const { t } = useTranslation();
+  const { currentVisit } = useVisit(getPatientUuidFromUrl());
   const orderedEnrollments = orderBy(enrollments, 'dateEnrolled', 'desc');
   const headers = useMemo(
     () =>
@@ -101,6 +100,8 @@ const ProgramEnrollment: React.FC<ProgramEnrollmentProps> = ({ enrollments = [],
       },
       formInfo: {
         encounterUuid: '',
+        visitTypeUuid: currentVisit?.visitType?.uuid ?? '',
+        visitUuid: currentVisit?.uuid ?? '',
         formUuid: enrollment?.discontinuationFormUuid,
         additionalProps:
           { enrollmentDetails: { dateEnrolled: new Date(enrollment.dateEnrolled), uuid: enrollment.enrollmentUuid } } ??
@@ -113,13 +114,18 @@ const ProgramEnrollment: React.FC<ProgramEnrollmentProps> = ({ enrollments = [],
     launchPatientWorkspace('patient-form-entry-workspace', {
       workspaceTitle: enrollment?.enrollmentFormName,
       mutateForm: () => {
-        mutate((key) => true, undefined, {
-          revalidate: true,
-        });
+        mutate(
+          (key) =>
+            typeof key === 'string' && key.startsWith('/ws/rest/v1/amrs/patientHistoricalEnrollment?patientUuid='),
+          undefined,
+          { revalidate: true },
+        );
       },
       formInfo: {
         encounterUuid: enrollment?.enrollmentEncounterUuid,
         formUuid: enrollment?.enrollmentFormUuid,
+        visitTypeUuid: currentVisit?.visitType?.uuid ?? '',
+        visitUuid: currentVisit?.uuid ?? '',
         additionalProps:
           { enrollmentDetails: { dateEnrolled: new Date(enrollment.dateEnrolled), uuid: enrollment.enrollmentUuid } } ??
           {},

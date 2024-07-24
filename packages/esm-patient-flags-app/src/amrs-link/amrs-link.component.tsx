@@ -4,5 +4,5 @@ import { useTranslation } from 'react-i18next';
 
 export default function AMRSLink() {
   const { t } = useTranslation();
-  return <ConfigurableLink to={'/openmrs/kenyaemr/userHome.page?'}>{t('AMRSHome', 'AMRS POC Home')}</ConfigurableLink>;
+  return <ConfigurableLink to={'/openmrs/amrs/userHome.page?'}>{t('AMRSHome', 'AMRS POC Home')}</ConfigurableLink>;
 }
