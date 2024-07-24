@@ -12,7 +12,6 @@
   "caxcScreeningOutcome": "Caxc screening",
   "cd4AtArtStart": "CD4 at ART start",
   "CD4Percentage": "CD4 percentage",
-  "cd4Trends": "CD4 Trends",
   "changeReason": "Change reason",
   "changeRegimen": "Change",
   "chronicDisease": "Chronic disease",
@@ -125,7 +124,6 @@
   "undoRegimen": "Undo",
   "uniquePatientIdentifier": "Unique patient identifier",
   "validating": "Validating data...",
-  "viralLoadTrends": "Viral load trends",
   "weight": "Weight",
   "whoAtEnrollment": "WHO stage at enrollment",
   "whoStage": "WHO STAGE"
