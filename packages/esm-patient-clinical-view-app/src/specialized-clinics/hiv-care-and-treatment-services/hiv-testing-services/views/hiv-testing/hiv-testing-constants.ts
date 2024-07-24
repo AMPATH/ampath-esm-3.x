@@ -1,5 +1,5 @@
 export const hivTestingConceptMap = {
-  'cf543666-ce76-4e91-8b8d-c0b54a436a2e': {
+  '93aa3f1d-1c39-4196-b5e6-8adc916cd5d6': {
     display: 'Population type',
     answers: {
       '5d308c8c-ad49-45e1-9885-e5d09a8e5587': 'General Population',
@@ -17,7 +17,7 @@ export const hivTestingConceptMap = {
       '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not Applicable',
     },
   },
-  '91a87033-8f75-4f08-9f15-0d8ae66bd9d9': {
+  '522cca7a-235d-43d4-837e-8a118f2d9f88': {
     display: 'Does client have any disability?',
     answers: {
       '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
