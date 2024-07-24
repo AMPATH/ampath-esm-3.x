@@ -11,7 +11,7 @@ export const mlPrediction = '167163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 export const testingRecommended = '584e01aa-a1a1-41d2-84c5-6331817bb53b';
 
 // HTS testing
-export const testApproachConcept = '1219f85c-31dd-4212-92ac-77926fa5ba03';
+export const testApproachConcept = 'ae0cb578-6ef0-4a10-9aad-d70b384782a0';
 export const testStrategyConcept = '1219f85c-31dd-4212-92ac-77926fa5ba03';
 export const entryPointConcept = 'aad34924-d6e7-4138-a841-0fea9ee4b41f';
 export const finalResultConcept = 'a89c6c64-1350-11df-a1f1-0026b9348838';
