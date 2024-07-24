@@ -4,6 +4,7 @@
         "AMRS",
         "formik",
         "microfrontend",
+        "nupi",
         "openmrs"
     ],
     "files.autoSave": "onWindowChange"

@@ -154,10 +154,10 @@ const RenderMOH362a: React.FC<{ reportData: any }> = ({ reportData }) => {
                 <TableRow>
                   <TableCell rowSpan={2}>{i + 1}</TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.encounter_id}
+                    {item.nupi}
                   </TableCell>
                   <TableCell rowSpan={2}>{item.visit_date}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{item.client_name}</TableCell>
                   <TableCell rowSpan={2}>{item.age}</TableCell>
                   <TableCell rowSpan={2}>{item.sex}</TableCell>
                   <TableCell rowSpan={2}>{`07${item.patient_id}`}</TableCell>
@@ -172,12 +172,12 @@ const RenderMOH362a: React.FC<{ reportData: any }> = ({ reportData }) => {
                   <TableCell rowSpan={2}>{item.final_test_result}</TableCell>
                   <TableCell rowSpan={2}>{item.couple_discordant}</TableCell>
                   <TableCell rowSpan={2}>{item.test_type}</TableCell>
-                  <TableCell rowSpan={2}>{item.hts_provider_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.provider_name}</TableCell>
                   <TableCell rowSpan={2}>{item.remarks}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.visit_id}
+                    {item.idno}
                   </TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
                     {i}
