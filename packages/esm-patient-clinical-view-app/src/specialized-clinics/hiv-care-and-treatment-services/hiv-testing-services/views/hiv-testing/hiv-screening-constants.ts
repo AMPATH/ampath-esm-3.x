@@ -7,7 +7,7 @@ export const hivScreeningConceptMap = {
       '138643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Priority Population',
     },
   },
-  '160581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '93aa3f1d-1c39-4196-b5e6-8adc916cd5d6': {
     display: 'Key Population Type :',
     answers: {
       '105AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'People who inject drugs',

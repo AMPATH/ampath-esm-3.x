@@ -16,7 +16,7 @@ export const configSchema = {
       antenatal: 'e8f98494-af35-4bb8-9fc7-c409c8fed843',
       postNatal: '72aa78e0-ee4b-47c3-9073-26f3b9ecc4a7',
       labourAndDelivery: '496c7cc3-0eea-4e84-a04c-2292949e2f7f',
-      defaulterTracingFormUuid: 'a1a62d1e-2def-11e9-b210-d663bd873d93',
+      defaulterTracingFormUuid: 'f3ba9242-9bbb-4284-a0c0-56ac6f0cec65',
       htsScreening: '7a16a346-0991-48ac-b339-aacd463a7845',
       htsInitialTest: 'edb264d4-91fc-4d16-bb34-a413eef2b865',
       htsRetest: 'ef3d58b9-7186-40f2-b601-3d568259d392',
@@ -28,7 +28,7 @@ export const configSchema = {
   defaulterTracingEncounterUuid: {
     _type: Type.String,
     _description: 'Encounter UUID for defaulter tracing',
-    _default: '1495edf8-2df2-11e9-b210-d663bd873d93',
+    _default: 'df5547bc-1350-11df-a1f1-0026b9348838',
   },
   clinicalEncounterUuid: {
     _type: Type.String,
