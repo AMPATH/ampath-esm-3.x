@@ -152,35 +152,35 @@ const RenderMOH362a: React.FC<{ reportData: any }> = ({ reportData }) => {
             reportData.map((item, i) => (
               <React.Fragment key={i}>
                 <TableRow>
-                  <TableCell rowSpan={2}>{i}</TableCell>
+                  <TableCell rowSpan={2}>{i + 1}</TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.patient_id}
+                    {item.encounter_id}
                   </TableCell>
                   <TableCell rowSpan={2}>{item.visit_date}</TableCell>
                   <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{item.age}</TableCell>
+                  <TableCell rowSpan={2}>{item.sex}</TableCell>
+                  <TableCell rowSpan={2}>{`07${item.patient_id}`}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_type}</TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.patient_id}
+                    {item.population_type}
                   </TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
-                  <TableCell rowSpan={2}>{item.patient_id}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_type}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_1_kit_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_2_kit_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_2_kit_lot_no}</TableCell>
+                  <TableCell rowSpan={2}>{item.final_test_result}</TableCell>
+                  <TableCell rowSpan={2}>{item.couple_discordant}</TableCell>
+                  <TableCell rowSpan={2}>{item.test_type}</TableCell>
+                  <TableCell rowSpan={2}>{item.hts_provider_name}</TableCell>
+                  <TableCell rowSpan={2}>{item.remarks}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.patient_id}
+                    {item.visit_id}
                   </TableCell>
                   <TableCell className={styles['dotted-border']} rowSpan={1}>
-                    {item.patient_id}
+                    {i}
                   </TableCell>
                 </TableRow>
               </React.Fragment>
