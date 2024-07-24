@@ -477,11 +477,6 @@ const PatientSummary: React.FC<PatientSummaryProps> = ({ patientUuid }) => {
             </div>
             <div className={styles.content}>
               <p className={styles.label}>{t('currentArtRegimenDate', 'Current Art regimen date')}</p>
-              <p>
-                <span className={styles.value}>
-                  {data?.currentArtRegimen ? formatDate(new Date(data?.currentArtRegimen?.startDate)) : '--'}
-                </span>
-              </p>
             </div>
           </div>
 
@@ -601,47 +596,6 @@ const PatientSummary: React.FC<PatientSummaryProps> = ({ patientUuid }) => {
                   {data?.nextAppointmentDate ? formatDate(new Date(data?.nextAppointmentDate)) : '--'}
                 </span>
               </p>
-            </div>
-          </div>
-
-          <div className={styles.container}>
-            <div className={styles.content}>
-              <p className={styles.label}>{t('viralLoadTrends', 'Viral load trends')}</p>
-              {data?.allVlResults?.value?.length > 0
-                ? data?.allVlResults?.value?.map((vl, index) => {
-                    return (
-                      <div key={`vl-${index}`}>
-                        <span className={styles.value}> {vl.vl} </span>
-                        {vl?.vlDate === 'N/A' || vl?.vlDate === '' ? <span>None</span> : <span>{vl.vlDate}</span>}
-                        <br />
-                      </div>
-                    );
-                  })
-                : '--'}
-            </div>
-            <div className={styles.content}>
-              <p className={styles.label}>{t('cd4Trends', 'CD4 Trends')}</p>
-              {data?.allCd4CountResults?.length > 0
-                ? data?.allCd4CountResults?.map((cd4, index) => {
-                    let formattedDate: Date;
-
-                    if (dayjs(cd4.cd4CountDate, 'DD/MM/YYYY', true).isValid()) {
-                      const parts = cd4.cd4CountDate?.split('/');
-                      const day = parseInt(parts[0], 10);
-                      const month = parseInt(parts[1], 10) - 1; // Subtract 1 since months are zero-based
-                      const year = parseInt(parts[2], 10);
-                      formattedDate = new Date(year, month, day);
-
-                      return (
-                        <div key={`cd4Trend-${cd4}-${index}`}>
-                          <span className={styles.value}> {cd4.cd4Count} </span>
-                          <span className={styles.label}> {cd4.cd4CountDate ? formatDate(formattedDate) : '--'}</span>
-                          <br />
-                        </div>
-                      );
-                    }
-                  })
-                : '--'}
             </div>
           </div>
 
