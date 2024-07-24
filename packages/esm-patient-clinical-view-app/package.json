@@ -6,7 +6,7 @@
   "main": "src/index.ts",
   "source": true,
   "license": "MPL-2.0",
-  "homepage": "https://github.com/palladiumkenya/ampath-esm-core#readme",
+  "homepage": "https://github.com/AMPATH/ampath-esm-core#readme",
   "scripts": {
     "start": "openmrs develop",
     "serve": "webpack serve --mode=development",
@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/palladiumkenya/ampath-esm-core#readme"
+    "url": "git+https://github.com/AMPATH/ampath-esm-core#readme"
   },
   "bugs": {
-    "url": "https://github.com/palladiumkenya/ampath-esm-core/issues"
+    "url": "https://github.com/AMPATH/ampath-esm-core/issues"
   },
   "dependencies": {
     "@carbon/charts-react": "^1.5.2",
