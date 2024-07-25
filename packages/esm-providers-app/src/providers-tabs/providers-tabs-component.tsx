@@ -28,6 +28,9 @@ export const ProvidersTabs: React.FC = () => {
           <TabPanel>
             <Admissionqueue />
           </TabPanel>
+          <TabPanel>
+            <Admissionqueue />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </main>

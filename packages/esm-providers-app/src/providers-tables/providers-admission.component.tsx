@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Table,
@@ -17,108 +17,37 @@ import {
   OverflowMenuItem,
 } from '@carbon/react';
 import { usePagination } from '@openmrs/esm-framework';
+import { getAllProviders } from '../api/api';
+import { use } from 'i18next';
 
 export const Admissionqueue: React.FC = () => {
   const { t } = useTranslation();
-  const [currentPageSize, setCurrentPageSize] = useState<number>(10);
+  const [currentPageSize, setCurrentPageSize] = useState<number>(5);
+  const { response, isLoading, error, isValidating } = getAllProviders();
 
-  // Dummy data for AdmissionWorkListEntries
-  const AdmissionWorkListEntries = [
-    {
-      id: 1,
-      name: 'John Doe',
-      date: '2024-03-20',
-      license: 'TEST_123',
-      created: 'Admin',
-      'date-created': '2024-03-19',
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      date: '2024-03-21',
-      license: 'TEST_124',
-      created: 'Doctor',
-      'date-created': '2024-03-20',
-    },
-    // {
-    //   id: 3,
-    //   name: 'Alice Johnson',
-    //   date: '2024-03-22',
-    //   cause: 'Accident',
-    //   created: 'Nurse',
-    //   'date-created': '2024-03-21',
-    // },
-    // {
-    //   id: 4,
-    //   name: 'Bob Brown',
-    //   date: '2024-03-23',
-    //   cause: 'Infection',
-    //   created: 'Admin',
-    //   'date-created': '2024-03-22',
-    // },
-    // {
-    //   id: 5,
-    //   name: 'Eva Garcia',
-    //   date: '2024-03-24',
-    //   cause: 'Allergic Reaction',
-    //   created: 'Doctor',
-    //   'date-created': '2024-03-23',
-    // },
-    // {
-    //   id: 6,
-    //   name: 'Michael Lee',
-    //   date: '2024-03-25',
-    //   cause: 'Food Poisoning',
-    //   created: 'Nurse',
-    //   'date-created': '2024-03-24',
-    // },
-    // {
-    //   id: 7,
-    //   name: 'Sophia Martinez',
-    //   date: '2024-03-26',
-    //   cause: 'Burn',
-    //   created: 'Admin',
-    //   'date-created': '2024-03-25',
-    // },
-    // {
-    //   id: 8,
-    //   name: 'William Wilson',
-    //   date: '2024-03-27',
-    //   cause: 'Fracture',
-    //   created: 'Doctor',
-    //   'date-created': '2024-03-26',
-    // },
-    // {
-    //   id: 9,
-    //   name: 'Olivia Taylor',
-    //   date: '2024-03-28',
-    //   cause: 'Pneumonia',
-    //   created: 'Nurse',
-    //   'date-created': '2024-03-27',
-    // },
-    // {
-    //   id: 10,
-    //   name: 'Daniel Anderson',
-    //   date: '2024-03-29',
-    //   cause: 'Appendicitis',
-    //   created: 'Admin',
-    //   'date-created': '2024-03-28',
-    // },
-    // Add more entries as needed
-  ];
+  useEffect(() => {}, [response, isLoading, error, isValidating]);
 
-  const isLoading = false;
+  const filteredResult = response.map((provider) => {
+    // Extract custom attributes
+    const licenseNumberAttr = provider.attributes.find((attr) => attr.display.startsWith('Licence Number'));
+    const licenseExpiryDateAttr = provider.attributes.find((attr) => attr.display.startsWith('Licence Expiry Date'));
 
-  const searchResults = AdmissionWorkListEntries.filter(() => {
-    return true; // No filtering applied for now
+    return {
+      id: provider.uuid,
+      identifier: provider.identifier,
+      name: provider.person.display,
+      licenseNumber: licenseNumberAttr ? licenseNumberAttr.display.split(': ')[1] : null,
+      licenseExpiryDate: licenseExpiryDateAttr ? licenseExpiryDateAttr.display.split(': ')[1] : null,
+    };
   });
 
-  const { goTo, results: paginatedResults, currentPage } = usePagination(searchResults, currentPageSize);
+  const { goTo, results: paginatedResults, currentPage } = usePagination(filteredResult, currentPageSize);
 
+  // const pageSizes = [5, 10, 15, 20, 25];
   const pageSizes = [10, 20, 30, 40, 50];
 
   const rows = useMemo(() => {
-    return paginatedResults.map((entry) => ({
+    return paginatedResults.map((entry: any) => ({
       ...entry,
       action: (
         <OverflowMenu flipped={document?.dir === 'rtl'} aria-label="overflow-menu">
@@ -133,8 +62,8 @@ export const Admissionqueue: React.FC = () => {
   const tableColumns = [
     { id: 0, header: t('id', 'IDENTIFIER'), key: 'id' },
     { id: 1, header: t('name', 'NAME'), key: 'name' },
-    { id: 2, header: t('license', 'LICENSE NUMBER'), key: 'license' },
-    { id: 3, header: t('date', 'LICENSE EXPIRY DATE'), key: 'date' },
+    { id: 2, header: t('licenseNumber', 'LICENSE NUMBER'), key: 'licenseNumber' },
+    { id: 3, header: t('licenseExpiryDate', 'LICENSE EXPIRY DATE'), key: 'licenseExpiryDate' },
     { id: 4, header: t('action', 'ACTION'), key: 'action' },
   ];
 
@@ -186,7 +115,7 @@ export const Admissionqueue: React.FC = () => {
                 page={currentPage}
                 pageSize={currentPageSize}
                 pageSizes={pageSizes}
-                totalItems={AdmissionWorkListEntries.length}
+                totalItems={response.length}
                 onChange={({ pageSize, page }) => {
                   if (pageSize !== currentPageSize) {
                     setCurrentPageSize(pageSize);
