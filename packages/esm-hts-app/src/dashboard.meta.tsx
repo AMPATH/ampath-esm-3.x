@@ -14,12 +14,6 @@ export const htsDashboardMeta = {
   dashboardIcon: Coronavirus,
 };
 
-export const htsPatientClinicalChartMeta = {
-  title: 'HTS Services',
-  slotName: 'ohri-hts-slot',
-  isExpanded: false,
-};
-
 export const htsPatientSummaryMeta = {
   slot: 'hts-patient-summary-slot',
   columns: 1,

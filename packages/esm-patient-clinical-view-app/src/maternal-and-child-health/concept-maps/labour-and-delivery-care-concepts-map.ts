@@ -1,255 +1,183 @@
 export const labourAndDeliveryConceptMap = {
-  '162054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Admission Number:',
+  'a89df3d6-1350-11df-a1f1-0026b9348838': {
+    display: 'Date Maternal death notified:',
     answers: {},
   },
-  '1590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Number of ANC Visits:',
-    answers: {},
-  },
-  '1427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Date of Last Menstrual Period(LMP)',
-    answers: {},
-  },
-  '299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'VDRL/RPR Results:',
-    answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Positive',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not Done',
-    },
-  },
-  '5596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Estimated date of Delivery',
-    answers: {},
-  },
-  '163454AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '0e617e22-1363-4b96-849d-03c21b594e3f': {
     display: 'Placenta complete?',
     answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-      '1501AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Baby born before arrival',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '160704AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '17572011-42ee-4a3d-a7bf-85faa52be41a': {
     display: 'Vagina Examination?',
     answers: {
-      '132681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Normal',
-      '5577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Episiotomy',
-      '159264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Vaginal tear',
-      '118935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'FGM',
-      '139505AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Vaginal warts',
+      'a899e7b4-1350-11df-a1f1-0026b9348838': 'Normal',
+      'a8aacd7c-1350-11df-a1f1-0026b9348838': 'Episiotomy',
+      '52430e73-de00-4a67-b708-8f75004924bf': 'Vaginal tear',
+      'a8b0f18e-1350-11df-a1f1-0026b9348838': 'FGM',
+      'a89cef0e-1350-11df-a1f1-0026b9348838': 'Vaginal warts',
     },
   },
-  '1282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'NVP for the baby dispensed?',
-    answers: {
-      '80586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'N/A',
-    },
-  },
-  '1789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '0670d3d9-950c-4836-b147-0dc8e6b013aa': {
     display: 'Gestation at birth (in weeks):',
     answers: {},
   },
-  '159616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8aff9b4-1350-11df-a1f1-0026b9348838': {
     display: 'Duration of Labor (Hours):',
     answers: {},
   },
-  '5630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8aafab8-1350-11df-a1f1-0026b9348838': {
     display: 'Mode of Delivery:',
     answers: {
-      '1170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Spontaneous vaginal delivery(SVD)',
-      '1171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Cesarean section(CS)',
-      '1172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Breech delivery',
-      '118159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Assisted vaginal delivery(AVD)',
+      'a89acf58-1350-11df-a1f1-0026b9348838': 'Normal delivery',
+      'a89ad034-1350-11df-a1f1-0026b9348838': 'Cesarean section(CS)',
+      'a89ad11a-1350-11df-a1f1-0026b9348838': 'Breech delivery',
+      'a8a351aa-1350-11df-a1f1-0026b9348838': 'Assisted vaginal delivery(AVD)',
     },
   },
-  '5599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Date and time of Delivery:',
+  'a8aae050-1350-11df-a1f1-0026b9348838': {
+    display: 'Date of Delivery:',
     answers: {},
   },
-  '161928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '4bf0bdd2-4351-4f6f-bba2-581a087a955f': {
+    display: 'Time of Delivery:',
+    answers: {},
+  },
+  '0976ee49-400e-46bf-b032-335c7a8c0602': {
     display: 'Blood loss during delivery in millilitres (mls):',
     answers: {},
   },
-  '1856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '47032e8f-6e2f-41d8-8afc-01cb87a9342a': {
     display: 'Condition of Mother after delivery:',
     answers: {
-      '160429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Alive',
-      '134612AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Dead',
+      '5d38b72e-eee9-43ef-8256-483f8c5df4a6': 'Alive',
+      'a89335d6-1350-11df-a1f1-0026b9348838': 'Dead',
     },
   },
-  '162131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Resuscitation Done:',
+  '407e3411-9670-4e43-89ed-27622fe4e9e3': {
+    display: 'Uterotonic given?',
     answers: {
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
+      'a899e0ac-1350-11df-a1f1-0026b9348838': 'None',
+      '86544975-997c-43ea-9a41-71f19701e292': 'Oxytocin',
+      '8fc531ed-0526-413d-89e4-9d18906db6e3': 'Carbetocin',
     },
   },
-  '1602AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Maternal death audited?',
+  'd606e28a-1d2b-472e-8009-be9020177d7b': {
+    display: 'HBV infected?',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '120216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'ef2d7b84-5c2a-4380-a2fd-cabac6cfb14d': {
     display: 'Delivery complications ?',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-      '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Unknown',
+      'a8937762-1350-11df-a1f1-0026b9348838': 'A.P.H. (Ante Partum Haemorrhage)',
+      'a890a276-1350-11df-a1f1-0026b9348838': 'P.P.H. (Post Partum Haemorrhage)',
+      'cd26e944-7a35-457f-bfd2-e855d0ee406f': 'Eclampsia',
+      'b99106f0-8680-40cc-8de6-994d36e63670': 'Ruptured Uterus',
+      '62376546-e8aa-4a36-b67a-76f560c438b4': 'Obstructed labour',
+      'a89d030e-1350-11df-a1f1-0026b9348838': 'Sepsis',
     },
   },
-  '1572AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Place of Delivery:',
+  '654c50da-d82a-4932-91a5-9b54e4bc7799': {
+    display: 'No. of babies delivered:',
     answers: {
-      '1536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Home',
-      '1589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Facility',
-      '1601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Born Before Arrival',
+      'cb07a7b3-1808-4086-b7d7-d80734181c32': 'Single',
+      '6de75823-d1c6-48a6-9b0b-f219692eeef6': 'Twins',
+      '98cda56b-893c-4ed8-9cc2-8faa2d82902b': 'Triplets',
     },
   },
-  '1576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Select delivery complications ?',
-    answers: {
-      '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Unknown',
-      '113195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Ruptured Uterus',
-      '118744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Eclampsia',
-      '228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'APH',
-      '230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'PPH',
-      '115036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Obstructed Labor',
-      '130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Puerperal sepsis',
-    },
-  },
-  '162093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Other delivery complications',
+  'e2fed582-5107-4080-8488-b1618a7b26d7': {
+    display: 'Baby details:',
     answers: {},
   },
-  '1473AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Delivery Conducted By:',
+  '4b98ce38-77d9-488b-8b59-251811e244a4': {
+    display: 'APGAR score at 1 min:',
     answers: {},
   },
-  '1573AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Cadre :',
+  'a752b53e-bb83-4c76-9237-d2d85919101c': {
+    display: 'APGAR score at 5 mins:',
+    answers: {},
+  },
+  '3349c58b-8938-4162-ae6c-e64b67f392c4': {
+    display: 'APGAR score at 10 mins:',
+    answers: {},
+  },
+  'a8aff7e8-1350-11df-a1f1-0026b9348838': {
+    display: 'Birth outcome:',
     answers: {
-      '1574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Clinical officer/Doctor',
-      '1578AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Midwife',
-      '1577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Nurse',
-      '1575AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Traditional Birth Attendant',
-      '1555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Community Health Care Worker',
-      '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Other',
+      'a89ffcb2-1350-11df-a1f1-0026b9348838': 'Live birth',
+      'dcfda2f8-d466-43d7-bcdf-a37f19ef6436': 'Fresh still birth',
+      '1d5986e2-f858-4f0f-9887-2b19c5a76d32': 'Macerated Still Birth',
     },
   },
-  '159949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Delivery Outcome',
+  '750f15ba-a202-4d7e-8da7-917bc4e24fce': {
+    display: 'Birth weight:',
+    answers: {},
+  },
+  'a8affd38-1350-11df-a1f1-0026b9348838': {
+    display: 'Sex:',
     answers: {
-      '159913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Single',
-      '159914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Twins',
-      '159915AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Triplets',
+      'a8affaea-1350-11df-a1f1-0026b9348838': 'Male',
+      'a8affc16-1350-11df-a1f1-0026b9348838': 'Female',
     },
   },
-  '159369AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '4ef4150f-a8e3-4ec7-bafe-8e56af7f763e': {
+    display: 'Initiated on B/F in < 1hr:',
+    answers: {
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
+    },
+  },
+  '8bb313e9-ff98-4126-93e3-dd741572c309': {
+    display: 'Kangaroo Mother Care:',
+    answers: {
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
+    },
+  },
+  'c58a7f0b-1397-4533-abc1-d9a53de95805': {
+    display: 'Tetracycline given at birth:',
+    answers: {
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
+    },
+  },
+  '385f1782-6198-4592-9ad3-1bdf3d0e3134': {
     display: 'Chlorhexidine applied on cord stump:',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '162588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Baby details',
+  '8c2dd314-41fc-402f-a5db-a8d2c371342d': {
+    display: 'Birth with deformity:',
+    answers: {
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
+    },
+  },
+  'f6f82550-1d45-4174-91d2-a42ac9f5fbea': {
+    display: 'Baby name:',
     answers: {},
   },
-  '164410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'HIV testing',
-    answers: {},
-  },
-  '1396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'HIV Status:',
+  '839a0824-647f-49d0-b137-c35dfe0720af': {
+    display: 'Indicate type of deformity:',
     answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Positive',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Unknown',
-      '164817AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Known Positive',
+      '45dee9b9-e87a-4f2b-a96e-2e8eba39174c': 'Congenital syphillis',
+      '9b9f7f28-cda7-4780-9c86-4e03d3d3f0d1': 'Spina bifida',
+      'c3e72f0d-ab42-421b-82d8-0aa4adb4cedf': 'Hydrocephalus',
+      '354011e7-0e7f-41cb-8e09-4c444c712351': 'Talipes',
     },
   },
-  '161557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: "Has the client's partner been tested for HIV? Partner HIV Status:",
+  '8b66aefb-23c5-4c46-8ef0-65a59fc0217a': {
+    display: 'Vitamin K given:',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-    },
-  },
-  '1436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Partner HIV Status:',
-    answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'HIV Positive',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'HIV Negative',
-      '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Unknown',
-    },
-  },
-  '1109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: "Mother's prophylaxis given during this visit?",
-    answers: {
-      '105281AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Cotrimoxazole',
-      '74250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Dapsone',
-      '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'None',
-    },
-  },
-  '166665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Mother started on HAART at maternity ?',
-    answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'N/A',
-    },
-  },
-  '163783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Was mother on HAART during ANC?',
-    answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'N/A',
-    },
-  },
-  '163145AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Referred to?',
-    answers: {
-      '1537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Another Health Facility',
-      '163488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Community Unit',
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'N/A',
-    },
-  },
-  '164359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Reasons for referral? ',
-    answers: {},
-  },
-  '5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Next appointment date:',
-    answers: {},
-  },
-  '159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Clinical notes',
-    answers: {},
-  },
-  '1586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: "Baby's name",
-    answers: {},
-  },
-  '1587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Sex',
-    answers: {
-      '1534AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Male',
-      '1535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Female',
-    },
-  },
-  '159917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Condition of the baby',
-    answers: {
-      '151849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Live birth',
-      '159916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Fresh still birth',
-      '135436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Macerated still birth',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
 };

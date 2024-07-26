@@ -1,12 +1,8 @@
 import { defineConfigSchema, getSyncLifecycle } from '@openmrs/esm-framework';
 import { configSchema } from './config-schema';
 import Root from './root.component';
-import {
-  htsPatientClinicalChartMeta,
-  htsPatientSummaryMeta,
-  htsProgramManagementDashboardMeta,
-} from './dashboard.meta';
-import { createDashboardGroup, createDashboardLink } from '@openmrs/esm-patient-common-lib';
+import { htsPatientSummaryMeta, htsProgramManagementDashboardMeta } from './dashboard.meta';
+import { createDashboardLink } from '@openmrs/esm-patient-common-lib';
 import HTSHomePatientTabs from './views/dashboard/patient-list-tabs/hts-patient-list-tabs.component';
 import { createLeftPanelLink } from './left-panel-link.component';
 import HTSSummaryTiles from './views/dashboard/summary-tiles/hts-summary-tiles.component';
@@ -27,8 +23,6 @@ export const root = getSyncLifecycle(Root, options);
 export function startupApp() {
   defineConfigSchema(moduleName, configSchema);
 }
-
-export const patientChartTptDashboard = getSyncLifecycle(createDashboardGroup(htsPatientClinicalChartMeta), options);
 
 export const htsLeftPanelLink = getSyncLifecycle(
   createLeftPanelLink({
