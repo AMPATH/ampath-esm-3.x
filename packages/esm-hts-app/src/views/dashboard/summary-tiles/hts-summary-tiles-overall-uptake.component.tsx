@@ -3,6 +3,7 @@ import { Tile } from '@carbon/react';
 import styles from './hts-summary-tile.scss';
 interface SummaryTileProps {
   headerTitle: string;
+  // value: any;
 }
 
 const HTSSummaryTileOverallUptake: React.FC<SummaryTileProps> = ({ headerTitle }) => {
