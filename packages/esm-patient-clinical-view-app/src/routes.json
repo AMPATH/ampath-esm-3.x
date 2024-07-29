@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json.openmrs.org/routes.schema.json",
+  "backendDependencies": {
+    "ampathemr": "^1.0.0"
+  },
+  "pages": [],
+  "extensions": [
+    {
+      "name": "clinical-view-section",
+      "component": "clinicalViewPatientDashboard",
+      "slot": "patient-chart-dashboard-slot"
+    },
+    {
+      "name": "family-history-link",
+      "component": "familyHistoryLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 14,
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-family-history-slot",
+        "path": "family-history",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "family-history",
+      "slot": "patient-chart-family-history-slot",
+      "component": "familyHistory",
+      "order": 0,
+      "online": true,
+      "offline": false
+    },
+    {
+      "name": "contact-list-link",
+      "component": "contactListLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 14,
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-relationships-slot",
+        "path": "contact-list",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "contact-list",
+      "slot": "patient-chart-relationships-slot",
+      "component": "contactList",
+      "order": 0,
+      "online": true,
+      "offline": false
+    },
+    {
+      "name": "contact-list-form",
+      "component": "contactListForm"
+    },
+    {
+      "name": "maternal-and-child-health-dashboard-group-link",
+      "slot": "clinical-view-section",
+      "component": "maternalAndChildHealthSideNavGroup"
+    },
+    {
+      "name": "antenatal-care-dashboard-link",
+      "component": "antenatalCareLink",
+      "slot": "maternal-and-child-health-slot",
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-antenatal-care-dashboard-slot",
+        "path": "antenatal-care-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "antenatal-care-dashboard",
+      "slot": "patient-chart-antenatal-care-dashboard-slot",
+      "component": "antenatalCare"
+    },
+    {
+      "name": "postnatal-care-dashboard-link",
+      "component": "postnatalCareLink",
+      "slot": "maternal-and-child-health-slot",
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-postnatal-care-dashboard-slot",
+        "path": "postnatal-care-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "postnatal-care-dashboard",
+      "slot": "patient-chart-postnatal-care-dashboard-slot",
+      "component": "postnatalCare"
+    },
+    {
+      "name": "labour-and-delivery-dashboard-link",
+      "component": "labourAndDeliveryLink",
+      "slot": "maternal-and-child-health-slot",
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-labour-and-delivery-dashboard-slot",
+        "path": "labour-and-delivery-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "labour-and-delivery-dashboard",
+      "slot": "patient-chart-labour-and-delivery-dashboard-slot",
+      "component": "labourAndDelivery"
+    },
+    {
+      "name": "hiv-care-and-treatment-dashboard-group-link",
+      "slot": "special-clinics-slot",
+      "component": "hivCareAndTreatMentSideNavGroup"
+    },
+    {
+      "name": "genericNavLinks",
+      "slot": "special-clinics-slot",
+      "component": "genericNavLinks",
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-special-clinic-dashboard-slot",
+        "path": "special-clinics-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "patient-chart-special-clinic-dashboard-slot",
+      "slot": "patient-chart-special-clinic-dashboard-slot",
+      "component": "genericDashboard"
+    },
+    {
+      "name": "hts-dashboard-link",
+      "component": "htsDashboardLink",
+      "slot": "hiv-care-and-treatment-slot",
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-hts-dashboard-slot",
+        "path": "hts-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "hts-clinical-view",
+      "slot": "patient-chart-hts-dashboard-slot",
+      "component": "htsClinicalView",
+      "order": 2,
+      "online": true,
+      "offline": false
+    },
+    {
+      "name": "defaulter-tracing-dashboard-link",
+      "component": "defaulterTracingLink",
+      "slot": "hiv-care-and-treatment-slot",
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-defaulter-tracing-dashboard-slot",
+        "path": "defaulter-tracing-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "defaulter-tracing-dashboard",
+      "slot": "patient-chart-defaulter-tracing-dashboard-slot",
+      "component": "defaulterTracing",
+      "order": 3,
+      "online": true,
+      "offline": false
+    },
+    {
+      "name": "special-clinics-dashboard-group-link",
+      "slot": "clinical-view-section",
+      "component": "specialClinicsSideNavGroup"
+    },
+    {
+      "name": "clinical-encounter-link",
+      "component": "inPatientClinicalEncounterLink",
+      "slot": "clinical-view-section",
+      "order": 40,
+      "meta": {
+        "columns": 1,
+        "columnSpan": 1,
+        "slot": "patient-chart-clinical-encounter-slot",
+        "path": "clinical-encounter",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "clinical-encounter",
+      "slot": "patient-chart-clinical-encounter-slot",
+      "component": "inPatientClinicalEncounter",
+      "order": 0,
+      "online": true,
+      "offline": false
+    },
+     {
+      "component": "caseManagementDashboardLink",
+      "name": "case-management-dashboard-link",
+      "slot": "homepage-dashboard-slot",
+      "meta": {
+        "name": "case-management",
+        "title": "Case Management",
+        "slot": "case-management-dashboard-slot",
+        "path": "/case-management"
+      }
+    },
+    {
+      "name": "wrap-component-view",
+      "slot": "case-management-dashboard-slot",
+      "component": "wrapComponent",
+      "order": 2,
+      "online": true,
+      "offline": false
+    },
+        {
+      "name": "case-management-form",
+      "component": "caseManagementForm"
+    }
+  ],
+  "modals": [
+	{
+	  "name": "birth-date-calculator",
+	  "component": "birthDateCalculator"
+	}
+]
+}

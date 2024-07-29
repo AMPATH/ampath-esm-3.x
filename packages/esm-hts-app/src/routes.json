@@ -41,38 +41,11 @@
       "slot": "hts-home-tabs-slot",
       "component": "htsDashboardTabs"
     },
-
-    {
-      "name": "hts-dashboard-link",
-      "slot": "dashboard-slot",
-      "component": "htsFolderLink",
-      "meta": {
-        "slot": "ohri-hts-dashboard-slot",
-        "isFolder": true,
-        "title": "HTS Service"
-      }
-    },
     {
       "name": "ohri-hts",
       "slot": "patient-chart-dashboard-slot",
       "component": "patientChartTptDashboard",
       "order": 24
-    },
-    {
-      "name": "hts-patient-summary",
-      "slot": "ohri-hts-slot",
-      "component": "htsPatientSummaryDashboardLink",
-      "meta": {
-        "slot": "hts-patient-summary-slot",
-        "columns": 1,
-        "path": "hts-patient-summary",
-        "layoutMode": "anchored"
-      }
-    },
-    {
-      "name": "hts-patient-summary-ext",
-      "slot": "hts-patient-summary-slot",
-      "component": "htsPatientSummaryDashboard"
     },
     {
       "name": "hts-program-management-summary",

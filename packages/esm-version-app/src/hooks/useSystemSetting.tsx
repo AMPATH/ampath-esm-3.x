@@ -19,7 +19,7 @@ export function useSystemSetting(key: string) {
 
 export function useDefaultFacility() {
   const { authenticated } = useSession();
-  const url = '/ws/rest/v1/kenyaemr/default-facility';
+  const url = '/ws/rest/v1/amrs/default-facility';
   const { data } = useSWR<{ data: OpenmrsResource }>(authenticated ? url : null, openmrsFetch, {});
   return data?.data ?? ({} as OpenmrsResource);
 }

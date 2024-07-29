@@ -14,11 +14,11 @@ interface PatientFlagsReturnType {
  * @returns An array of patient identifiers
  */
 export const usePatientFlags = (patientUuid: string): PatientFlagsReturnType => {
-  const patientFlagsUrl = `/ws/rest/v1/amrscore/flags?patientUuid=${patientUuid}`;
+  const patientFlagsUrl = `/ws/rest/v1/amrs/flags?patientUuid=${patientUuid}`;
   const { data, mutate, error, isLoading } = useSWR<{ data: { results: Array<string> } }>(
     patientFlagsUrl,
     openmrsFetch,
   );
-  const patientFlags = typeof data?.data === 'string' ? [] : data?.data?.results ?? [];
+  const patientFlags = typeof data?.data === 'string' ? [] : (data?.data?.results ?? []);
   return { patientFlags, isLoading, error };
 };
