@@ -1,16 +1,57 @@
 /* eslint-disable no-console */
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from '@carbon/react/icons';
+import { ClickableTile } from '@carbon/react';
 import styles from './providers-header.scss';
-import { Button, TextInput, Modal, Select, ComboBox, SelectItem, DatePickerInput, DatePicker } from '@carbon/react';
+import { Button, TextInput, Modal, Search, DatePickerInput, DatePicker } from '@carbon/react';
+import { searchUsers } from '../api/api';
+
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func(...args), delay);
+  };
+};
 
 const MetricsHeader = () => {
   const { t } = useTranslation();
   const metricsTitle = t('providersSummary', 'Providers Summary');
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const filterItems = (menu) => {
-    return menu?.item?.toLowerCase().includes(menu?.inputValue?.toLowerCase());
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [selectedUser, setSelectedUser] = useState<any | null>(null);
+  const [licenseNumber, setLicenseNumber] = useState('');
+  const [expiryDate, setExpiryDate] = useState('');
+  const [query, setQuery] = useState('');
+
+  const handleSearch = async (searchQuery) => {
+    if (searchQuery.trim() === '') {
+      setSearchResults([]);
+      return;
+    }
+
+    const response = await searchUsers(searchQuery.toLowerCase());
+
+    if (response) {
+      setSearchResults(response);
+    } else {
+      console.error('Error fetching users:');
+    }
+  };
+
+  const handleSearchOnEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch(query);
+    }
+  };
+
+  const handleUserSelect = (user) => {
+    setSelectedUser(user);
+    setLicenseNumber('');
+    setExpiryDate('');
+    setIsModalOpen(true);
+    setSearchResults([]);
   };
 
   return (
@@ -30,115 +71,68 @@ const MetricsHeader = () => {
         secondaryButtonText="CANCEL"
         open={isModalOpen}
         onRequestClose={() => setIsModalOpen(false)}
-        //modalLabel="ADMIT BROUGHT IN BODY"
         modalHeading="NEW PROVIDER"
         hasScrollingContent>
-        <TextInput
-          data-modal-primary-focus
-          id="text-input-1"
-          labelText="Given Name*"
-          placeholder="Enter your given name"
-          required
-          style={{
-            marginBottom: '1rem',
-          }}
-        />
-        <TextInput
-          data-modal-primary-focus
-          id="text-input-1"
-          labelText="Middle Name"
-          placeholder="Enter your middle name"
-          required
-          style={{
-            marginBottom: '1rem',
-          }}
-        />
-        <TextInput
-          data-modal-primary-focus
-          id="text-input-1"
-          labelText="Family Name*"
-          placeholder="Enter your family name"
-          required
-          style={{
-            marginBottom: '1rem',
-          }}
-        />
-        <div style={{ marginBottom: '20px' }}>
-          <Select id="select-1" labelText="Gender*">
-            <SelectItem value="" text="Select Gender" />
-            <SelectItem value="Option 2" text="Male" />
-            <SelectItem value="Option 2" text="Female" />
-          </Select>
-        </div>
-        <DatePicker datePickerType="single">
-          <DatePickerInput placeholder="mm/dd/yyyy" labelText="Date of Birth" id="date-picker-single" size="md" />
-        </DatePicker>
-        <div style={{ marginBottom: '20px' }}>
-          <ComboBox
-            allowCustomValue
-            shouldFilterItem={filterItems}
-            required
-            onChange={(e) => {
-              console.log(e);
-            }}
-            id="carbon-combobox"
-            items={[
-              'Married Polygamous',
-              'Married Monogamous',
-              'Divorced',
-              'Widowed',
-              'Cohabiting',
-              'Single',
-              'Not Married',
-            ]}
-            downshiftProps={{
-              onStateChange: () => {
-                console.log('the state has changed');
-              },
-            }}
-            titleText="Marital Status*"
+        <div style={{ paddingBottom: '8px' }}>
+          <Search
+            id="userSearch"
+            autoFocus
+            placeHolderText={t('searchUser', 'Search User')}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleSearchOnEnter}
           />
         </div>
+        {searchResults.length > 0 && (
+          <div style={{ marginBottom: '1rem' }}>
+            {searchResults.map((user) => (
+              <ClickableTile
+                key={user.id}
+                onClick={() => handleUserSelect(user.person)}
+                style={{ marginBottom: '8px' }}>
+                <span>{user.person.display}</span>
+              </ClickableTile>
+            ))}
+          </div>
+        )}
+        <TextInput
+          data-modal-primary-focus
+          id="full-name-input"
+          labelText="Full Names*"
+          placeholder="Full Names"
+          required
+          value={selectedUser?.display || ''}
+          readOnly
+          style={{ marginBottom: '1rem' }}
+        />
+        <TextInput
+          data-modal-primary-focus
+          id="gender-input"
+          labelText="Gender*"
+          placeholder="Gender"
+          required
+          value={selectedUser?.gender || ''}
+          readOnly
+          style={{ marginBottom: '1rem' }}
+        />
         <div style={{ marginBottom: '20px' }}>
           <TextInput
-            data-modal-primary-focus
-            id="text-input-1"
+            id="license-number-input"
             labelText="License Number*"
             placeholder="Enter License Number"
             required
-            style={{
-              marginBottom: '1rem',
-            }}
+            value={licenseNumber}
+            onChange={(e) => setLicenseNumber(e.target.value)}
+            style={{ marginBottom: '1rem' }}
           />
-          <DatePicker datePickerType="single">
+          <DatePicker datePickerType="single" dateFormat="m/d/Y" onChange={(date) => setExpiryDate(date[0] || '')}>
             <DatePickerInput
               placeholder="mm/dd/yyyy"
               labelText="License Expiry Date"
               id="date-picker-single"
-              size="md"
+              value={expiryDate}
             />
           </DatePicker>
         </div>
-
-        <div style={{ marginBottom: '20px' }}>
-          <ComboBox
-            allowCustomValue
-            shouldFilterItem={filterItems}
-            required
-            onChange={(e) => {
-              console.log(e);
-            }}
-            id="carbon-combobox"
-            items={['TB', 'Malaria']}
-            downshiftProps={{
-              onStateChange: () => {
-                console.log('the state has changed');
-              },
-            }}
-            titleText="Cause of death*"
-          />
-        </div>
-        <div style={{ marginBottom: '20px' }}></div>
       </Modal>
     </div>
   );
