@@ -31,3 +31,10 @@ export const getAllProviders = () => {
     isValidating,
   };
 };
+
+export const searchUsers = async (name: string, ac = new AbortController()) => {
+  const results = await openmrsFetch(`ws/rest/v1/user?q=${name}&v=custom:(uuid,display,person)`, {
+    signal: ac.signal,
+  });
+  return results.data.results;
+};
