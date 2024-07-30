@@ -19,6 +19,7 @@ import html2canvas from 'html2canvas';
 import { PDFDocument } from 'pdf-lib';
 import reportMapping from './reportMapping.json';
 import RenderOtzregister from '../../registers/OTZ/MOH_otz_component';
+import DefaulterTracingRegister from '../../registers/MOH_Defaulter_Tracing/Defaulter_Tracing_Register';
 
 const componentMap = {
   RenderMOH405,
@@ -34,6 +35,7 @@ const componentMap = {
   MOH731,
   RenderJuaMtotoWako,
   RenderOtzregister,
+  DefaulterTracingRegister,
 };
 
 const DynamicReportLoader: React.FC = () => {
