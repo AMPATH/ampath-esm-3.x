@@ -43,7 +43,7 @@ const MOH731: React.FC<{ reportData: any }> = ({ reportData }) => {
                 <h5>2. Elimination of Mother-to-Child Transmission (EMTCT)</h5>
               </TableHeader>
             </TableRow>
-            <PartTwo />
+            <PartTwo reportData={reportData} />
             <TableRow>
               <TableHeader className={styles['border-two']} colSpan={12}>
                 <h5>3. HIV and TB treatment</h5>
