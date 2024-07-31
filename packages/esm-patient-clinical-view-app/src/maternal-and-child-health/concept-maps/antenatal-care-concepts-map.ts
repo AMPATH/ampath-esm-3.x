@@ -1,263 +1,263 @@
 export const ancConceptMap = {
-  '1425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '02faca9b-50be-4f5e-b363-171a2d561abb': {
     display: 'ANC Visit Number:',
     answers: {},
   },
-  '5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65fee-1350-11df-a1f1-0026b9348838': {
     display: 'Temperature (C) :',
     answers: {},
   },
-  '5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65f12-1350-11df-a1f1-0026b9348838': {
     display: 'Pulse Rate',
     answers: {},
   },
-  '5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65d5a-1350-11df-a1f1-0026b9348838': {
     display: 'Systolic B.P',
     answers: {},
   },
-  '5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65e36-1350-11df-a1f1-0026b9348838': {
     display: 'Diastolic B.P',
     answers: {},
   },
-  '5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a6f71a-1350-11df-a1f1-0026b9348838': {
     display: 'Respiratory Rate',
     answers: {},
   },
-  '5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a66354-1350-11df-a1f1-0026b9348838': {
     display: 'Oxygen Saturation',
     answers: {},
   },
-  '1343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a89c6188-1350-11df-a1f1-0026b9348838': {
     display: 'MUAC',
     answers: {},
   },
-  '5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a6619c-1350-11df-a1f1-0026b9348838': {
     display: 'Height:(cms)',
     answers: {},
   },
-  '5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a660ca-1350-11df-a1f1-0026b9348838': {
     display: 'Weight: (kg)',
     answers: {},
   },
-  '163590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'b33dd937-9ad5-435b-b86b-9469b533d122': {
     display: 'Breast examination done:',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '5245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a6f9a4-1350-11df-a1f1-0026b9348838': {
     display: 'Pallor:',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not applicable',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '1438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a89c293e-1350-11df-a1f1-0026b9348838': {
     display: 'Maturity in weeks:',
     answers: {},
   },
-  '1439AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a005fe-1350-11df-a1f1-0026b9348838': {
     display: 'Fundal Height (Weeks):',
     answers: {},
   },
-  '160090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8b026a0-1350-11df-a1f1-0026b9348838': {
     display: 'Presentation:',
     answers: {
-      '139814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Frank Breech Presentation',
-      '160091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'vertex presentation',
+      '933e0810-c716-41ff-81a9-62858bd69bb2': 'Frank Breech Presentation',
+      'a8b025e2-1350-11df-a1f1-0026b9348838': 'vertex presentation',
     },
   },
-  '162089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '394f9ff9-1c93-4bb0-80a7-31d10ef5a1cd': {
     display: 'Lie:',
     answers: {
-      '162088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Longitudinal lie',
-      '132623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Oblique lie',
-      '124261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Transverse lie',
+      '82c549e8-2d31-4d67-af55-58b9d48fe31b': 'Longitudinal lie',
+      '9b66f44f-78d7-4f5e-bad4-5e930096083a': 'Oblique lie',
+      'b14ef520-0c2a-45ca-a598-64d770dc46bd': 'Transverse lie',
     },
   },
-  '1440AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a007a2-1350-11df-a1f1-0026b9348838': {
     display: 'Foetal Heart Rate:',
     answers: {},
   },
-  '162107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a006c6-1350-11df-a1f1-0026b9348838': {
     display: 'Foetal Movement:',
     answers: {
       '113377AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Decreased fetal movements',
-      '162108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Fetal movements present',
+      '945649a4-c5da-49e5-9b28-751b9be0c7fd': 'Foetal movements present',
       '162090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Increased fetal movements',
-      '1452AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No fetal movements',
+      'cbf5fb38-9b97-4f0b-b9bf-4769ea1be7b0': 'No foetal movements',
     },
   },
-  '164410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '71bb9660-cb25-48d0-ab90-2dc39df8e9ab': {
     display: 'HIV Testing',
     answers: {},
   },
-  '159427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a89c6c64-1350-11df-a1f1-0026b9348838': {
     display: 'Final Results:',
     answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Positive',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Inconclusive',
+      'a896f3a6-1350-11df-a1f1-0026b9348838': 'Positive',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      'a89a7ae4-1350-11df-a1f1-0026b9348838': 'Inconclusive',
     },
   },
-  '164848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a4a8b6-1350-11df-a1f1-0026b9348838': {
     display: 'Results given to client?',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'YES',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'NO',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'YES',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'NO',
     },
   },
-  '161557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a4636a-1350-11df-a1f1-0026b9348838': {
     display: "Has the client's partner been tested for HIV?",
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
+      'a89ad3a4-1350-11df-a1f1-0026b9348838': 'N/A',
     },
   },
-  '1436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a46428-1350-11df-a1f1-0026b9348838': {
     display: 'Partner HIV Status:',
     answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'HIV Positive',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'HIV Negative',
-      '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Unknown',
+      'a896f3a6-1350-11df-a1f1-0026b9348838': 'HIV Positive',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'HIV Negative',
+      'a899b50a-1350-11df-a1f1-0026b9348838': 'Unknown',
     },
   },
-  '56AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a890a7e4-1350-11df-a1f1-0026b9348838': {
     display: 'Urine Microscopy',
     answers: {},
   },
-  '161441AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8b0f3e6-1350-11df-a1f1-0026b9348838': {
     display: 'Urine Leukocyte Esterase Test',
     answers: {
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Trace',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+)',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++)',
-      '1364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Three Plus(+++)',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      '569f77cc-87b2-442c-a871-3a96e2194e8f': 'Trace',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+)',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++)',
+      'a8a1909a-1350-11df-a1f1-0026b9348838': 'Three Plus(+++)',
     },
   },
-  '1875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a47ca6-1350-11df-a1f1-0026b9348838': {
     display: 'Urinary Albumin (mg/dL)',
     answers: {
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Trace - 15',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+) - 30',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++) - 100',
-      '1364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Three Plus(+++) - 300',
-      '1365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Four Plus(++++) - 1000',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      '569f77cc-87b2-442c-a871-3a96e2194e8f': 'Trace - 15',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+) - 30',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++) - 100',
+      'a8a1909a-1350-11df-a1f1-0026b9348838': 'Three Plus(+++) - 300',
+      '42b9eb07-2272-407d-9fba-e69f3e2bebfd': 'Four Plus(++++) - 1000',
     },
   },
-  '161442AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'b72fa772-19a9-4386-8185-6491ab97e97e': {
     display: 'Urinary Ketone (mg/dL)',
     answers: {
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Trace - 5',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+) - 15',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++) - 50',
-      '1364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Three Plus(+++) - 150',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      '569f77cc-87b2-442c-a871-3a96e2194e8f': 'Trace - 5',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+) - 15',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++) - 50',
+      'a8a1909a-1350-11df-a1f1-0026b9348838': 'Three Plus(+++) - 150',
     },
   },
-  '159734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '6b627304-97a1-4eb9-8c0d-3bc84d05be84': {
     display: 'Glucose Measurement (Qualitative)',
     answers: {
-      '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Normal',
-      '1874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Trace',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+)',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++)',
-      '1364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Three Plus(+++)',
-      '1365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Four Plus(++++)',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Normal',
+      '569f77cc-87b2-442c-a871-3a96e2194e8f': 'Trace',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+)',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++)',
+      'a8a1909a-1350-11df-a1f1-0026b9348838': 'Three Plus(+++)',
+      '42b9eb07-2272-407d-9fba-e69f3e2bebfd': 'Four Plus(++++)',
     },
   },
-  '161444AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '9e2fab9c-c3f6-4a33-8375-21b12a4cd424': {
     display: 'Urine Bile Salt Test (mg/dL)',
     answers: {
-      '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Normal',
-      '1874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Trace - 1',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+) - 4',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++) - 8',
-      '1364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Three Plus(+++) - 12',
+      'a899e7b4-1350-11df-a1f1-0026b9348838': 'Normal',
+      '569f77cc-87b2-442c-a871-3a96e2194e8f': 'Trace - 1',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+) - 4',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++) - 8',
+      'a8a1909a-1350-11df-a1f1-0026b9348838': 'Three Plus(+++) - 12',
     },
   },
-  '161438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '9aa18e19-ea39-4327-967b-1bf4c64698b4': {
     display: 'Urine pH',
     answers: {},
   },
-  '161443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '2e9cc4f7-7edf-49fa-803f-b13ee6d767fd': {
     display: 'Urine Bile Pigment Test',
     answers: {
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+)',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++)',
-      '1364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Three Plus(+++)',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+)',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++)',
+      'a8a1909a-1350-11df-a1f1-0026b9348838': 'Three Plus(+++)',
     },
   },
-  '161439AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '2124717e-3b0d-44ee-bf8a-d97ef103d5c8': {
     display: 'Urine Specific Gravity',
     answers: {},
   },
-  '162106AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'd2c8a492-bbec-4609-878d-fc0e5e020bcf': {
     display: 'Urine Color',
     answers: {
-      '162100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Brown color',
-      '162099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Colourless',
-      '162098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Dark yellow colour',
-      '162097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Light yellow colour',
-      '127778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Red color',
-      '162105AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yellow-green colour',
+      '9cf42ab8-d393-4fda-80e4-024cfb515865': 'Brown color',
+      '848de614-1c21-4d5b-805c-cadd9c5fb1b3': 'Colourless',
+      'ef094f6a-82f6-4d1d-afe4-26e61b1c970f': 'Dark yellow colour',
+      '8d32073f-11f8-4cb1-a75a-739804b03345': 'Light yellow colour',
+      '887adc2f-7e80-46e7-acb6-3b41a6066801': 'Red color',
+      '3229c645-16e1-41ac-9373-0346ebc85716': 'Yellow-green colour',
     },
   },
-  '161440AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '6ab44394-80a5-40cd-9649-32f1839e94cd': {
     display: 'Urine Nitrite Test',
     answers: {
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Positive',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+)',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++)',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      'a896f3a6-1350-11df-a1f1-0026b9348838': 'Positive',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+)',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++)',
     },
   },
-  '162101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'aaf8ed2c-df86-401d-9228-6a06451acdab': {
     display: 'Urine Turbidity',
     answers: {
-      '162103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Cloudy urine',
-      '162102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Urine appears clear',
-      '162104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Urine appears turbid',
+      '3c68aab3-ce07-4c55-8775-05c6ff62b1e8': 'Cloudy urine',
+      '8f6ef118-0bc9-4cf0-804d-106c33c55f26': 'Urine appears clear',
+      '14111daa-8536-42c4-94c6-c80c82e18ac7': 'Urine appears turbid',
     },
   },
-  '162096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '1a2012cc-30f2-4cbd-b8d6-3191e4b60ea8': {
     display: 'Urine Dipstick for Blood',
     answers: {
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Trace',
-      '1362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'One Plus(+)',
-      '1363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Two Plus(++)',
-      '1364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Three Plus(+++)',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      '569f77cc-87b2-442c-a871-3a96e2194e8f': 'Trace',
+      'a8a45ab4-1350-11df-a1f1-0026b9348838': 'One Plus(+)',
+      'a8a18fdc-1350-11df-a1f1-0026b9348838': 'Two Plus(++)',
+      'a8a1909a-1350-11df-a1f1-0026b9348838': 'Three Plus(+++)',
     },
   },
-  '299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8945678-1350-11df-a1f1-0026b9348838': {
     display: 'Syphilis serology:',
     answers: {
-      '1229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Positive',
-      '1271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Requested',
-      '1402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not Tested',
-      '1304AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Poor Sample quality',
+      'a89b3b8c-1350-11df-a1f1-0026b9348838': 'Non reactive',
+      'a89b3ab0-1350-11df-a1f1-0026b9348838': 'Reactive',
+      'a89c2268-1350-11df-a1f1-0026b9348838': 'Requested',
+      'a899ea48-1350-11df-a1f1-0026b9348838': 'Not Tested',
+      'a89c3d8e-1350-11df-a1f1-0026b9348838': 'Poor Sample quality',
     },
   },
-  '159918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'f555d446-93e1-49ef-ba85-05962ee5ef48': {
     display: 'Has the client been treated for syphilis?',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8909524-1350-11df-a1f1-0026b9348838': {
     display: 'BS for MPS:',
     answers: {
       '1138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'INDETERMINATE',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'NEGATIVE',
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'POSITIVE',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'NEGATIVE',
+      'a896f3a6-1350-11df-a1f1-0026b9348838': 'POSITIVE',
     },
   },
   '21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
@@ -271,14 +271,14 @@ export const ancConceptMap = {
       '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
     },
   },
-  '1659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '02ad9357-b996-4530-b1a4-aff91a105383': {
     display: 'TB Screening Results:',
     answers: {
-      '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'NO signs',
-      '142177AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'TB presumed',
-      '164128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No signs and started on INH',
-      '1662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'TB Rx',
-      '160737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not done (ND)',
+      'a899e0ac-1350-11df-a1f1-0026b9348838': 'NO signs',
+      'a8afcc82-1350-11df-a1f1-0026b9348838': 'On TB treatment',
+      '260e6d24-1634-4467-a070-e8359f6827f7': 'Suspect',
+      'a8af9046-1350-11df-a1f1-0026b9348838': 'Confirmed',
+      'a899ea48-1350-11df-a1f1-0026b9348838': 'Not assessed',
     },
   },
   '06398e78-0d3e-43d5-8017-f2fc3865e2e0': {
@@ -300,13 +300,13 @@ export const ancConceptMap = {
       '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Other',
     },
   },
-  '5356AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a8331e-1350-11df-a1f1-0026b9348838': {
     display: 'WHO Staging:',
     answers: {
-      '1204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'WHO Stage1',
-      '1205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'WHO Stage2',
-      '1206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'WHO Stage3',
-      '1207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'WHO Stage4',
+      'a89b2606-1350-11df-a1f1-0026b9348838': 'WHO Stage1',
+      'a89b26d8-1350-11df-a1f1-0026b9348838': 'WHO Stage2',
+      'a89b27be-1350-11df-a1f1-0026b9348838': 'WHO Stage3',
+      'a89b289a-1350-11df-a1f1-0026b9348838': 'WHO Stage4',
     },
   },
   '1271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
@@ -359,11 +359,11 @@ export const ancConceptMap = {
       '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'N/A',
     },
   },
-  '5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a666ba-1350-11df-a1f1-0026b9348838': {
     display: 'Next appointment date:',
     answers: {},
   },
-  '159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '23f710cc-7f9c-4255-9b6b-c3e240215dba': {
     display: 'Clinical Notes',
     answers: {},
   },
