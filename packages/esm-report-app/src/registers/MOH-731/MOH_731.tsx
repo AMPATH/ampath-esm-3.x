@@ -5,7 +5,7 @@ import PartOne from './PartOne';
 import PartTwo from './PartTwo';
 import PartThree from './PartThree';
 
-const MOH731: React.FC = () => {
+const MOH731: React.FC<{ reportData: any }> = ({ reportData }) => {
   return (
     <>
       <TableContainer className={styles['table']}>
@@ -37,7 +37,7 @@ const MOH731: React.FC = () => {
                 <h5>HIV Testing Services & Pre exposure Prophylaxis</h5>
               </TableHeader>
             </TableRow>
-            <PartOne />
+            <PartOne reportData={reportData} />
             <TableRow>
               <TableHeader className={styles['border-two']} colSpan={12}>
                 <h5>2. Elimination of Mother-to-Child Transmission (EMTCT)</h5>
