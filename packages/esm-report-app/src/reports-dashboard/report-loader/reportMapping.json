@@ -65,6 +65,12 @@
     "report_name": "OTZ Register",
     "report_uuid": "e8ae582a-2383-4291-837a-1426d650bed3",
     "component": "RenderOtzregister"
+  },
+  {
+    "report_name": "Defaulter Tracing",
+    "report_uuid": "69941a69-9070-4b39-8d30-615533d78b41",
+    "component": "DefaulterTracingRegister"
   }
+
 
 ]

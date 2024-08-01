@@ -1,86 +1,86 @@
 export const pncConceptMap = {
-  '1646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '42de8e7e-24b2-4c16-b62b-137eb2c55ede': {
     display: 'PNC Number:',
     answers: {},
   },
-  '159893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '5eca73ec-0cae-4e56-8032-a377ea2d483a': {
     display: 'PNC Visit Number:',
     answers: {},
   },
-  '5599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8aae050-1350-11df-a1f1-0026b9348838': {
     display: 'Date of Delivery:',
     answers: {},
   },
-  '5630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8aafab8-1350-11df-a1f1-0026b9348838': {
     display: 'Mode of Delivery:',
     answers: {
-      '1171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Cesarean section(CS)',
-      '1170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Spontaneous vaginal delivery(SVD)',
-      '1172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Breech delivery',
-      '118159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Assisted vaginal delivery(AVD)',
+      'a89ad034-1350-11df-a1f1-0026b9348838': 'Cesarean section(CS)',
+      'a89acf58-1350-11df-a1f1-0026b9348838': 'Spontaneous vaginal delivery(SVD)',
+      'a89ad11a-1350-11df-a1f1-0026b9348838': 'Breech delivery',
+      'a8a351aa-1350-11df-a1f1-0026b9348838': 'Assisted vaginal delivery(AVD)',
     },
   },
-  '1572AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a492d6-1350-11df-a1f1-0026b9348838': {
     display: 'Place of Delivery:',
     answers: {
-      '1536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Home',
-      '1589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Facility',
-      '1601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Born Before Arrival',
+      'a89df17e-1350-11df-a1f1-0026b9348838': 'Home',
+      '744b2cb1-0849-486c-a9cb-1ebe4b03c4bf': 'Facility',
+      'fb7feb08-a769-4f08-a2f5-09e937f4582a': 'Born Before Arrival',
     },
   },
-  '1724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '80733d16-c7e7-462d-b4f9-f2391c5c35ea': {
     display: 'Visit timing Mother:',
     answers: {
-      '1721AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': '0-48 Hours',
-      '1722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': '3 days - 6 weeks',
-      '1723AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'More than 6 weeks',
+      'a77c0d06-d1a2-4c56-bf9a-eaf5aa388129': '0-48 Hours',
+      'd94aa153-b9e5-4118-a182-6e00beeefba8': '3 days - 6 weeks',
+      '7723095c-825f-4c71-ab66-4bdc0a463ee5': 'More than 6 weeks',
     },
   },
-  '167017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '6db3be5f-ad58-4d87-a66e-e7adaba3654d': {
     display: 'Visit timing Baby:',
     answers: {
-      '167012AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': '0-48 Hours',
-      '167013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': '3 days - 6 weeks',
-      '167015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'More than 6 weeks',
+      'a77c0d06-d1a2-4c56-bf9a-eaf5aa388129': '0-48 Hours',
+      'd94aa153-b9e5-4118-a182-6e00beeefba8': '3 days - 6 weeks',
+      '7723095c-825f-4c71-ab66-4bdc0a463ee5': 'More than 6 weeks',
     },
   },
-  '5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65fee-1350-11df-a1f1-0026b9348838': {
     display: 'Temperature',
     answers: {},
   },
-  '5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65f12-1350-11df-a1f1-0026b9348838': {
     display: 'Pulse Rate',
     answers: {},
   },
-  '5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65e36-1350-11df-a1f1-0026b9348838': {
     display: 'Diastolic BP (mmHg)',
     answers: {},
   },
-  '5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a65d5a-1350-11df-a1f1-0026b9348838': {
     display: 'Systolic BP (mmHg)',
     answers: {},
   },
-  '5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a6f71a-1350-11df-a1f1-0026b9348838': {
     display: 'Respiratory Rate',
     answers: {},
   },
-  '5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a66354-1350-11df-a1f1-0026b9348838': {
     display: 'Oxygen Saturation',
     answers: {},
   },
-  '1343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a89c6188-1350-11df-a1f1-0026b9348838': {
     display: 'MUAC',
     answers: {},
   },
-  '5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a6619c-1350-11df-a1f1-0026b9348838': {
     display: 'Height: (cm)',
     answers: {},
   },
-  '5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a660ca-1350-11df-a1f1-0026b9348838': {
     display: 'Weight: (kg)',
     answers: {},
   },
-  '1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a89c60c0-1350-11df-a1f1-0026b9348838': {
     display: 'BMI',
     answers: {},
   },
@@ -92,58 +92,58 @@ export const pncConceptMap = {
       '162133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Fair',
     },
   },
-  '159780AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Breast:',
+  'a8b017dc-1350-11df-a1f1-0026b9348838': {
+    display: 'Breast examination findings:',
     answers: {
-      '127522AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Engorged nipple',
-      '115915AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Mastitis',
-      '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Normal',
-      '143242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Cracked nipple',
+      '912c6334-5c56-4a7c-8506-cac486cacf48': 'Engorged nipple',
+      'a890ddf4-1350-11df-a1f1-0026b9348838': 'Mastitis',
+      'a899e7b4-1350-11df-a1f1-0026b9348838': 'Normal',
+      'a8b0158e-1350-11df-a1f1-0026b9348838': 'Cracked nipple',
     },
   },
-  '230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'PPH:',
+  'a8a495e2-1350-11df-a1f1-0026b9348838': {
+    display: 'Postpartum hemorrhage:',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Present',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Absent',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Present',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'Absent',
     },
   },
-  '163742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a49768-1350-11df-a1f1-0026b9348838': {
     display: 'Uterus:',
     answers: {
-      '163750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Contracted',
-      '148220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not Contracted',
+      'b520471a-127e-4783-ae84-686879d23e41': 'Contracted',
+      '39efdae5-c962-4fa7-9685-39699b996a2c': 'Not Contracted',
       '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Other-Specify',
     },
   },
-  '160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8affe64-1350-11df-a1f1-0026b9348838': {
     display: 'Other Maternal Complications',
     answers: {},
   },
-  '5245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a6f9a4-1350-11df-a1f1-0026b9348838': {
     display: 'Pallor:',
     answers: {
       '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not applicable',
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '162642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
-    display: 'Pallor Severity:',
+  'a8a49524-1350-11df-a1f1-0026b9348838': {
+    display: 'Level of pallor:',
     answers: {
-      '1498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Mild',
-      '1499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Moderate',
-      '1500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Severe',
+      'a89efccc-1350-11df-a1f1-0026b9348838': 'Mild',
+      'a89efdee-1350-11df-a1f1-0026b9348838': 'Moderate',
+      'a89eff1a-1350-11df-a1f1-0026b9348838': 'Severe',
     },
   },
-  '162128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a499ac-1350-11df-a1f1-0026b9348838': {
     display: 'C-Section Site:',
     answers: {
-      '147241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Bleeding',
-      '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Normal',
-      '156794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Infected',
-      '145776AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Gapping',
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not Applicable',
+      'a8a498ee-1350-11df-a1f1-0026b9348838': 'Bleeding',
+      'a899e7b4-1350-11df-a1f1-0026b9348838': 'Normal',
+      'a8a49830-1350-11df-a1f1-0026b9348838': 'Infected',
+      'a8a4a41a-1350-11df-a1f1-0026b9348838': 'Gapping',
+      'a89ad3a4-1350-11df-a1f1-0026b9348838': 'Not Applicable',
     },
   },
   '21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
@@ -165,22 +165,22 @@ export const pncConceptMap = {
       '162113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'On exam, uterine fundus 20-24 week size',
     },
   },
-  '159840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a4a4e2-1350-11df-a1f1-0026b9348838': {
     display: 'Condition of Episiotomy:',
     answers: {
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not Applicable',
-      '159843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Healed-episiotomy wound',
-      '159841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Gap-episiotomy wound',
-      '159842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Repaired-episiotomy wound',
-      '113919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Postoperative wound infection',
+      'a89ad3a4-1350-11df-a1f1-0026b9348838': 'Not Applicable',
+      'a8a4a29e-1350-11df-a1f1-0026b9348838': 'Healed-episiotomy wound',
+      'a8a4a41a-1350-11df-a1f1-0026b9348838': 'Gaping',
+      'a8a4a35c-1350-11df-a1f1-0026b9348838': 'Repaired-episiotomy wound',
+      'a8a49830-1350-11df-a1f1-0026b9348838': 'Infected',
     },
   },
-  '159844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a4a1cc-1350-11df-a1f1-0026b9348838': {
     display: 'Lochia:',
     answers: {
-      '159846AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Foul smelling',
-      '159845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Excessive',
-      '159721AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Normal',
+      'a8a49a74-1350-11df-a1f1-0026b9348838': 'Foul smelling',
+      'a8a49b3c-1350-11df-a1f1-0026b9348838': 'Excessive',
+      'a899e7b4-1350-11df-a1f1-0026b9348838': 'Normal',
     },
   },
   '161651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
@@ -190,11 +190,11 @@ export const pncConceptMap = {
       '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'NO',
     },
   },
-  '1382AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '5b68f24c-7443-4d94-982b-658bddd7dbb5': {
     display: 'Counselling on Modern Post-Partum Family Planning?',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
   '159949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
@@ -209,23 +209,23 @@ export const pncConceptMap = {
     display: 'Baby(s) observations',
     answers: {},
   },
-  '164410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '4544eade-0f9a-45c4-9425-8fa495960f50': {
     display: 'HIV Test(s)',
     answers: {},
   },
-  '159427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a89c6c64-1350-11df-a1f1-0026b9348838': {
     display: 'Final Results:',
     answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Positive',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Negative',
-      '1138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Inconclusive',
+      'a896f3a6-1350-11df-a1f1-0026b9348838': 'Positive',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'Negative',
+      'a89a7ae4-1350-11df-a1f1-0026b9348838': 'Inconclusive',
     },
   },
-  '164848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a4a8b6-1350-11df-a1f1-0026b9348838': {
     display: 'Results given to client?',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
   'bfe0cbb2-eea0-4431-a5c5-d0f49a4ed21b': {
@@ -235,19 +235,19 @@ export const pncConceptMap = {
       '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
     },
   },
-  '161557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a4636a-1350-11df-a1f1-0026b9348838': {
     display: "Has the client's partner been tested for HIV?",
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '1436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a46428-1350-11df-a1f1-0026b9348838': {
     display: 'Partner HIV Status:',
     answers: {
-      '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'HIV Positive',
-      '664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'HIV Negative',
-      '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Unknown',
+      'a896f3a6-1350-11df-a1f1-0026b9348838': 'HIV Positive',
+      'a896d2cc-1350-11df-a1f1-0026b9348838': 'HIV Negative',
+      'a899b50a-1350-11df-a1f1-0026b9348838': 'Unknown',
     },
   },
   '1109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
@@ -300,20 +300,20 @@ export const pncConceptMap = {
       '162133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Patient condition fair/satisfactory',
     },
   },
-  '161004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '8eb7f64b-5b9f-4ea5-911d-d211e2e44d5e': {
     display: 'Iron supplementation (Haematinics):',
     answers: {
-      '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Yes',
-      '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No',
+      'a899b35c-1350-11df-a1f1-0026b9348838': 'Yes',
+      'a899b42e-1350-11df-a1f1-0026b9348838': 'No',
     },
   },
-  '159921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '38e47701-f530-46d3-9bc3-81d7ada57126': {
     display: 'Fistula screening:',
     answers: {
       '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'None',
       '1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Not done',
-      '127847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Rectovaginal fistula',
-      '49AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Vesicovaginal Fistula',
+      'a89b3218-1350-11df-a1f1-0026b9348838': 'Rectovaginal fistula',
+      '4978ba7d-7654-4274-8bd7-6543ec2343ea': 'Vesicovaginal Fistula',
     },
   },
   '06398e78-0d3e-43d5-8017-f2fc3865e2e0': {
@@ -346,36 +346,36 @@ export const pncConceptMap = {
     display: 'Family planning methods (specify)',
     answers: {},
   },
-  '1659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '02ad9357-b996-4530-b1a4-aff91a105383': {
     display: 'TB Screening:',
     answers: {
-      '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'No TB Signs',
-      '142177AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Presumed TB',
-      '1662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'TB Confirmed',
-      '160737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'TB Screening Not Done',
+      'a899e0ac-1350-11df-a1f1-0026b9348838': 'No TB Signs',
+      'a8afcc82-1350-11df-a1f1-0026b9348838': 'On TB treatment',
+      'a8af9046-1350-11df-a1f1-0026b9348838': 'TB Confirmed',
+      'a899ea48-1350-11df-a1f1-0026b9348838': 'TB Screening Not Done',
     },
   },
-  '160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'aad34924-d6e7-4138-a841-0fea9ee4b41f': {
     display: 'Referred from?',
     answers: {
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'N/A',
-      '1537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Another Health Facility',
-      '163488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Community Unit',
+      'a89ad3a4-1350-11df-a1f1-0026b9348838': 'N/A',
+      'a89c25d8-1350-11df-a1f1-0026b9348838': 'Another Health Facility',
+      'a8a00b4e-1350-11df-a1f1-0026b9348838': 'Community Unit',
     },
   },
-  '163145AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '6434322f-d050-4764-8c00-741e20c4c9e1': {
     display: 'Referred to?',
     answers: {
-      '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'N/A',
-      '1537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Another Health Facility',
-      '163488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': 'Community Unit',
+      'a89ad3a4-1350-11df-a1f1-0026b9348838': 'N/A',
+      'a89c25d8-1350-11df-a1f1-0026b9348838': 'Another Health Facility',
+      'a8a00b4e-1350-11df-a1f1-0026b9348838': 'Community Unit',
     },
   },
-  '5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  'a8a666ba-1350-11df-a1f1-0026b9348838': {
     display: 'Next appointment date:',
     answers: {},
   },
-  '159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA': {
+  '23f710cc-7f9c-4255-9b6b-c3e240215dba': {
     display: 'Clinical Notes',
     answers: {},
   },

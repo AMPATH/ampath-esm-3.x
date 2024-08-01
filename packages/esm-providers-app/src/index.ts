@@ -11,13 +11,13 @@ const options = {
 export const importTranslation = require.context('../translations', false, /.json$/, 'lazy');
 
 export function startupApp() {
-  const morgueBasepath = `${window.spaBase}/home/providers`;
+  const providerBasepath = `${window.spaBase}/home/providers`;
 
   defineConfigSchema(moduleName, configSchema);
   registerBreadcrumbs([
     {
       title: 'providers',
-      path: morgueBasepath,
+      path: providerBasepath,
       parent: `${window.spaBase}/home`,
     },
   ]);
