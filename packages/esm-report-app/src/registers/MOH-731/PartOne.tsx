@@ -116,10 +116,10 @@ const PartOne: React.FC<{ reportData: any }> = ({ reportData }) => {
             <TableRow>
               <TableCell>Discordant</TableCell>
               <TableCell>
-                HV01-17 <div className={styles['small-cont']}>{row.positive_female_25_plus}</div>
+                HV01-17 <div className={styles['small-cont']}>{row.discordant_couple_male_total}</div>
               </TableCell>
               <TableCell>
-                HV01-18 <div className={styles['small-cont']}>{row.positive_female_25_plus}</div>
+                HV01-18 <div className={styles['small-cont']}>{row.discordant_couple_prep_female_total}</div>
               </TableCell>
             </TableRow>
           </div>
@@ -276,7 +276,7 @@ const PartOne: React.FC<{ reportData: any }> = ({ reportData }) => {
                 HV01-42 <div className={styles['small-cont']}>{row.ayp_prep_sti_male}</div>
               </TableCell>
               <TableCell>
-                HV01-43 <div className={styles['small-cont']}>{row.ayp_prep_sti_male}</div>
+                HV01-43 <div className={styles['small-cont']}>{row.ayp_prep_sti_female}</div>
               </TableCell>
             </TableRow>
             <TableRow>

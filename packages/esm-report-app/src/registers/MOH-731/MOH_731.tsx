@@ -49,7 +49,7 @@ const MOH731: React.FC<{ reportData: any }> = ({ reportData }) => {
                 <h5>3. HIV and TB treatment</h5>
               </TableHeader>
             </TableRow>
-            <PartThree />
+            <PartThree reportData={reportData} />
           </TableBody>
         </Table>
       </TableContainer>
